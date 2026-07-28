@@ -14,6 +14,7 @@ Estructura y URLs resultantes:
   carta-de-navegacion/index.html                          ->  /carta-de-navegacion/
   encuesta/index.html                                     ->  /encuesta/
   vivir-en-grande/index.html                              ->  /vivir-en-grande/
+  reddeespecialistas/index.html                           ->  /reddeespecialistas/
 
 Cada archivo es autonomo (imagenes y estilos incluidos). No requiere base de datos
 ni servidor especial: cualquier hosting estatico (Apache, Nginx, IIS, Netlify, etc.) sirve.
@@ -29,3 +30,7 @@ PENDIENTES antes de publicar en produccion:
   5. [RESUELTO] Footer: Facebook y Instagram apuntan a
      facebook.com/contigoenelcaminomx/ e instagram.com/contigoenelcaminomx/.
   6. Nueva pagina /carta-de-navegacion/ (Carta de Navegacion) enlazada desde el footer.
+  7. Nueva pagina /reddeespecialistas/ (Red de Especialistas y Aliados), en el menu y
+     el footer. Contacto de aliado VADV Del Valle con mensaje prellenado.
+  8. Footer: nueva seccion Contacto con WhatsApp y correo hola@contigoenelcamino.com.
+  9. [RESUELTO] /reddeespecialistas: imagen Open Graph og/og-especialistas.png generada.

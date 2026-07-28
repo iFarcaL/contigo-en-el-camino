@@ -11,6 +11,8 @@ Estructura y URLs resultantes:
                                                           ->  /biblioteca/es-momento-de-buscar-acompanamiento/
   biblioteca/5-dimensiones-del-bienestar/index.html
                                                           ->  /biblioteca/5-dimensiones-del-bienestar/
+  biblioteca/el-acompanamiento-no-depende-de-todos-tus-hermanos/index.html
+                                                          ->  /biblioteca/el-acompanamiento-no-depende-de-todos-tus-hermanos/
   carta-de-navegacion/index.html                          ->  /carta-de-navegacion/
   encuesta/index.html                                     ->  /encuesta/
   vivir-en-grande/index.html                              ->  /vivir-en-grande/
@@ -34,3 +36,7 @@ PENDIENTES antes de publicar en produccion:
      el footer. Contacto de aliado VADV Del Valle con mensaje prellenado.
   8. Footer: nueva seccion Contacto con WhatsApp y correo hola@contigoenelcamino.com.
   9. [RESUELTO] /reddeespecialistas: imagen Open Graph og/og-especialistas.png generada.
+ 10. Nueva guia /biblioteca/el-acompanamiento-no-depende-de-todos-tus-hermanos/
+     (decision familiar). PDF en blob (contenedor biblioteca), OG og/og-guia-decision-familiar.png.
+ 11. Guias: fecha de publicacion visible en la pagina (24 jul / 26 jul / 28 jul 2026).
+     La fecha NO aparece en los PDFs descargables, solo en el HTML.

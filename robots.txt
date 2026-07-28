@@ -1,0 +1,8 @@
+# robots.txt — contigoenelcamino.com
+User-agent: *
+Allow: /
+
+# La encuesta no se indexa (tiene meta robots noindex)
+Disallow: /encuesta/
+
+Sitemap: https://contigoenelcamino.com/sitemap.xml

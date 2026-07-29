@@ -14,7 +14,6 @@ Estructura y URLs resultantes:
   biblioteca/el-acompanamiento-no-depende-de-todos-tus-hermanos/index.html
                                                           ->  /biblioteca/el-acompanamiento-no-depende-de-todos-tus-hermanos/
   carta-de-navegacion/index.html                          ->  /carta-de-navegacion/
-  encuesta/index.html                                     ->  /encuesta/
   vivir-en-grande/index.html                              ->  /vivir-en-grande/
   reddeespecialistas/index.html                           ->  /reddeespecialistas/
 
@@ -32,18 +31,13 @@ PENDIENTES antes de publicar en produccion:
   1. [RESUELTO] WhatsApp Comunidad: linea dedicada +52 55 2078 0577 (Hero, CTA,
      guia 5-dimensiones y encuesta). VADV Del Valle +52 55 7940 5463 sigue siendo
      el contacto de aliado en el pie de guias y bloque aliado (sin cambios).
-  2. [RESUELTO] /encuesta: iframe de Google Forms embebido real
-     (docs.google.com/forms/.../viewform?embedded=true). Pagina rehecha como HTML
-     plano (fuera del bundle) con nav y footer del sitio; conserva meta robots
-     noindex. Alto del iframe fijado en 1400px; ajustar si el formulario se corta
-     o deja demasiado espacio en blanco (depende del numero de preguntas).
-  3. [RESUELTO] /vivir-en-grande: seccion 6 con iframe de Google Forms embebido real
-     (docs.google.com/forms/1FAIpQLSf16fq.../viewform?embedded=true). Se reemplazo el
-     formulario placeholder y su script de "Gracias". Alto del iframe = 1150px (menos
-     preguntas que la encuesta); ajustar si se corta o sobra espacio. NOTA perfil B
-     (adulto mayor): la legibilidad y contraste del formulario embebido se controlan
-     desde el editor de Google Forms (tema, tamano de fuente) — no por CSS externo,
-     porque el iframe es cross-origin. Revisar el tema en Forms antes de publicar.
+  2. [ELIMINADA] /encuesta: la pagina se retiro del sitio. El boton "Responde la
+     encuesta" (Hero de Home) y el link del footer ahora apuntan DIRECTO al Google
+     Form (docs.google.com/forms/1FAIpQLSdMEsmxq.../viewform, target=_blank). Se quito
+     tambien el Disallow /encuesta/ de robots.txt. No queda ningun enlace a /encuesta.
+  3. [RESUELTO] /vivir-en-grande: seccion 6 con boton "Quiero unirme al Club" que abre
+     el Google Form real (docs.google.com/forms/1FAIpQLSf16fq.../viewform, target=_blank).
+     Se reemplazo el iframe/placeholder anterior. Boton grande para perfil B (adulto mayor).
   4. [RESUELTO] Guia: botones de descarga PDF apuntan a las URLs reales en
      bibliotecacontigo.blob.core.windows.net (acompanamiento y 5-dimensiones).
   5. [RESUELTO] Footer: Facebook y Instagram apuntan a

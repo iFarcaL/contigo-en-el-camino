@@ -56,3 +56,9 @@ PENDIENTES antes de publicar en produccion:
      <source media> sirve la version ligera en movil, fetchpriority=high y
      <link rel=preload> del hero en el <head>; caminata con srcset + loading=lazy.
      Los .png originales se conservan como respaldo pero el HTML ya usa .webp.
+ 13. Google Analytics 4 (G-X6H9QE31MJ) en las 8 paginas: snippet gtag.js insertado
+     justo tras <head>. Eventos de conversion via listener delegado (mismo bloque):
+     click_encuesta, click_whatsapp_comunidad, click_whatsapp_vadv, click_whatsapp_footer,
+     click_unirme_club, y click_descarga_guia_{acompanamiento|5dimensiones|decision_familiar}.
+     El listener deduce el evento por el destino del enlace, no requiere onclick por boton.
+     En GA4: marcar estos eventos como "conversiones" en Administrar > Eventos.

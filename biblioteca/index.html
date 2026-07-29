@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6H9QE31MJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X6H9QE31MJ');
+    // Seguimiento de eventos de conversion (delegado, sin tocar cada boton)
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var ev = null;
+      if (a.hasAttribute('data-pdf')) {
+        var p = location.pathname;
+        ev = p.indexOf('5-dimensiones') > -1 ? 'click_descarga_guia_5dimensiones'
+           : (p.indexOf('hermanos') > -1 || p.indexOf('no-depende') > -1) ? 'click_descarga_guia_decision_familiar'
+           : 'click_descarga_guia_acompanamiento';
+      } else if (href.indexOf('1FAIpQLSdMEsmxq') > -1) {
+        ev = 'click_encuesta';
+      } else if (href.indexOf('1FAIpQLSf16fq') > -1) {
+        ev = 'click_unirme_club';
+      } else if (href.indexOf('wa.me/525579405463') > -1) {
+        ev = 'click_whatsapp_vadv';
+      } else if (href.indexOf('wa.me/525520780577') > -1) {
+        ev = (a.closest && a.closest('footer')) ? 'click_whatsapp_footer' : 'click_whatsapp_comunidad';
+      }
+      if (ev && typeof gtag === 'function') gtag('event', ev);
+    }, true);
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Biblioteca Acompañar — Guías para comprender y decidir | Contigo en el Camino</title>

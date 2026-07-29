@@ -47,3 +47,8 @@ PENDIENTES antes de publicar en produccion:
      (decision familiar). PDF en blob (contenedor biblioteca), OG og/og-guia-decision-familiar.png.
  11. Guias: fecha de publicacion visible en la pagina (24 jul / 26 jul / 28 jul 2026).
      La fecha NO aparece en los PDFs descargables, solo en el HTML.
+ 12. Rendimiento Home: imagenes hero y caminata convertidas a WebP con variantes
+     responsivas (hero movil 30 KB vs 2 MB del PNG). Un solo <picture> con
+     <source media> sirve la version ligera en movil, fetchpriority=high y
+     <link rel=preload> del hero en el <head>; caminata con srcset + loading=lazy.
+     Los .png originales se conservan como respaldo pero el HTML ya usa .webp.

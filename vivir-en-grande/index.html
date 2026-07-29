@@ -54,6 +54,7 @@
   .nav-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid #D8CBAE;border-radius:9px;background:#F7F0E1;cursor:pointer;color:#5f5442;flex-shrink:0;}
   .nav-mobile{display:none;border-top:1px solid #E2D9C6;background:#F3EBDA;padding:8px 15px 16px;flex-direction:column;gap:3px;}
   .nav-mobile a{display:flex;align-items:center;gap:13px;padding:15px 12px;border-radius:10px;color:#463C2D;font-weight:600;font-size:16.5px;}
+  .vg-form-frame{width:100%;height:1150px;border:0;display:block;background:#FFFFFF;}
   @media(max-width:1039px){
     .nav-desktop{display:none;} .nav-burger{display:flex;}
     .nav-toggle:checked ~ .nav-mobile{display:flex;}
@@ -170,63 +171,25 @@
 
 <!-- ============================ 6 · FORMULARIO (audiencia: adulto mayor) ============================ -->
 <section style="background:#F6EDD5;border-top:1px solid #EAD9AE;margin-top:clamp(40px,6vw,72px);">
-  <div style="max-width:680px;margin:0 auto;padding:clamp(44px,7vw,80px) 22px;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(44px,7vw,80px) 22px;">
     <div style="text-align:center;">
       <div style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#98701C;font-weight:700;">Únete al Club</div>
       <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4.6vw,42px);line-height:1.12;color:#2B2216;margin:16px 0 0;text-wrap:pretty;">¿Te gustaría unirte?</h2>
       <p style="font-size:clamp(20px,2.7vw,23px);line-height:1.65;color:#5f5442;margin:20px auto 0;max-width:540px;">Déjanos tus datos y te contamos cuándo empezamos. Es fácil y no toma más de un minuto.</p>
     </div>
 
-    <!-- FORMULARIO-PLACEHOLDER · conectar a un formulario/servicio real cuando esté listo -->
-    <form id="vg-form" style="margin-top:clamp(32px,5vw,44px);display:flex;flex-direction:column;gap:34px;">
+    <div style="margin-top:clamp(32px,5vw,44px);background:#FFFFFF;border:1px solid #E4D6AE;border-radius:18px;box-shadow:0 26px 50px -34px rgba(152,112,28,.5);overflow:hidden;">
+      <iframe
+        class="vg-form-frame"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSf16fqZ1xJpdAkKTPU1GEXxORxNwYnOoLzXnIkGgSkBcwMXxA/viewform?embedded=true"
+        title="Formulario del Club Vivir en Grande"
+        loading="lazy"
+        marginheight="0"
+        marginwidth="0">Cargando…</iframe>
+    </div>
 
-      <!-- Nombre -->
-      <div>
-        <label for="vg-nombre" style="display:block;font-size:20px;font-weight:700;color:#2B2216;margin-bottom:12px;">¿Cómo te llamas?</label>
-        <input id="vg-nombre" name="nombre" type="text" placeholder="Tu nombre" style="width:100%;box-sizing:border-box;font-family:'Assistant',sans-serif;font-size:19px;color:#2B2216;background:#FFFDF8;border:2px solid #D8C9A0;border-radius:12px;padding:16px 18px;" />
-      </div>
-
-      <!-- Actividades -->
-      <div>
-        <span style="display:block;font-size:20px;font-weight:700;color:#2B2216;margin-bottom:6px;">¿Qué te gustaría hacer?</span>
-        <span style="display:block;font-size:16px;color:#7a6a45;margin-bottom:16px;">Puedes elegir todas las que quieras.</span>
-        <div style="display:flex;flex-direction:column;gap:14px;">
-          <label style="display:flex;align-items:center;gap:16px;background:#FFFDF8;border:2px solid #D8C9A0;border-radius:12px;padding:18px 20px;cursor:pointer;font-size:19px;color:#2B2216;">
-            <input type="checkbox" name="actividades" value="actividad-fisica" style="width:26px;height:26px;accent-color:#C7982F;flex-shrink:0;" /> Actividad física
-          </label>
-          <label style="display:flex;align-items:center;gap:16px;background:#FFFDF8;border:2px solid #D8C9A0;border-radius:12px;padding:18px 20px;cursor:pointer;font-size:19px;color:#2B2216;">
-            <input type="checkbox" name="actividades" value="musica-coro" style="width:26px;height:26px;accent-color:#C7982F;flex-shrink:0;" /> Música y coro
-          </label>
-          <label style="display:flex;align-items:center;gap:16px;background:#FFFDF8;border:2px solid #D8C9A0;border-radius:12px;padding:18px 20px;cursor:pointer;font-size:19px;color:#2B2216;">
-            <input type="checkbox" name="actividades" value="convivencia" style="width:26px;height:26px;accent-color:#C7982F;flex-shrink:0;" /> Convivencia
-          </label>
-          <label style="display:flex;align-items:center;gap:16px;background:#FFFDF8;border:2px solid #D8C9A0;border-radius:12px;padding:18px 20px;cursor:pointer;font-size:19px;color:#2B2216;">
-            <input type="checkbox" name="actividades" value="otro" style="width:26px;height:26px;accent-color:#C7982F;flex-shrink:0;" /> Otra cosa
-          </label>
-        </div>
-      </div>
-
-      <!-- Zona -->
-      <div>
-        <label for="vg-zona" style="display:block;font-size:20px;font-weight:700;color:#2B2216;margin-bottom:12px;">¿En qué zona de la ciudad vives?</label>
-        <input id="vg-zona" name="zona" type="text" placeholder="Por ejemplo: Del Valle, Coyoacán…" style="width:100%;box-sizing:border-box;font-family:'Assistant',sans-serif;font-size:19px;color:#2B2216;background:#FFFDF8;border:2px solid #D8C9A0;border-radius:12px;padding:16px 18px;" />
-      </div>
-
-      <!-- Contacto -->
-      <div>
-        <label for="vg-contacto" style="display:block;font-size:20px;font-weight:700;color:#2B2216;margin-bottom:12px;">¿A qué número te llamamos?</label>
-        <span style="display:block;font-size:16px;color:#7a6a45;margin-bottom:12px;">Teléfono o WhatsApp, el que prefieras.</span>
-        <input id="vg-contacto" name="contacto" type="tel" inputmode="tel" placeholder="Tu teléfono o WhatsApp" style="width:100%;box-sizing:border-box;font-family:'Assistant',sans-serif;font-size:19px;color:#2B2216;background:#FFFDF8;border:2px solid #D8C9A0;border-radius:12px;padding:16px 18px;" />
-      </div>
-
-      <button type="submit" style="width:100%;font-family:'Assistant',sans-serif;font-weight:700;font-size:21px;color:#FFFBF0;background:#C7982F;border:none;border-radius:14px;padding:20px 24px;cursor:pointer;box-shadow:0 16px 30px -14px rgba(152,112,28,.7);">Quiero unirme al Club</button>
-
-      <div id="vg-gracias" style="display:none;">
-        <div style="background:#EAF0DE;border:1.5px solid #AEB99C;border-radius:12px;padding:18px 20px;font-size:18px;line-height:1.55;color:#4A5A38;text-align:center;">¡Gracias! Recibimos tus datos y pronto te contactamos. 💛</div>
-      </div>
-
-      <p style="font-size:15px;line-height:1.6;color:#8a7a52;margin:0;text-align:center;">Tus datos solo se usan para invitarte a las actividades del Club.</p>
-    </form>
+    <p style="font-size:17px;line-height:1.6;color:#8a7a52;margin:24px auto 0;text-align:center;max-width:520px;">¿No ves el formulario? <a href="https://docs.google.com/forms/d/e/1FAIpQLSf16fqZ1xJpdAkKTPU1GEXxORxNwYnOoLzXnIkGgSkBcwMXxA/viewform" target="_blank" rel="noopener" style="color:#98701C;font-weight:700;">Ábrelo en una pestaña nueva</a>.</p>
+    <p style="font-size:16px;line-height:1.6;color:#8a7a52;margin:14px auto 0;text-align:center;max-width:520px;">Tus datos solo se usan para invitarte a las actividades del Club.</p>
   </div>
 </section>
 
@@ -294,6 +257,5 @@
 
 </div>
 <script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var t=document.getElementById('nav-toggle');document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});})();</script>
-<script>(function(){var f=document.getElementById('vg-form'),g=document.getElementById('vg-gracias');if(f&&g){f.addEventListener('submit',function(e){e.preventDefault();g.style.display='block';});}})();</script>
 </body>
 </html>

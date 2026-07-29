@@ -32,8 +32,18 @@ PENDIENTES antes de publicar en produccion:
   1. [RESUELTO] WhatsApp Comunidad: linea dedicada +52 55 2078 0577 (Hero, CTA,
      guia 5-dimensiones y encuesta). VADV Del Valle +52 55 7940 5463 sigue siendo
      el contacto de aliado en el pie de guias y bloque aliado (sin cambios).
-  2. /encuesta: reemplazar el iframe placeholder por la URL real de Microsoft Forms.
-  3. /vivir-en-grande: conectar el formulario de interes a un servicio real.
+  2. [RESUELTO] /encuesta: iframe de Google Forms embebido real
+     (docs.google.com/forms/.../viewform?embedded=true). Pagina rehecha como HTML
+     plano (fuera del bundle) con nav y footer del sitio; conserva meta robots
+     noindex. Alto del iframe fijado en 1400px; ajustar si el formulario se corta
+     o deja demasiado espacio en blanco (depende del numero de preguntas).
+  3. [RESUELTO] /vivir-en-grande: seccion 6 con iframe de Google Forms embebido real
+     (docs.google.com/forms/1FAIpQLSf16fq.../viewform?embedded=true). Se reemplazo el
+     formulario placeholder y su script de "Gracias". Alto del iframe = 1150px (menos
+     preguntas que la encuesta); ajustar si se corta o sobra espacio. NOTA perfil B
+     (adulto mayor): la legibilidad y contraste del formulario embebido se controlan
+     desde el editor de Google Forms (tema, tamano de fuente) — no por CSS externo,
+     porque el iframe es cross-origin. Revisar el tema en Forms antes de publicar.
   4. [RESUELTO] Guia: botones de descarga PDF apuntan a las URLs reales en
      bibliotecacontigo.blob.core.windows.net (acompanamiento y 5-dimensiones).
   5. [RESUELTO] Footer: Facebook y Instagram apuntan a

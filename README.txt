@@ -21,6 +21,13 @@ Estructura y URLs resultantes:
 Cada archivo es autonomo (imagenes y estilos incluidos). No requiere base de datos
 ni servidor especial: cualquier hosting estatico (Apache, Nginx, IIS, Netlify, etc.) sirve.
 
+IMPORTANTE (Azure Static Web Apps):
+  Incluye staticwebapp.config.json en la raiz. Sirve sitemap.xml como
+  application/xml (Google Search Console lo rechazaba como "Invalid sitemap
+  address" porque Azure lo devolvia como texto). Tambien fija Content-Type de
+  robots.txt y excluye assets (.xml, .png, /uploads, /og, etc.) del
+  navigationFallback para que no los reescriba a index.html. NO borrar este archivo.
+
 PENDIENTES antes de publicar en produccion:
   1. [RESUELTO] WhatsApp Comunidad: linea dedicada +52 55 2078 0577 (Hero, CTA,
      guia 5-dimensiones y encuesta). VADV Del Valle +52 55 7940 5463 sigue siendo

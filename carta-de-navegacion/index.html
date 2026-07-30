@@ -449,8 +449,8 @@
       </div>
       <!-- Red de especialistas -->
       <div style="background:#FBF6EC;border:1px solid #E2D9C6;border-top:4px solid #4C5A6B;border-radius:6px 6px 13px 13px;padding:18px 18px 20px;">
-        <div style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#2F3A47;font-weight:700;">Red</div>
-        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:17px;line-height:1.22;color:#2B2216;margin:4px 0 0;">Especialistas y aliados</h3>
+        <div style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#2F3A47;font-weight:700;">Red de</div>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:17px;line-height:1.22;color:#2B2216;margin:4px 0 0;">Especialistas</h3>
       </div>
       <!-- Visiting Angels (aliado externo · tarjeta punteada) -->
       <div style="background:#F3EBDA;border:1.5px dashed #B08968;border-radius:13px;padding:18px 18px 20px;">
@@ -573,7 +573,7 @@
 
 
 </div>
-<script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var t=document.getElementById('nav-toggle');document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});})();</script>
+<script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var t=document.getElementById('nav-toggle');document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});document.addEventListener('click',function(e){if(t&&t.checked&&!n.contains(e.target))t.checked=false;});})();</script>
 
 </body>
 </html>

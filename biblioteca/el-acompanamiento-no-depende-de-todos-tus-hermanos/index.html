@@ -346,7 +346,7 @@
 
 
 </div>
-<script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var t=document.getElementById('nav-toggle');document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});})();</script>
+<script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var t=document.getElementById('nav-toggle');document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});document.addEventListener('click',function(e){if(t&&t.checked&&!n.contains(e.target))t.checked=false;});})();</script>
 
 </body>
 </html>

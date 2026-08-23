@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6H9QE31MJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X6H9QE31MJ');
+    // Seguimiento de eventos de conversion (delegado, sin tocar cada boton)
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var ev = null;
+      if (a.hasAttribute('data-pdf')) {
+        var p = location.pathname;
+        ev = p.indexOf('5-dimensiones') > -1 ? 'click_descarga_guia_5dimensiones'
+           : (p.indexOf('hermanos') > -1 || p.indexOf('no-depende') > -1) ? 'click_descarga_guia_decision_familiar'
+           : 'click_descarga_guia_acompanamiento';
+      } else if (href.indexOf('1FAIpQLSdMEsmxq') > -1) {
+        ev = 'click_encuesta';
+      } else if (href.indexOf('1FAIpQLSf16fq') > -1) {
+        ev = 'click_unirme_club';
+      } else if (href.indexOf('wa.me/525579405463') > -1) {
+        ev = 'click_whatsapp_vadv';
+      } else if (href.indexOf('wa.me/525520780577') > -1) {
+        ev = (a.closest && a.closest('footer')) ? 'click_whatsapp_footer' : 'click_whatsapp_comunidad';
+      }
+      if (ev && typeof gtag === 'function') gtag('event', ev);
+    }, true);
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carta de Navegación — Contigo en el Camino</title>
+  <meta name="description" content="El rumbo, el propósito y el mapa del ecosistema Contigo en el Camino: un espacio para acompañar mejor el envejecimiento de quienes amamos.">
+  <meta property="og:title" content="Carta de Navegación — Contigo en el Camino">
+  <meta property="og:description" content="El rumbo, el propósito y el mapa del ecosistema Contigo en el Camino.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Contigo en el Camino">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://contigoenelcamino.com/carta-de-navegacion/">
+  <meta property="og:image" content="https://contigoenelcamino.com/og/og-carta-navegacion.png">
+  <meta property="og:image:secure_url" content="https://contigoenelcamino.com/og/og-carta-navegacion.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Carta de Navegación — el rumbo y el mapa del ecosistema">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Carta de Navegación — Contigo en el Camino">
+  <meta name="twitter:description" content="El rumbo, el propósito y el mapa del ecosistema Contigo en el Camino.">
+  <meta name="twitter:image" content="https://contigoenelcamino.com/og/og-carta-navegacion.png">
+  <meta name="twitter:image:alt" content="Carta de Navegación — el rumbo y el mapa del ecosistema">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://contigoenelcamino.com/carta-de-navegacion/">
+  <style>
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;background:#F3EBDA;color:#463c2d;font-family:'Assistant',sans-serif;-webkit-font-smoothing:antialiased;}
+  a{color:#5B6B4A;text-decoration:none;} a:hover{color:#41502f;}
+  .nav-bar{position:sticky;top:0;z-index:50;background:rgba(243,235,218,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #E2D9C6;transition:background .28s,box-shadow .28s,border-color .28s;}
+  .nav-bar.scrolled{background:rgba(246,239,224,.98);box-shadow:0 6px 22px -12px rgba(60,45,25,.34);border-bottom-color:#D8CBAE;}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:padding .28s;}
+  .nav-desktop{display:flex;align-items:center;gap:22px;}
+  .nav-link{color:#5f5442;font-weight:600;font-size:14.5px;padding:5px 0;border-bottom:2.5px solid transparent;transition:color .18s,border-color .18s;white-space:nowrap;}
+  .nav-link:hover{color:#B5542C;border-bottom-color:#E8B79E;}
+  .nav-link.vg:hover{color:#98701C;border-bottom-color:#E4C878;}
+  .nav-link.esp:hover{color:#2F3A47;border-bottom-color:#8794A3;}
+  .nav-link.is-active{color:#5B6B4A;font-weight:700;border-bottom-color:#5B6B4A;}
+  .nav-link.com.is-active{color:#B5542C;border-bottom-color:#B5542C;}
+  .nav-link.vg.is-active{color:#98701C;border-bottom-color:#98701C;}
+  .nav-link.esp.is-active{color:#2F3A47;border-bottom-color:#2F3A47;}
+  .nav-aliado{display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border:1.5px dotted #B08968;border-radius:999px;color:#6F4A28;font-weight:600;font-size:12.5px;white-space:nowrap;transition:background .18s;}
+  .nav-aliado:hover{background:#EFE6D3;}
+  .nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;}
+  .nav-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid #D8CBAE;border-radius:9px;background:#F7F0E1;cursor:pointer;color:#5f5442;flex-shrink:0;}
+  .nav-mobile{display:none;border-top:1px solid #E2D9C6;background:#F3EBDA;padding:8px 15px 16px;flex-direction:column;gap:3px;}
+  .nav-mobile a{display:flex;align-items:center;gap:13px;padding:15px 12px;border-radius:10px;color:#463C2D;font-weight:600;font-size:16.5px;}
+  .hero-mobile{display:none;}
+  @media(max-width:1039px){
+    .nav-desktop{display:none;} .nav-burger{display:flex;}
+    .nav-toggle:checked ~ .nav-mobile{display:flex;}
+    .nav-inner{padding:7px 15px;}
+    .nav-badge{width:28px !important;height:28px !important;} .nav-badge svg{width:15px;height:15px;}
+    .nav-title{font-size:15.5px !important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .hero-desktop{display:none;} .hero-mobile{display:block;}
+  }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://contigoenelcamino.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Carta de Navegación",
+            "item": "https://contigoenelcamino.com/carta-de-navegacion/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<div id="top" style="background:#F3EBDA;overflow-x:clip;min-height:100vh;display:flex;flex-direction:column;">
+<header class="nav-bar" id="site-nav">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1">
+  <div class="nav-inner">
+    <a href="/" style="display:flex;align-items:center;gap:11px;color:inherit;">
+      <span class="nav-badge" style="width:34px;height:34px;border-radius:9px;background:#B5542C;display:flex;align-items:center;justify-content:center;color:#F1E2D6;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.47 5.49 A8.5 8.5 0 1 0 17.47 18.51" stroke-width="3" stroke-linecap="round"/><path d="M14.76 8.71 A4.3 4.3 0 1 0 14.76 15.29" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <span class="nav-title" style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;letter-spacing:-.01em;">Contigo en el Camino</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Principal">
+      <a class="nav-link com" href="/#comunidad">Comunidad</a>
+      <a class="nav-link" href="/biblioteca/">Biblioteca</a>
+      <a class="nav-link vg" href="/vivir-en-grande/">Vivir en Grande</a>
+      <a class="nav-link esp" href="/reddeespecialistas/">Especialistas</a>
+      <span style="width:1px;height:22px;background:#D8CBAE;"></span>
+      <a class="nav-aliado" href="/#aliado" title="Visiting Angels Del Valle — aliado fundador"><span style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#9C6B3F;font-weight:700;">Aliado</span>Visiting Angels Del Valle</a>
+    </nav>
+    <label class="nav-burger" for="nav-toggle" aria-label="Abrir menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+  </div>
+  <nav class="nav-mobile" aria-label="Menú móvil">
+    <a href="/#comunidad"><span style="width:4px;height:24px;border-radius:2px;background:#B5542C;flex-shrink:0;"></span>Comunidad</a>
+    <a href="/biblioteca/"><span style="width:4px;height:24px;border-radius:2px;background:#5B6B4A;flex-shrink:0;"></span>Biblioteca</a>
+    <a href="/vivir-en-grande/"><span style="width:4px;height:24px;border-radius:2px;background:#C7982F;flex-shrink:0;"></span>Club Vivir en Grande</a>
+    <a href="/reddeespecialistas/"><span style="width:4px;height:24px;border-radius:2px;background:#4C5A6B;flex-shrink:0;"></span>Red de Especialistas</a>
+    <a class="nav-aliado-m" href="/#aliado" style="gap:9px;margin-top:8px;padding:13px 14px;border:1.5px dotted #B08968;color:#6F4A28;font-size:14.5px;"><span style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#9C6B3F;font-weight:700;">Aliado</span>Visiting Angels Del Valle</a>
+  </nav>
+</header>
+
+
+<!-- ============================ TÍTULO ============================ -->
+<section style="background:#EFE6D3;border-bottom:1px solid #E2D9C6;">
+  <div style="max-width:840px;margin:0 auto;padding:clamp(50px,8vw,96px) 22px;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <span style="width:40px;height:40px;border-radius:11px;background:#B5542C;display:flex;align-items:center;justify-content:center;color:#F1E2D6;flex-shrink:0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.47 5.49 A8.5 8.5 0 1 0 17.47 18.51" stroke-width="3" stroke-linecap="round"/><path d="M14.76 8.71 A4.3 4.3 0 1 0 14.76 15.29" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <span style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8F3F1F;font-weight:600;">Carta de Navegación · Versión 0.3</span>
+    </div>
+    <h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(31px,5vw,52px);line-height:1.08;letter-spacing:-.015em;color:#2B2216;margin:22px 0 0;max-width:760px;text-wrap:pretty;">Un ecosistema para acompañar mejor el envejecimiento de quienes amamos</h1>
+    <div style="width:60px;height:3px;background:#B5542C;margin:26px 0 0;"></div>
+  </div>
+</section>
+
+<!-- ============================ CUERPO ============================ -->
+<main style="flex:1;">
+
+<!-- 1 -->
+<section>
+  <div style="max-width:760px;margin:0 auto;padding:clamp(42px,6vw,72px) 22px clamp(30px,4vw,44px);">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">01</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">El punto de partida</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Acompañar el envejecimiento de nuestros padres es una etapa para la que casi nadie se prepara.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Los cambios suelen aparecer poco a poco. Una actividad que dejan de hacer, una llamada que empezamos a realizar con mayor frecuencia, una consulta médica que ahora requiere compañía o una responsabilidad que, sin haberlo decidido expresamente, termina concentrándose en uno de los hijos o en la pareja.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Al mismo tiempo, nosotros seguimos atendiendo nuestra propia vida: hijos, trabajo, relaciones, salud y compromisos. Queremos estar presentes, pero no siempre sabemos qué hacer, cuándo intervenir o cómo ofrecer apoyo sin afectar la autonomía de nuestros padres.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Muchas familias comienzan a buscar respuestas hasta que aparece una caída, una hospitalización, un diagnóstico o el agotamiento de quien lleva tiempo cuidando. Sin embargo, existen muchas oportunidades para actuar antes: promover actividad física, fortalecer la vida social, adaptar el entorno, conversar sobre el futuro, identificar cambios y construir una red de apoyo.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Quiero construir un ecosistema capaz de acompañar este proceso completo, desde los años en que nuestros padres todavía son independientes hasta los momentos en que requieren una atención más cercana o profesional.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section style="border-top:1px solid #E7DECB;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(34px,5vw,54px) 22px;">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">02</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">Mi propósito</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Mi propósito es ayudar a las familias a crear las condiciones para que sus seres queridos vivan el envejecimiento con la mayor autonomía, dignidad, seguridad y plenitud posibles.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Quiero que los hijos tengan información para tomar mejores decisiones, espacios donde puedan compartir lo que están viviendo y alternativas concretas para actuar de acuerdo con la situación de su familia.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">También quiero contribuir a que los adultos mayores mantengan durante más tiempo aquello que les da identidad y calidad de vida: sus relaciones, sus actividades, su capacidad de decidir, su conexión con otras personas y la posibilidad de permanecer en casa cuando esta siga siendo una opción adecuada.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">El acompañamiento puede tomar formas muy distintas. A veces significa organizar un grupo de ejercicio, facilitar nuevas amistades o recuperar una actividad que se había abandonado. En otros casos implica ayudar a una familia a comprender un diagnóstico, respaldar a un esposo que cuida a su pareja o incorporar un acompañante profesional.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Todas esas respuestas forman parte del mismo propósito.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section style="border-top:1px solid #E7DECB;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(34px,5vw,54px) 22px;">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">03</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">Lo que he aprendido</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">La edad, por sí sola, no determina lo que una persona necesita. Dos adultos mayores de la misma edad pueden tener niveles de autonomía, condiciones de salud, redes familiares y entornos completamente diferentes.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 4px;">La necesidad de apoyo surge de la combinación de varios factores:</p>
+    <ul style="margin:0 0 16px;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;">
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>la autonomía de la persona;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>su estado físico, cognitivo y emocional;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>las condiciones de su vivienda;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>la red familiar disponible;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>el bienestar de quien la cuida;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>y la posibilidad de sostener esa organización durante los siguientes meses o años.</span></li>
+    </ul>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">También he aprendido que la familia no solo necesita servicios. Antes de buscar una solución, muchas veces necesita claridad.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Antes de contratar un acompañante, las personas necesitan entender qué está cambiando, cuáles son los riesgos, qué pueden esperar, cómo hablarlo con sus padres y qué alternativas existen. Una buena orientación puede evitar decisiones apresuradas y ayudar a que el apoyo se incorpore de manera gradual.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Esto lo he visto de cerca a través de dos iniciativas que he impulsado activamente, orientadas a este mismo propósito, y que me han dado claridad sobre lo que de verdad hace falta.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Visiting Angels Del Valle comenzó como una empresa de cuidado no médico a domicilio. Con el tiempo entendí que su propuesta real va más allá de asignar cuidadores. Lo que ofrece es tranquilidad para las familias, dignidad para el adulto mayor y presencia humana dentro de su vida cotidiana.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Happy Abus me permitió descubrir otra parte de esta visión. Comenzó con sesiones de acondicionamiento físico para mi mamá y la mamá de mi expareja. Después se sumaron sus hermanas y amigas, el grupo creció de manera orgánica y llegó a incorporar una experiencia de coro.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Fue una iniciativa sencilla, pero reunió movimiento, convivencia, amistad, aprendizaje y alegría antes de que existiera una necesidad urgente. También me mostró que actuar anticipadamente puede ser positivo, divertido y significativo para todos los involucrados.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Contigo en el Camino lo concebí como un espacio para quienes tenemos padres adultos mayores. Un lugar tanto para quienes quieren hacer algo antes de que exista una crisis como para quienes ya están atravesando una situación difícil.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Identifico dos momentos de entrada. El primero es el de la inspiración: hijos que quieren ayudar a sus padres a mantenerse activos, conectados y con una vida plena. El segundo es el de la necesidad: familias que enfrentan un diagnóstico, una caída, una recuperación, una dependencia creciente o el agotamiento de quien cuida.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Ambos perfiles pueden convivir y aprender uno del otro. Quienes llegan desde la inspiración pueden prepararse mejor para el futuro. Quienes han atravesado una situación compleja pueden convertirse en una referencia valiosa para las familias que apenas comienzan ese recorrido.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">La intersección entre Visiting Angels Del Valle, Happy Abus y Contigo en el Camino revela un propósito común que hoy puedo ver con mayor claridad.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section style="border-top:1px solid #E7DECB;background:#EFE6D3;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(38px,5vw,60px) 22px;">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">04</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">La transformación que quiero provocar</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Quiero ayudar a que una familia pase de la preocupación difusa a una comprensión más clara de su situación.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Que pueda reconocer cambios sin exagerarlos ni ignorarlos.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Que tenga conversaciones importantes antes de que las decisiones deban tomarse bajo presión.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Que el adulto mayor participe en las decisiones que afectan su vida mientras tenga la capacidad para hacerlo.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Que la pareja, el hijo o el familiar que cuida reciba respaldo antes de llegar al agotamiento.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Que el acompañamiento profesional se incorpore cuando aporte valor, con la intensidad que realmente se necesita, y no únicamente después de una crisis.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">A largo plazo, quiero que las familias puedan mirar hacia atrás y sentir que estuvieron presentes, actuaron a tiempo y tomaron decisiones congruentes con el bienestar y la dignidad de las personas que aman.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section style="border-top:1px solid #E7DECB;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(34px,5vw,54px) 22px;">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">05</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">El mapa del ecosistema</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Concibo Contigo en el Camino como la marca madre y el espacio común del ecosistema.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Será un proyecto independiente, fundado desde mi experiencia como hijo y desde lo que he aprendido al impulsar iniciativas relacionadas con el envejecimiento, la vida activa, la comunidad y el cuidado en casa.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Esta estructura permitirá que la confianza, la comunidad y el conocimiento que se construyan permanezcan vinculados al propósito general, sin quedar limitados por el territorio o la estructura de una franquicia.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Dentro de Contigo en el Camino convivirán distintas iniciativas.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:30px 0 8px;">Contigo en el Camino: comunidad y orientación</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 4px;">Será el punto de encuentro para hijos, parejas y familiares de adultos mayores. Aquí vivirán:</p>
+    <ul style="margin:0 0 12px;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;">
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>la comunidad;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>los encuentros presenciales;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>los espacios digitales;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>las historias y experiencias de los miembros;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>las conversaciones con especialistas;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>los grupos de acompañamiento;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>y los espacios de apoyo entre familias.</span></li>
+    </ul>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Su función será ayudar a que las personas comprendan mejor esta etapa y dejen de vivirla de manera aislada.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:30px 0 8px;">Biblioteca Acompañar: conocimiento y herramientas</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 4px;">Será la capa educativa del ecosistema. Podrá contener:</p>
+    <ul style="margin:0 0 12px;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;">
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>guías breves;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>documentos detallados;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>listas de observación;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>herramientas de evaluación;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>entrevistas;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>directorios;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cursos;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>videos;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>recursos para conversaciones familiares;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>y contenidos desarrollados con especialistas.</span></li>
+    </ul>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">La primera guía, ¿Es momento de buscar acompañamiento para mi mamá?, puede funcionar como una de las puertas de entrada a esta biblioteca.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">El propósito de los contenidos será ayudar a las familias a comprender su situación y tomar mejores decisiones, sin convertir cada recurso en una herramienta comercial.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:30px 0 8px;">Club Vivir en Grande: activación, convivencia y prevención</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 4px;">Será la iniciativa dirigida principalmente a adultos mayores que todavía mantienen un buen nivel de independencia. Su objetivo será traducir las ideas del buen envejecer en experiencias reales:</p>
+    <ul style="margin:0 0 12px;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;">
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>ejercicio;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>música;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>actividades culturales;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>caminatas;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>aprendizaje;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>convivencia;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>retos;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>y proyectos con propósito.</span></li>
+    </ul>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">También podrá funcionar como un laboratorio de experiencias. Me permitirá observar qué actividades generan adherencia, bienestar, vínculos y entusiasmo, en lugar de diseñar programas únicamente desde supuestos.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Club Vivir en Grande representa la parte más activa, social y preventiva del ecosistema.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:30px 0 8px;">Visiting Angels Del Valle: acompañamiento profesional</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Será la solución operativa para las familias que necesitan apoyo profesional en casa.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Su participación puede comenzar con unas horas de compañía, acompañamiento para actividades cotidianas, apoyo después de una cirugía, relevo para un cuidador familiar o atención de una persona con Alzheimer, demencia, Parkinson, debilidad visual o limitaciones de movilidad.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 6px;">Dentro del ecosistema, la presentaré como:</p>
+    <p style="font-family:'Source Serif 4',serif;font-style:italic;font-size:clamp(17px,2.2vw,19px);line-height:1.5;color:#8F3F1F;margin:0 0 16px;">Aliado fundador y proveedor de acompañamiento profesional.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Esta definición permitirá reconocer la experiencia, la infraestructura y la participación de Visiting Angels Del Valle, manteniendo al mismo tiempo la independencia de Contigo en el Camino.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">La credibilidad del ecosistema dependerá de que la recomendación responda primero a lo que necesita la familia, sea cual sea el camino que eso implique.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:30px 0 8px;">Red de especialistas y aliados</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 4px;">El envejecimiento requiere respuestas que ninguna persona u organización puede ofrecer por sí sola. Quiero integrar progresivamente una red que pueda incluir:</p>
+    <ul style="margin:0 0 12px;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;">
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>geriatría;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>neurología;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>fisioterapia;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>psicología;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>nutrición;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>adaptación de vivienda;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>audiología y salud visual;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>asesoría legal y patrimonial;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cuidados paliativos;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>tanatología;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>y servicios de apoyo para las familias.</span></li>
+    </ul>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">La participación de estos aliados deberá basarse en la confianza, la calidad profesional y la congruencia con la filosofía del proyecto.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">No concibo esta red únicamente como un directorio. Quiero que los especialistas también participen en conversaciones, guías, encuentros presenciales y procesos de aprendizaje para la comunidad.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:30px 0 8px;">Laboratorio del Buen Envejecer</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">El Laboratorio del Buen Envejecer puede funcionar inicialmente como una forma interna de trabajar, más que como una marca pública.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">La comunidad revelará necesidades reales. Club Vivir en Grande permitirá probar experiencias. Visiting Angels Del Valle aportará aprendizajes sobre lo que sucede dentro de los hogares. Los especialistas contribuirán con conocimiento y las guías ayudarán a organizar y compartir lo aprendido.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">A partir de este ciclo podrán surgir nuevas actividades, herramientas, programas y servicios.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">El laboratorio será la parte del ecosistema dedicada a escuchar, probar, aprender y mejorar.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section style="border-top:1px solid #E7DECB;background:#EFE6D3;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(34px,5vw,54px) 22px;">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">06</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">El recorrido de una familia</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">El ecosistema deberá acompañar distintos momentos del envejecimiento, porque las necesidades de una familia cambian con el tiempo.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Vivir bien y mantenerse activo</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">La persona mayor conserva su autonomía y la familia quiere ayudarla a seguir así.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">En esta etapa predominan Club Vivir en Grande, las actividades, el aprendizaje, la convivencia, la prevención y las experiencias con propósito.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Empezar a observar cambios</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">Surgen dudas relacionadas con la memoria, la movilidad, la alimentación, el aislamiento, la seguridad o el estado emocional.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">La Biblioteca Acompañar y la comunidad ayudan a comprender lo que está sucediendo, identificar señales relevantes y reconocer cuándo conviene consultar a un especialista.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Adaptarse a una condición de salud</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">Aparece un diagnóstico, una cirugía, una caída, una hospitalización o una limitación sensorial.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">La familia necesita información específica, acompañamiento emocional y una reorganización práctica de la vida cotidiana.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">El ecosistema puede ayudarla a comprender la condición, encontrar especialistas, adaptar el entorno y determinar qué tipo de acompañamiento se requiere.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Sostener el cuidado</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">Una pareja, un hijo u otro familiar empieza a asumir cada vez más responsabilidades.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">El cuidado puede afectar el sueño, la salud, el trabajo, la libertad personal y la relación con el adulto mayor. En esta etapa será importante identificar el desgaste, distribuir tareas, construir relevos e incorporar apoyo profesional cuando resulte conveniente.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">El bienestar de quien cuida deberá entenderse como parte de la solución.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Acompañar una dependencia mayor</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">La persona necesita supervisión o asistencia frecuente.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Visiting Angels Del Valle y la red de especialistas adquieren mayor relevancia, mientras la comunidad continúa ofreciendo orientación, recursos y contención para la familia.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Atravesar las transiciones finales</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">Algunas familias enfrentarán hospitalizaciones frecuentes, decisiones sobre cuidados paliativos, pérdidas y duelo.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Quiero que el ecosistema también pueda acompañar estas etapas con honestidad, sensibilidad y recursos adecuados, sin pretender tener todas las respuestas.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section style="border-top:1px solid #E7DECB;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(34px,5vw,54px) 22px;">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">07</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">Los principios que quiero preservar</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:0 0 8px;">Actuar con anticipación</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">La prevención no garantiza que una enfermedad o una crisis no ocurran. Sin embargo, permite prepararse, proteger capacidades durante más tiempo y ampliar las alternativas disponibles.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Respetar la autonomía</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">El adulto mayor debe participar en las decisiones que afectan su vida mientras tenga capacidad para hacerlo.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">El apoyo debe facilitar su independencia y evitar sustituir innecesariamente aquello que todavía puede realizar por sí mismo.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Cuidar a quien cuida</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">El bienestar del cuidador familiar forma parte del cuidado.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">El agotamiento, la irritabilidad, la pérdida de paciencia y la tensión en la relación no necesariamente significan que haya menos amor. Con frecuencia indican que una sola persona ha sostenido demasiado durante demasiado tiempo.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Quiero que el ecosistema ayude a las familias a reconocer esas señales y pedir respaldo antes de llegar a una ruptura o una crisis.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Reconocer los límites de cada intervención</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">La comunidad puede informar, orientar y acompañar, pero no diagnosticar.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Los acompañantes profesionales cumplen funciones diferentes de las de médicos, enfermeras, fisioterapeutas y psicólogos. Cada situación debe dirigirse hacia el nivel de atención que corresponda.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Construir desde la experiencia real</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">Las iniciativas deben surgir de la escucha a las familias, los adultos mayores, los cuidadores y los especialistas.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Quiero aprender de lo que funciona en la práctica, revisar mis propias ideas y ajustar las propuestas con humildad.</p>
+
+    <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(19px,2.4vw,22px);line-height:1.25;color:#2B2216;margin:28px 0 8px;">Proteger la confianza</h3>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">Una familia puede participar durante años sin contratar un servicio.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 12px;">El valor de su relación con Contigo en el Camino no dependerá de que se convierta en cliente de Visiting Angels Del Valle.</p>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Quiero que las personas sepan que pueden acercarse para aprender, compartir o pedir orientación sin sentirse dentro de un proceso comercial.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section style="border-top:1px solid #E7DECB;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(34px,5vw,54px) 22px;">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">08</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">Cómo quiero medir el impacto</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 4px;">El impacto de Contigo en el Camino no se medirá en una sola cifra. Quiero observar:</p>
+    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;">
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cuántas familias iniciaron conversaciones relevantes con sus padres;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cuántas personas comenzaron a actuar antes de una crisis;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cuántos adultos mayores recuperaron o mantuvieron actividades significativas;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cuántos cuidadores familiares recibieron descanso o respaldo;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cuántas familias encontraron al especialista o servicio adecuado;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cuántas relaciones familiares se volvieron más sostenibles;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>cuántas personas encontraron una comunidad donde podían hablar de esta etapa con honestidad;</span></li>
+      <li style="display:flex;gap:12px;font-size:clamp(15px,1.9vw,17px);line-height:1.65;color:#463c2d;"><span style="color:#B5542C;flex-shrink:0;">•</span><span>y qué nuevas soluciones surgieron de escuchar a los miembros.</span></li>
+    </ul>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:16px 0 0;">Estas señales me permitirán saber si el ecosistema está cumpliendo su propósito, incluso antes de convertirse en una organización de mayor escala.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section style="border-top:1px solid #E7DECB;background:#EFE6D3;">
+  <div style="max-width:1000px;margin:0 auto;padding:clamp(34px,5vw,54px) 22px;">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">09</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">La arquitectura inicial</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 30px;max-width:640px;">La estructura que quiero construir es la siguiente:</p>
+
+    <!-- MARCA MADRE -->
+    <div style="max-width:560px;margin:0 auto;background:#B5542C;color:#FCF3E7;border-radius:16px;padding:22px 26px;text-align:center;box-shadow:0 22px 44px -30px rgba(120,52,20,.75);">
+      <div style="display:flex;align-items:center;justify-content:center;gap:11px;">
+        <span style="width:32px;height:32px;border-radius:9px;background:rgba(252,243,231,.16);display:flex;align-items:center;justify-content:center;color:#FCF3E7;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.47 5.49 A8.5 8.5 0 1 0 17.47 18.51" stroke-width="3" stroke-linecap="round"/><path d="M14.76 8.71 A4.3 4.3 0 1 0 14.76 15.29" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(20px,2.6vw,24px);letter-spacing:.01em;">Contigo en el Camino</span>
+      </div>
+      <div style="font-size:12.5px;line-height:1.5;color:#F3D9C9;margin-top:8px;">Movimiento y marca madre independiente · Fundado por Isaac Farca</div>
+    </div>
+
+    <div style="width:2px;height:30px;background:#D8CBAE;margin:0 auto;"></div>
+
+    <!-- 5 ELEMENTOS -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;align-items:stretch;">
+      <!-- Comunidad -->
+      <div style="background:#FBF6EC;border:1px solid #E2D9C6;border-top:4px solid #B5542C;border-radius:6px 6px 13px 13px;padding:18px 18px 20px;">
+        <div style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#8F3F1F;font-weight:700;">Comunidad</div>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:17px;line-height:1.22;color:#2B2216;margin:4px 0 0;">Contigo en el Camino</h3>
+      </div>
+      <!-- Biblioteca -->
+      <div style="background:#FBF6EC;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:6px 6px 13px 13px;padding:18px 18px 20px;">
+        <div style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#5B6B4A;font-weight:700;">Biblioteca</div>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:17px;line-height:1.22;color:#2B2216;margin:4px 0 0;">Acompañar</h3>
+      </div>
+      <!-- Vivir en Grande -->
+      <div style="background:#FBF6EC;border:1px solid #E2D9C6;border-top:4px solid #C7982F;border-radius:6px 6px 13px 13px;padding:18px 18px 20px;">
+        <div style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#98701C;font-weight:700;">Club</div>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:17px;line-height:1.22;color:#2B2216;margin:4px 0 0;">Vivir en Grande</h3>
+      </div>
+      <!-- Red de especialistas -->
+      <div style="background:#FBF6EC;border:1px solid #E2D9C6;border-top:4px solid #4C5A6B;border-radius:6px 6px 13px 13px;padding:18px 18px 20px;">
+        <div style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#2F3A47;font-weight:700;">Red de</div>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:17px;line-height:1.22;color:#2B2216;margin:4px 0 0;">Especialistas</h3>
+      </div>
+      <!-- Visiting Angels (aliado externo · tarjeta punteada) -->
+      <div style="background:#F3EBDA;border:1.5px dashed #B08968;border-radius:13px;padding:18px 18px 20px;">
+        <div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;background:#B08968;color:#F7EFE1;padding:3px 8px;border-radius:4px;display:inline-block;font-weight:600;">Aliado fundador</div>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:17px;line-height:1.22;color:#2B2216;margin:8px 0 0;">Visiting Angels Del Valle</h3>
+      </div>
+    </div>
+
+    <!-- CONECTOR TRANSVERSAL: recoge de los cinco elementos por igual -->
+    <div style="height:22px;"></div>
+    <div style="border-top:1.5px dashed #C9B48D;"></div>
+    <div style="height:20px;border-left:1.5px dashed #C9B48D;width:0;margin:0 auto;"></div>
+
+    <!-- LABORATORIO (capa transversal · tarjeta angosta centrada) -->
+    <div style="max-width:430px;margin:0 auto;border:1.5px dashed #C9B48D;border-radius:14px;background:rgba(247,240,225,.5);padding:15px 22px;display:flex;align-items:center;gap:11px;">
+      <span style="width:32px;height:32px;border-radius:9px;border:1.5px dashed #C9B48D;background:#F3EBDA;display:flex;align-items:center;justify-content:center;color:#9C6B3F;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.5L5.5 18a1.6 1.6 0 0 0 1.4 2.4h10.2A1.6 1.6 0 0 0 18.5 18L14 9.5V3"/><path d="M7.5 14h9"/></svg></span>
+      <div>
+        <div style="font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:700;">Capa transversal · interna</div>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:16px;line-height:1.2;color:#2B2216;margin:2px 0 0;">Laboratorio del Buen Envejecer</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section style="border-top:1px solid #E7DECB;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(34px,5vw,54px) 22px clamp(46px,6vw,72px);">
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <span style="font-family:'Source Serif 4',serif;font-size:15px;color:#B5542C;font-weight:600;letter-spacing:.04em;">10</span>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);line-height:1.18;color:#2B2216;margin:0;text-wrap:pretty;">La pregunta que orientará mis decisiones</h2>
+    </div>
+    <div style="width:46px;height:3px;background:#B5542C;margin:18px 0 22px;"></div>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0 0 16px;">Cada nueva iniciativa deberá responder tres preguntas:</p>
+    <ol style="margin:0 0 20px;padding:0;list-style:none;counter-reset:q;display:flex;flex-direction:column;gap:14px;">
+      <li style="display:flex;gap:14px;align-items:flex-start;"><span style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#F1E2D6;border:1.5px solid #E4CDBB;display:flex;align-items:center;justify-content:center;font-family:'Source Serif 4',serif;font-size:14px;color:#8F3F1F;">1</span><span style="font-size:clamp(16px,2vw,17.5px);line-height:1.65;color:#463c2d;">¿Contribuye al bienestar, la autonomía o la dignidad de los adultos mayores?</span></li>
+      <li style="display:flex;gap:14px;align-items:flex-start;"><span style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#F1E2D6;border:1.5px solid #E4CDBB;display:flex;align-items:center;justify-content:center;font-family:'Source Serif 4',serif;font-size:14px;color:#8F3F1F;">2</span><span style="font-size:clamp(16px,2vw,17.5px);line-height:1.65;color:#463c2d;">¿Ayuda a sus familias a comprender, prepararse, actuar o sostener el cuidado?</span></li>
+      <li style="display:flex;gap:14px;align-items:flex-start;"><span style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#F1E2D6;border:1.5px solid #E4CDBB;display:flex;align-items:center;justify-content:center;font-family:'Source Serif 4',serif;font-size:14px;color:#8F3F1F;">3</span><span style="font-size:clamp(16px,2vw,17.5px);line-height:1.65;color:#463c2d;">¿Fortalece el ecosistema sin comprometer su confianza e independencia?</span></li>
+    </ol>
+    <p style="font-size:clamp(16px,2vw,17.5px);line-height:1.78;color:#463c2d;margin:0;">Cuando una idea cumpla estos criterios, podrá encontrar un lugar dentro del mapa.</p>
+
+    <!-- Declaración de rumbo -->
+    <div style="background:#B5542C;color:#FCF3E7;border-radius:18px;padding:clamp(28px,4.5vw,44px);margin-top:34px;position:relative;overflow:hidden;">
+      <div style="position:absolute;width:180px;height:180px;border:1px solid rgba(247,239,225,.16);border-radius:50%;top:-60px;right:-40px;"></div>
+      <div style="position:relative;">
+        <div style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#F0C9B4;font-weight:600;">Declaración de rumbo</div>
+        <p style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(18px,2.6vw,22px);line-height:1.55;color:#FCF3E7;margin:16px 0 0;text-wrap:pretty;">Contigo en el Camino es un ecosistema que quiero construir para reunir a familias, adultos mayores, especialistas y organizaciones interesadas en vivir el envejecimiento con mayor conciencia y preparación. A través de comunidad, conocimiento, experiencias y acompañamiento profesional, busco contribuir a que las personas mayores vivan esta etapa con la mayor plenitud posible y que sus familias cuenten con el respaldo necesario para acompañarlas sin dejar de vivir su propia vida.</p>
+      </div>
+    </div>
+
+    <!-- Firma -->
+    <div style="margin-top:30px;display:flex;align-items:center;gap:13px;">
+      <div style="width:40px;height:1px;background:#C9B48D;"></div>
+      <div style="font-family:'Source Serif 4',serif;font-size:15.5px;color:#2B2216;line-height:1.4;">Isaac Farca Luna, hijo de Mercedes Luna <span style="color:#B5542C;">♥</span><br><span style="font-size:13.5px;color:#8A7C68;font-style:italic;">Fundador, Contigo en el Camino</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer style="background:#2B2216;color:#C9BCA6;">
+  <div style="max-width:1120px;margin:0 auto;padding:clamp(44px,6vw,68px) 22px 34px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;align-items:start;">
+      <div style="max-width:360px;">
+        <a href="/" style="display:flex;align-items:center;gap:11px;color:inherit;">
+          <span style="width:34px;height:34px;border-radius:9px;background:#B5542C;display:flex;align-items:center;justify-content:center;color:#F1E2D6;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.47 5.49 A8.5 8.5 0 1 0 17.47 18.51" stroke-width="3" stroke-linecap="round"/><path d="M14.76 8.71 A4.3 4.3 0 1 0 14.76 15.29" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span style="font-family:'Source Serif 4',serif;font-weight:600;font-size:19px;color:#F3EBDA;">Contigo en el Camino</span>
+        </a>
+        <p style="font-size:14px;line-height:1.65;color:#A79A85;margin:16px 0 0;">Comunidad y orientación para familias que acompañan el envejecimiento de quienes aman.</p>
+        <div style="font-family:'Source Serif 4',serif;font-style:italic;font-size:12.5px;color:#A79A85;display:flex;align-items:center;gap:6px;margin-top:16px;">Inspirado por el amor a mi mamá <svg width="13" height="13" viewBox="0 0 24 24" fill="#B5542C" style="flex-shrink:0;"><path d="M12 20.5s-6.6-4.2-6.6-9.1A3.4 3.4 0 0 1 12 7.2a3.4 3.4 0 0 1 6.6 4.2c0 4.9-6.6 9.1-6.6 9.1Z"/></svg></div>
+      </div>
+
+      <div style="margin-left:clamp(0px,3vw,44px);">
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;">Explorar</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="/biblioteca/" style="color:#C9BCA6;font-size:14.5px;">Biblioteca Acompañar</a>
+          <a href="/reddeespecialistas/" style="color:#C9BCA6;font-size:14.5px;">Red de Especialistas</a>
+          <a href="/#comunidad" style="color:#C9BCA6;font-size:14.5px;">Únete a la comunidad</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMEsmxqLFkJIA10qj5JN0fry3QqcVoPK8LX2yT4V8ZnS8n0g/viewform" target="_blank" rel="noopener noreferrer" style="color:#C9BCA6;font-size:14.5px;">Responde la encuesta</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;">Contacto</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://wa.me/525520780577?text=Hola%2C%20vengo%20del%20sitio%20de%20Contigo%20en%20el%20Camino%20y%20quisiera%20saber%20m%C3%A1s%20sobre%20la%20comunidad." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;color:#C9BCA6;font-size:14.5px;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.13.24-3.68-.77-3.1-1.22-5.08-4.38-5.24-4.58-.15-.2-1.25-1.66-1.25-3.17s.79-2.25 1.07-2.56c.28-.31.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.68.52.24.6.83 2.06.9 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.36 1.46.3.15.47.13.64-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.28.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.72-.17 1.4Z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:hola@contigoenelcamino.com" style="display:inline-flex;align-items:center;gap:9px;color:#C9BCA6;font-size:14.5px;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></svg>
+            hola@contigoenelcamino.com
+          </a>
+        </div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;margin-top:28px;">Síguenos</div>
+        <div style="display:flex;gap:11px;">
+          <a href="https://www.facebook.com/contigoenelcaminomx/" target="_blank" rel="noopener" aria-label="Facebook" style="width:40px;height:40px;border-radius:10px;border:1px solid #4A4132;background:#3A3123;display:flex;align-items:center;justify-content:center;color:#C9BCA6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5h2.2V5.3h-2.6c-2 0-3.5 1.4-3.5 3.6v1.9H8v3.1h2.1V21h3.3v-7.1h2.3l.4-3.1h-2.7V9.1c0-.5.3-.6.6-.6Z"/></svg></a>
+          <a href="https://www.instagram.com/contigoenelcaminomx/" target="_blank" rel="noopener" aria-label="Instagram" style="width:40px;height:40px;border-radius:10px;border:1px solid #4A4132;background:#3A3123;display:flex;align-items:center;justify-content:center;color:#C9BCA6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+        <div style="font-size:12px;color:#7d715d;margin-top:12px;line-height:1.5;">Pronto en más redes.</div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;">
+        <a href="/carta-de-navegacion/" style="display:inline-flex;align-items:center;gap:9px;font-family:'Source Serif 4',serif;font-style:italic;font-size:13px;color:#A79A85;line-height:1.4;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B5542C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg>
+          Carta de Navegación
+        </a>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:40px;padding-top:22px;border-top:1px solid #43392A;">
+      <div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="/uploads/Del-Valle-grafito.png" width="26" height="26" style="display:block;flex-shrink:0;filter:brightness(0) invert(1);opacity:.55;" alt="Visiting Angels Del Valle">
+        <span style="font-size:11.5px;color:#8A7C68;">Aliado fundador · Visiting Angels Del Valle</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+<script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var t=document.getElementById('nav-toggle');document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});document.addEventListener('click',function(e){if(t&&t.checked&&!n.contains(e.target))t.checked=false;});})();</script>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6H9QE31MJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X6H9QE31MJ');
+    // Seguimiento de eventos de conversion (delegado, sin tocar cada boton)
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var ev = null;
+      if (a.hasAttribute('data-pdf')) {
+        var p = location.pathname;
+        ev = p.indexOf('5-dimensiones') > -1 ? 'click_descarga_guia_5dimensiones'
+           : p.indexOf('hoy-puedes') > -1 ? 'click_descarga_guia_hoy_puedes'
+           : (p.indexOf('hermanos') > -1 || p.indexOf('no-depende') > -1) ? 'click_descarga_guia_decision_familiar'
+           : 'click_descarga_guia_acompanamiento';
+      } else if (href.indexOf('1FAIpQLSdMEsmxq') > -1) {
+        ev = 'click_encuesta';
+      } else if (href.indexOf('1FAIpQLSf16fq') > -1) {
+        ev = 'click_unirme_club';
+      } else if (href.indexOf('wa.me/525579405463') > -1) {
+        ev = 'click_whatsapp_vadv';
+      } else if (href.indexOf('wa.me/525520780577') > -1) {
+        ev = (a.closest && a.closest('footer')) ? 'click_whatsapp_footer' : 'click_whatsapp_comunidad';
+      }
+      if (ev && typeof gtag === 'function') gtag('event', ev);
+    }, true);
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hoy puedes más de lo que crees | Club Vivir en Grande</title>
+  <meta name="description" content="Una invitación para adultos mayores a retomar lo que dejaron de hacer y atreverse a algo nuevo. Del Club Vivir en Grande de Contigo en el Camino.">
+  <meta property="og:title" content="Hoy puedes más de lo que crees">
+  <meta property="og:description" content="Retomar lo que dejaste de hacer, ir despacio, y atreverte a algo nuevo. Una pieza del Club Vivir en Grande.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Contigo en el Camino">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://contigoenelcamino.com/vivir-en-grande/hoy-puedes-mas-de-lo-que-crees/">
+  <meta property="og:image" content="https://contigoenelcamino.com/og/og-vivir-en-grande.png">
+  <meta property="og:image:secure_url" content="https://contigoenelcamino.com/og/og-vivir-en-grande.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hoy puedes más de lo que crees — Club Vivir en Grande">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hoy puedes más de lo que crees">
+  <meta name="twitter:description" content="Retomar lo que dejaste de hacer, ir despacio, y atreverte a algo nuevo. Una pieza del Club Vivir en Grande.">
+  <meta name="twitter:image" content="https://contigoenelcamino.com/og/og-vivir-en-grande.png">
+  <meta name="twitter:image:alt" content="Hoy puedes más de lo que crees — Club Vivir en Grande">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://contigoenelcamino.com/vivir-en-grande/hoy-puedes-mas-de-lo-que-crees/">
+  <style>
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;background:#F3EBDA;color:#463c2d;font-family:'Assistant',sans-serif;-webkit-font-smoothing:antialiased;}
+  a{color:#98701C;text-decoration:none;} a:hover{color:#75540f;}
+  .nav-bar{position:sticky;top:0;z-index:50;background:rgba(243,235,218,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #E2D9C6;transition:background .28s,box-shadow .28s,border-color .28s;}
+  .nav-bar.scrolled{background:rgba(246,239,224,.98);box-shadow:0 6px 22px -12px rgba(60,45,25,.34);border-bottom-color:#D8CBAE;}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:padding .28s;}
+  .nav-desktop{display:flex;align-items:center;gap:22px;}
+  .nav-link{color:#5f5442;font-weight:600;font-size:14.5px;padding:5px 0;border-bottom:2.5px solid transparent;transition:color .18s,border-color .18s;white-space:nowrap;}
+  .nav-link.com:hover{color:#B5542C;border-bottom-color:#E8B79E;}
+  .nav-link.bib:hover{color:#5B6B4A;border-bottom-color:#AEB99C;}
+  .nav-link.vg:hover{color:#98701C;border-bottom-color:#E4C878;}
+  .nav-link.esp:hover{color:#2F3A47;border-bottom-color:#8794A3;}
+  .nav-link.vg.is-active{color:#98701C;font-weight:700;border-bottom-color:#98701C;}
+  .nav-aliado{display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border:1.5px dotted #B08968;border-radius:999px;color:#6F4A28;font-weight:600;font-size:12.5px;white-space:nowrap;transition:background .18s;}
+  .nav-aliado:hover{background:#EFE6D3;}
+  .nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;}
+  .nav-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid #D8CBAE;border-radius:9px;background:#F7F0E1;cursor:pointer;color:#5f5442;flex-shrink:0;}
+  .nav-mobile{display:none;border-top:1px solid #E2D9C6;background:#F3EBDA;padding:8px 15px 16px;flex-direction:column;gap:3px;}
+  .nav-mobile a{display:flex;align-items:center;gap:13px;padding:15px 12px;border-radius:10px;color:#463C2D;font-weight:600;font-size:16.5px;}
+  @media(max-width:1039px){
+    .nav-desktop{display:none;} .nav-burger{display:flex;}
+    .nav-toggle:checked ~ .nav-mobile{display:flex;}
+    .nav-inner{padding:7px 15px;}
+    .nav-badge{width:28px !important;height:28px !important;} .nav-badge svg{width:15px;height:15px;}
+    .nav-title{font-size:15.5px !important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Hoy puedes más de lo que crees",
+        "description": "Una invitación para adultos mayores a retomar lo que dejaron de hacer y atreverse a algo nuevo. Del Club Vivir en Grande de Contigo en el Camino.",
+        "image": "https://contigoenelcamino.com/og/og-vivir-en-grande.png",
+        "inLanguage": "es-MX",
+        "datePublished": "2026-08-13T00:00:00-06:00",
+        "dateModified": "2026-08-13T00:00:00-06:00",
+        "author": [
+          { "@type": "Person", "name": "Mercedes Luna" },
+          { "@type": "Person", "name": "Isaac Farca Luna" }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Contigo en el Camino",
+          "url": "https://contigoenelcamino.com/",
+          "logo": { "@type": "ImageObject", "url": "https://contigoenelcamino.com/favicon.svg" }
+        },
+        "isPartOf": {
+          "@type": "CollectionPage",
+          "name": "Club Vivir en Grande",
+          "url": "https://contigoenelcamino.com/vivir-en-grande/"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://contigoenelcamino.com/vivir-en-grande/hoy-puedes-mas-de-lo-que-crees/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://contigoenelcamino.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Club Vivir en Grande", "item": "https://contigoenelcamino.com/vivir-en-grande/" },
+          { "@type": "ListItem", "position": 3, "name": "Hoy puedes más de lo que crees", "item": "https://contigoenelcamino.com/vivir-en-grande/hoy-puedes-mas-de-lo-que-crees/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<div id="top" style="background:#F3EBDA;overflow-x:clip;">
+<header class="nav-bar" id="site-nav">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1">
+  <div class="nav-inner">
+    <a href="/" style="display:flex;align-items:center;gap:11px;color:inherit;">
+      <span class="nav-badge" style="width:34px;height:34px;border-radius:9px;background:#B5542C;display:flex;align-items:center;justify-content:center;color:#F1E2D6;flex-shrink:0;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.47 5.49 A8.5 8.5 0 1 0 17.47 18.51" stroke-width="3" stroke-linecap="round"/><path d="M14.76 8.71 A4.3 4.3 0 1 0 14.76 15.29" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <span class="nav-title" style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;letter-spacing:-.01em;">Contigo en el Camino</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Principal">
+      <a class="nav-link com" href="/#comunidad">Comunidad</a>
+      <a class="nav-link bib" href="/biblioteca/">Biblioteca</a>
+      <a class="nav-link vg is-active" href="/vivir-en-grande/">Vivir en Grande</a>
+      <a class="nav-link esp" href="/reddeespecialistas/">Especialistas</a>
+      <span style="width:1px;height:22px;background:#D8CBAE;"></span>
+      <a class="nav-aliado" href="/#aliado" title="Visiting Angels Del Valle — aliado fundador"><span style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#9C6B3F;font-weight:700;">Aliado</span>Visiting Angels Del Valle</a>
+    </nav>
+    <label class="nav-burger" for="nav-toggle" aria-label="Abrir menú"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+  </div>
+  <nav class="nav-mobile" aria-label="Menú móvil">
+    <a href="/#comunidad"><span style="width:4px;height:24px;border-radius:2px;background:#B5542C;flex-shrink:0;"></span>Comunidad</a>
+    <a href="/biblioteca/"><span style="width:4px;height:24px;border-radius:2px;background:#7E8E6C;flex-shrink:0;"></span>Biblioteca</a>
+    <a href="/vivir-en-grande/" style="background:rgba(199,152,47,.13);color:#98701C;font-weight:700;"><span style="width:4px;height:24px;border-radius:2px;background:#98701C;flex-shrink:0;"></span>Club Vivir en Grande</a>
+    <a href="/reddeespecialistas/"><span style="width:4px;height:24px;border-radius:2px;background:#4C5A6B;flex-shrink:0;"></span>Red de Especialistas</a>
+    <a class="nav-aliado-m" href="/#aliado" style="gap:9px;margin-top:8px;padding:13px 14px;border:1.5px dotted #B08968;color:#6F4A28;font-size:14.5px;"><span style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#9C6B3F;font-weight:700;">Aliado</span>Visiting Angels Del Valle</a>
+  </nav>
+</header>
+
+<!-- ============================ ENCABEZADO / HERO ============================ -->
+<section style="background:#F6EDD5;border-bottom:1px solid #EAD9AE;">
+  <div style="max-width:760px;margin:0 auto;padding:clamp(30px,4vw,46px) 24px clamp(40px,5vw,58px);">
+    <nav style="display:flex;align-items:center;gap:9px;font-size:14.5px;color:#8A7C68;margin-bottom:26px;" aria-label="Ruta de navegación">
+      <a href="/vivir-en-grande/" style="color:#98701C;font-weight:600;">Club Vivir en Grande</a>
+      <span style="color:#D4BE7E;">/</span>
+      <span>Guía</span>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:12px;">
+      <span style="width:42px;height:42px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;flex-shrink:0;">
+        <svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+      </span>
+      <span style="font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:700;">Club Vivir en Grande</span>
+    </div>
+
+    <h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(38px,6vw,58px);line-height:1.06;letter-spacing:-.015em;color:#2B2216;margin:22px 0 0;text-wrap:pretty;">Hoy puedes más de lo que crees</h1>
+    <div style="width:66px;height:4px;background:#C7982F;border-radius:2px;margin:26px 0 0;"></div>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px 24px;margin-top:28px;">
+      <div style="display:flex;align-items:center;gap:9px;font-size:14.5px;color:#8A7358;">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>
+        <span>Publicada el 13 de agosto de 2026</span>
+      </div>
+      <!-- AZURE-PDF-PLACEHOLDER · reemplazar href con la URL del PDF cuando el descargable esté listo -->
+      <a href="https://bibliotecacontigo.blob.core.windows.net/biblioteca/club/guia-vivir-en-grande-hoy-puedes-mas-de-lo-que-crees.pdf" download target="_blank" rel="noopener noreferrer" data-pdf="hoy-puedes-mas-de-lo-que-crees" style="display:inline-flex;align-items:center;gap:10px;color:#75540f;font-weight:700;font-size:16px;padding:13px 24px;border-radius:10px;border:1.8px solid #C7982F;background:#FBF4E2;white-space:nowrap;">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 4 5-4M5 21h14"/></svg>
+        Descargar en PDF
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CUERPO ============================ -->
+<article style="max-width:700px;margin:0 auto;padding:clamp(44px,6vw,68px) 24px clamp(56px,8vw,88px);">
+
+  <!-- 1 · APERTURA -->
+  <p style="font-size:clamp(23px,3vw,27px);line-height:1.6;font-weight:500;color:#3a3120;margin:0;text-wrap:pretty;">Hay una idea que se repite mucho entre quienes tienen más años: “ya estoy muy grande para eso.” Para caminar más. Para aprender algo nuevo. Para volver a lo que antes te gustaba hacer.</p>
+  <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:26px 0 0;text-wrap:pretty;">Esa idea se siente como un hecho. Pero casi siempre es solo una costumbre — algo que se dejó de intentar, no algo que se perdió para siempre.</p>
+
+  <!-- 2 -->
+  <div style="margin-top:clamp(52px,7vw,76px);">
+    <div style="width:48px;height:4px;background:#C7982F;border-radius:2px;margin-bottom:20px;"></div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(27px,3.8vw,35px);line-height:1.16;color:#2B2216;margin:0;text-wrap:pretty;">La fuerza cambia. La confianza es otra cosa.</h2>
+    <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:24px 0 0;text-wrap:pretty;">Es cierto que el cuerpo y la memoria cambian con los años. Eso es real, y no hay que fingir que no pasa. Pero perder confianza no es lo mismo que perder capacidad.</p>
+    <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:22px 0 0;text-wrap:pretty;">Muchas veces, lo primero que se pierde no es lo que puedes hacer — es la costumbre de intentarlo. Y entre menos se intenta, más fuerte se siente la idea de que ya no se puede.</p>
+  </div>
+
+  <!-- 3 -->
+  <div style="margin-top:clamp(52px,7vw,76px);">
+    <div style="width:48px;height:4px;background:#C7982F;border-radius:2px;margin-bottom:20px;"></div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(27px,3.8vw,35px);line-height:1.16;color:#2B2216;margin:0;text-wrap:pretty;">Algo que dejaste de hacer, no algo que perdiste</h2>
+    <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:24px 0 0;text-wrap:pretty;">Piensa en algo que antes te gustaba y dejaste de hacer. Tal vez no fue porque ya no podías. Fue por costumbre. Por miedo a no lograrlo como antes. O porque nadie te lo volvió a proponer.</p>
+    <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:22px 0 0;text-wrap:pretty;">Esa cosa sigue ahí. Esperando que la intentes otra vez, aunque sea distinto a como la recuerdas.</p>
+  </div>
+
+  <!-- 4 -->
+  <div style="margin-top:clamp(52px,7vw,76px);">
+    <div style="width:48px;height:4px;background:#C7982F;border-radius:2px;margin-bottom:20px;"></div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(27px,3.8vw,35px);line-height:1.16;color:#2B2216;margin:0;text-wrap:pretty;">No tienes que empezar solo</h2>
+    <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:24px 0 0;text-wrap:pretty;">Si te cuesta trabajo dar el primer paso, invita a alguien contigo — un amigo, un hijo, alguien de la familia. Te ayuda a animarte, y de paso recuperas algo igual de valioso: el tiempo compartido con esa persona.</p>
+  </div>
+
+  <!-- 5 -->
+  <div style="margin-top:clamp(52px,7vw,76px);">
+    <div style="width:48px;height:4px;background:#C7982F;border-radius:2px;margin-bottom:20px;"></div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(27px,3.8vw,35px);line-height:1.16;color:#2B2216;margin:0;text-wrap:pretty;">Ve despacio, no de golpe</h2>
+    <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:24px 0 0;text-wrap:pretty;">No tiene que ser con la misma fuerza ni el mismo ritmo de antes. Empieza pequeño. Lo que importa no es la intensidad con la que regresas, es que regresas.</p>
+  </div>
+
+  <!-- 6 -->
+  <div style="margin-top:clamp(52px,7vw,76px);">
+    <div style="width:48px;height:4px;background:#C7982F;border-radius:2px;margin-bottom:20px;"></div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(27px,3.8vw,35px);line-height:1.16;color:#2B2216;margin:0;text-wrap:pretty;">Y atrévete también a algo nuevo</h2>
+    <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:24px 0 0;text-wrap:pretty;">No tiene que ser solo lo que ya conocías. Puede ser algo que siempre quisiste intentar y nunca hiciste. Diviértete. Dale pelea.</p>
+  </div>
+
+  <!-- 7 · CIERRE -->
+  <div style="margin-top:clamp(52px,7vw,76px);">
+    <div style="width:48px;height:4px;background:#C7982F;border-radius:2px;margin-bottom:20px;"></div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(27px,3.8vw,35px);line-height:1.16;color:#2B2216;margin:0;text-wrap:pretty;">No se trata de demostrarle nada a nadie</h2>
+    <p style="font-size:clamp(20px,2.5vw,23px);line-height:1.85;color:#463c2d;margin:24px 0 0;text-wrap:pretty;">Esto no es para probarle algo a tu familia, ni a nadie más. Es para que tú mismo descubras, otra vez, todo lo que todavía puedes hacer.</p>
+
+    <div style="margin-top:30px;background:#F6EDD5;border-left:5px solid #C7982F;border-radius:0 14px 14px 0;padding:clamp(26px,3.5vw,34px) clamp(24px,3.5vw,36px);">
+      <p style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(22px,2.9vw,26px);line-height:1.55;color:#2B2216;margin:0;text-wrap:pretty;">Elige una sola cosa esta semana. Algo pequeño, con alguien si quieres compañía, o algo completamente nuevo si te atreves. Y hazlo, aunque haya pasado tiempo desde la última vez.</p>
+    </div>
+  </div>
+
+  <!-- FIRMA (coautoría) -->
+  <div style="margin-top:clamp(48px,6vw,64px);display:flex;align-items:center;gap:15px;">
+    <div style="width:44px;height:1px;background:#B5542C;flex-shrink:0;"></div>
+    <div style="font-family:'Source Serif 4',serif;font-size:17.5px;color:#2B2216;line-height:1.45;">Mercedes Luna e Isaac Farca Luna, hijo de Mercedes Luna <span style="color:#B5542C;">♥</span><br><span style="font-size:15px;color:#8A7C68;font-style:italic;">Fundador, Contigo en el Camino</span></div>
+  </div>
+
+  <!-- DESCARGA PDF -->
+  <div style="margin-top:clamp(44px,6vw,60px);background:#F6EDD5;border:1px solid #EAD9AE;border-radius:16px;padding:clamp(30px,4vw,40px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3vw,28px);line-height:1.2;color:#2B2216;margin:0;">Llévate esta guía contigo</h2>
+    <p style="font-size:clamp(18px,2.2vw,20px);line-height:1.6;color:#5f5442;margin:12px auto 26px;max-width:460px;">Descárgala en PDF para leerla con calma, imprimirla o compartirla con quien quieras.</p>
+    <!-- AZURE-PDF-PLACEHOLDER · reemplazar href con la URL del PDF cuando el descargable esté listo -->
+    <a href="https://bibliotecacontigo.blob.core.windows.net/biblioteca/club/guia-vivir-en-grande-hoy-puedes-mas-de-lo-que-crees.pdf" download target="_blank" rel="noopener noreferrer" data-pdf="hoy-puedes-mas-de-lo-que-crees" style="display:inline-flex;align-items:center;gap:11px;background:#C7982F;color:#FFFBF0;font-weight:700;font-size:clamp(17px,2vw,19px);padding:17px 34px;border-radius:12px;box-shadow:0 16px 30px -14px rgba(152,112,28,.7);">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 4 5-4M5 21h14"/></svg>
+      Descargar guía en PDF
+    </a>
+  </div>
+
+</article>
+
+<!-- ============================ FOOTER ============================ -->
+<footer style="background:#2B2216;color:#C9BCA6;">
+  <div style="max-width:1120px;margin:0 auto;padding:clamp(44px,6vw,68px) 22px 34px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;align-items:start;">
+      <div style="max-width:360px;">
+        <a href="/" style="display:flex;align-items:center;gap:11px;color:inherit;">
+          <span style="width:34px;height:34px;border-radius:9px;background:#B5542C;display:flex;align-items:center;justify-content:center;color:#F1E2D6;flex-shrink:0;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.47 5.49 A8.5 8.5 0 1 0 17.47 18.51" stroke-width="3" stroke-linecap="round"/><path d="M14.76 8.71 A4.3 4.3 0 1 0 14.76 15.29" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span style="font-family:'Source Serif 4',serif;font-weight:600;font-size:19px;color:#F3EBDA;">Contigo en el Camino</span>
+        </a>
+        <p style="font-size:14px;line-height:1.65;color:#A79A85;margin:16px 0 0;">Comunidad y orientación para familias que acompañan el envejecimiento de quienes aman.</p>
+        <div style="font-family:'Source Serif 4',serif;font-style:italic;font-size:12.5px;color:#A79A85;display:flex;align-items:center;gap:6px;margin-top:16px;">Inspirado por el amor a mi mamá <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="#B5542C" style="flex-shrink:0;"><path d="M12 20.5s-6.6-4.2-6.6-9.1A3.4 3.4 0 0 1 12 7.2a3.4 3.4 0 0 1 6.6 4.2c0 4.9-6.6 9.1-6.6 9.1Z"/></svg></div>
+      </div>
+
+      <div style="margin-left:clamp(0px,3vw,44px);">
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;">Explorar</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="/vivir-en-grande/" style="color:#C9BCA6;font-size:14.5px;">Club Vivir en Grande</a>
+          <a href="/biblioteca/" style="color:#C9BCA6;font-size:14.5px;">Biblioteca Acompañar</a>
+          <a href="/reddeespecialistas/" style="color:#C9BCA6;font-size:14.5px;">Red de Especialistas</a>
+          <a href="/#comunidad" style="color:#C9BCA6;font-size:14.5px;">Únete a la comunidad</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;">Contacto</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://wa.me/525520780577?text=Hola%2C%20vengo%20del%20sitio%20de%20Contigo%20en%20el%20Camino%20y%20quisiera%20saber%20m%C3%A1s%20sobre%20la%20comunidad." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;color:#C9BCA6;font-size:14.5px;">
+            <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.13.24-3.68-.77-3.1-1.22-5.08-4.38-5.24-4.58-.15-.2-1.25-1.66-1.25-3.17s.79-2.25 1.07-2.56c.28-.31.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.68.52.24.6.83 2.06.9 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.36 1.46.3.15.47.13.64-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.28.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.72-.17 1.4Z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:hola@contigoenelcamino.com" style="display:inline-flex;align-items:center;gap:9px;color:#C9BCA6;font-size:14.5px;">
+            <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></svg>
+            hola@contigoenelcamino.com
+          </a>
+        </div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;margin-top:28px;">Síguenos</div>
+        <div style="display:flex;gap:11px;">
+          <a href="https://www.facebook.com/contigoenelcaminomx/" target="_blank" rel="noopener" aria-label="Facebook" style="width:40px;height:40px;border-radius:10px;border:1px solid #4A4132;background:#3A3123;display:flex;align-items:center;justify-content:center;color:#C9BCA6;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5h2.2V5.3h-2.6c-2 0-3.5 1.4-3.5 3.6v1.9H8v3.1h2.1V21h3.3v-7.1h2.3l.4-3.1h-2.7V9.1c0-.5.3-.6.6-.6Z"/></svg></a>
+          <a href="https://www.instagram.com/contigoenelcaminomx/" target="_blank" rel="noopener" aria-label="Instagram" style="width:40px;height:40px;border-radius:10px;border:1px solid #4A4132;background:#3A3123;display:flex;align-items:center;justify-content:center;color:#C9BCA6;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+        <div style="font-size:12px;color:#7d715d;margin-top:12px;line-height:1.5;">Pronto en más redes.</div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;">
+        <a href="/carta-de-navegacion/" style="display:inline-flex;align-items:center;gap:9px;font-family:'Source Serif 4',serif;font-style:italic;font-size:13px;color:#A79A85;line-height:1.4;">
+          <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B5542C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg>
+          Carta de Navegación
+        </a>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:40px;padding-top:22px;border-top:1px solid #43392A;">
+      <div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="/uploads/Del-Valle-grafito.png" width="26" height="26" style="display:block;flex-shrink:0;filter:brightness(0) invert(1);opacity:.55;" alt="Visiting Angels Del Valle">
+        <span style="font-size:11.5px;color:#8A7C68;">Aliado fundador · Visiting Angels Del Valle</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var t=document.getElementById('nav-toggle');document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});document.addEventListener('click',function(e){if(t&&t.checked&&!n.contains(e.target))t.checked=false;});})();</script>
+
+</body>
+</html>

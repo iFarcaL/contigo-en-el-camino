@@ -1,0 +1,5 @@
+# robots.txt — contigoenelcamino.com
+User-agent: *
+Allow: /
+
+Sitemap: https://contigoenelcamino.com/sitemap.xml

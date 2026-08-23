@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6H9QE31MJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X6H9QE31MJ');
+    // Seguimiento de eventos de conversion (delegado, sin tocar cada boton)
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var ev = null;
+      if (a.hasAttribute('data-pdf')) {
+        var p = location.pathname;
+        ev = p.indexOf('5-dimensiones') > -1 ? 'click_descarga_guia_5dimensiones'
+           : (p.indexOf('hermanos') > -1 || p.indexOf('no-depende') > -1) ? 'click_descarga_guia_decision_familiar'
+           : p.indexOf('moverse') > -1 ? 'click_descarga_guia_moverse_juntos'
+           : 'click_descarga_guia_acompanamiento';
+      } else if (href.indexOf('1FAIpQLSdMEsmxq') > -1) {
+        ev = 'click_encuesta';
+      } else if (href.indexOf('1FAIpQLSf16fq') > -1) {
+        ev = 'click_unirme_club';
+      } else if (href.indexOf('wa.me/525579405463') > -1) {
+        ev = 'click_whatsapp_vadv';
+      } else if (href.indexOf('wa.me/525520780577') > -1) {
+        ev = (a.closest && a.closest('footer')) ? 'click_whatsapp_footer' : 'click_whatsapp_comunidad';
+      }
+      if (ev && typeof gtag === 'function') gtag('event', ev);
+    }, true);
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moverse juntos: cómo acompañar a tu papá o mamá a estar más activo | Biblioteca Acompañar</title>
+  <meta name="description" content="Cómo ayudar a tu papá o mamá a moverse más, sin que se sienta una obligación: dónde empezar, cómo proponerlo, y ejercicios para adultos mayores organizados por tipo, para hacer en casa o con un instructor.">
+  <meta property="og:title" content="Moverse juntos: cómo acompañar a tu papá o mamá a estar más activo">
+  <meta property="og:description" content="Dónde empezar, cómo proponer el movimiento sin que suene a obligación, y ejercicios para adultos mayores para hacer en casa o con un instructor.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Contigo en el Camino">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://contigoenelcamino.com/biblioteca/moverse-juntos/">
+  <meta property="og:image" content="https://contigoenelcamino.com/og/og-guia-moverse-juntos.png">
+  <meta property="og:image:secure_url" content="https://contigoenelcamino.com/og/og-guia-moverse-juntos.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Guía: Moverse juntos — cómo acompañar a tu papá o mamá a estar más activo — Biblioteca Acompañar">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moverse juntos: cómo acompañar a tu papá o mamá a estar más activo">
+  <meta name="twitter:description" content="Dónde empezar, cómo proponer el movimiento sin que suene a obligación, y ejercicios para adultos mayores para hacer en casa o con un instructor.">
+  <meta name="twitter:image" content="https://contigoenelcamino.com/og/og-guia-moverse-juntos.png">
+  <meta name="twitter:image:alt" content="Guía: Moverse juntos — cómo acompañar a tu papá o mamá a estar más activo — Biblioteca Acompañar">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://contigoenelcamino.com/biblioteca/moverse-juntos/">
+  <style>
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;background:#F3EBDA;color:#463c2d;font-family:'Assistant',sans-serif;-webkit-font-smoothing:antialiased;}
+  a{color:#5B6B4A;text-decoration:none;} a:hover{color:#41502f;}
+  .nav-bar{position:sticky;top:0;z-index:50;background:rgba(243,235,218,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #E2D9C6;transition:background .28s,box-shadow .28s,border-color .28s;}
+  .nav-bar.scrolled{background:rgba(246,239,224,.98);box-shadow:0 6px 22px -12px rgba(60,45,25,.34);border-bottom-color:#D8CBAE;}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:padding .28s;}
+  .nav-desktop{display:flex;align-items:center;gap:22px;}
+  .nav-link{color:#5f5442;font-weight:600;font-size:14.5px;padding:5px 0;border-bottom:2.5px solid transparent;transition:color .18s,border-color .18s;white-space:nowrap;}
+  .nav-link:hover{color:#B5542C;border-bottom-color:#E8B79E;}
+  .nav-link.vg:hover{color:#98701C;border-bottom-color:#E4C878;}
+  .nav-link.esp:hover{color:#2F3A47;border-bottom-color:#8794A3;}
+  .nav-link.is-active{color:#5B6B4A;font-weight:700;border-bottom-color:#5B6B4A;}
+  .nav-link.com.is-active{color:#B5542C;border-bottom-color:#B5542C;}
+  .nav-link.vg.is-active{color:#98701C;border-bottom-color:#98701C;}
+  .nav-link.esp.is-active{color:#2F3A47;border-bottom-color:#2F3A47;}
+  .nav-aliado{display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border:1.5px dotted #B08968;border-radius:999px;color:#6F4A28;font-weight:600;font-size:12.5px;white-space:nowrap;transition:background .18s;}
+  .nav-aliado:hover{background:#EFE6D3;}
+  .nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;}
+  .nav-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid #D8CBAE;border-radius:9px;background:#F7F0E1;cursor:pointer;color:#5f5442;flex-shrink:0;}
+  .nav-mobile{display:none;border-top:1px solid #E2D9C6;background:#F3EBDA;padding:8px 15px 16px;flex-direction:column;gap:3px;}
+  .nav-mobile a{display:flex;align-items:center;gap:13px;padding:15px 12px;border-radius:10px;color:#463C2D;font-weight:600;font-size:16.5px;}
+  .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:1039px){
+    .nav-desktop{display:none;} .nav-burger{display:flex;}
+    .nav-toggle:checked ~ .nav-mobile{display:flex;}
+    .nav-inner{padding:7px 15px;}
+    .nav-badge{width:28px !important;height:28px !important;} .nav-badge svg{width:15px;height:15px;}
+    .nav-title{font-size:15.5px !important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  }
+  @media(max-width:719px){
+    .cat-grid{grid-template-columns:1fr;}
+  }
+  </style>
+</head>
+<body>
+<div id="top" style="background:#F3EBDA;overflow-x:clip;">
+<header class="nav-bar" id="site-nav">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1">
+  <div class="nav-inner">
+    <a href="/" style="display:flex;align-items:center;gap:11px;color:inherit;">
+      <span class="nav-badge" style="width:34px;height:34px;border-radius:9px;background:#B5542C;display:flex;align-items:center;justify-content:center;color:#F1E2D6;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.47 5.49 A8.5 8.5 0 1 0 17.47 18.51" stroke-width="3" stroke-linecap="round"/><path d="M14.76 8.71 A4.3 4.3 0 1 0 14.76 15.29" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <span class="nav-title" style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;letter-spacing:-.01em;">Contigo en el Camino</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Principal">
+      <a class="nav-link com" href="/#comunidad">Comunidad</a>
+      <a class="nav-link is-active" href="/biblioteca/">Biblioteca</a>
+      <a class="nav-link vg" href="/vivir-en-grande/">Vivir en Grande</a>
+      <a class="nav-link esp" href="/reddeespecialistas/">Especialistas</a>
+      <span style="width:1px;height:22px;background:#D8CBAE;"></span>
+      <a class="nav-aliado" href="/#aliado" title="Visiting Angels Del Valle — aliado fundador"><span style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#9C6B3F;font-weight:700;">Aliado</span>Visiting Angels Del Valle</a>
+    </nav>
+    <label class="nav-burger" for="nav-toggle" aria-label="Abrir menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+  </div>
+  <nav class="nav-mobile" aria-label="Menú móvil">
+    <a href="/#comunidad"><span style="width:4px;height:24px;border-radius:2px;background:#B5542C;flex-shrink:0;"></span>Comunidad</a>
+    <a href="/biblioteca/" style="background:rgba(126,142,108,.12);color:#5B6B4A;font-weight:700;"><span style="width:4px;height:24px;border-radius:2px;background:#5B6B4A;flex-shrink:0;"></span>Biblioteca</a>
+    <a href="/vivir-en-grande/"><span style="width:4px;height:24px;border-radius:2px;background:#C7982F;flex-shrink:0;"></span>Club Vivir en Grande</a>
+    <a href="/reddeespecialistas/"><span style="width:4px;height:24px;border-radius:2px;background:#4C5A6B;flex-shrink:0;"></span>Red de Especialistas</a>
+    <a class="nav-aliado-m" href="/#aliado" style="gap:9px;margin-top:8px;padding:13px 14px;border:1.5px dotted #B08968;color:#6F4A28;font-size:14.5px;"><span style="font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#9C6B3F;font-weight:700;">Aliado</span>Visiting Angels Del Valle</a>
+  </nav>
+</header>
+
+
+<!-- ============================ ARTÍCULO ============================ -->
+<article style="max-width:760px;margin:0 auto;padding:clamp(28px,4vw,44px) 22px clamp(56px,8vw,92px);">
+
+  <nav style="display:flex;align-items:center;gap:8px;font-size:13px;color:#8A7C68;margin-bottom:26px;" aria-label="Ruta de navegación">
+    <a href="/biblioteca/" style="color:#5B6B4A;font-weight:600;">Biblioteca Acompañar</a>
+    <span style="color:#C4B79E;">/</span>
+    <span>Guía de actividades</span>
+  </nav>
+
+  <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#5B6B4A;font-weight:600;">Biblioteca Acompañar · Guía de actividades — Dimensión Cuerpo</div>
+  <h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(28px,4.4vw,42px);line-height:1.1;letter-spacing:-.01em;color:#2B2216;margin:14px 0 0;text-wrap:pretty;">Moverse juntos: cómo acompañar a tu papá o mamá a estar más activo</h1>
+  <div style="width:60px;height:3px;background:#7E8E6C;margin:24px 0 20px;"></div>
+  <p style="font-family:'Source Serif 4',serif;font-style:italic;font-size:clamp(18px,2.3vw,21px);line-height:1.5;color:#5f5442;margin:0;">Cómo ayudar a tu papá o mamá a moverse más, sin que se sienta una obligación ni un régimen.</p>
+
+  <div style="display:flex;align-items:center;gap:8px;margin-top:18px;font-size:13px;color:#8A7C68;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>
+    <span>Publicada el 30 de julio de 2026</span>
+  </div>
+
+  <!-- AZURE-PDF-PLACEHOLDER · reemplazar href con la URL del PDF en Azure Blob Storage cuando esté lista -->
+  <a href="https://bibliotecacontigo.blob.core.windows.net/biblioteca/guia-contigo-en-el-camino-moverse-juntos.pdf" download target="_blank" rel="noopener noreferrer" data-pdf="moverse-juntos" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;color:#5B6B4A;font-weight:600;font-size:14.5px;padding:11px 20px;border-radius:8px;border:1.6px solid #7E8E6C;background:#EAEEE0;white-space:nowrap;">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 4 5-4M5 21h14"/></svg>
+    Descargar en PDF
+  </a>
+
+  <!-- INTRO -->
+  <div style="margin-top:36px;">
+    <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#5B6B4A;font-weight:600;margin-bottom:9px;">El punto de partida</div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(23px,3.2vw,28px);line-height:1.18;color:#2B2216;margin:0 0 14px;">La pregunta que casi todos nos hacemos</h2>
+    <p style="font-size:clamp(16px,2vw,17px);line-height:1.78;margin:0;">“¿Cómo contribuyo al bienestar de mi papá o mamá?” Es una de las preguntas más comunes entre quienes acompañamos a un ser querido mayor — y una de las más difíciles de responder, porque el bienestar no es una sola cosa. En Contigo en el Camino lo pensamos en cinco dimensiones: <strong style="font-weight:600;color:#2B2216;">Cuerpo, Mente, Emociones, Relaciones y Propósito</strong>. Cada una importa, y cada una tiene su propia forma de cuidarse.</p>
+    <p style="font-size:clamp(16px,2vw,17px);line-height:1.78;margin:18px 0 0;">Esta guía se enfoca en la primera: el <strong style="font-weight:600;color:#2B2216;">Cuerpo</strong> — específicamente, cómo ayudar a tu papá o mamá a moverse más, sin que se sienta una obligación ni un régimen.</p>
+  </div>
+
+  <!-- PULL QUOTE -->
+  <div style="margin:40px 0 0;text-align:center;">
+    <div style="width:44px;height:3px;background:#7E8E6C;margin:0 auto 20px;"></div>
+    <p style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(21px,3.1vw,26px);line-height:1.4;color:#2B2216;margin:0 auto;max-width:560px;text-wrap:pretty;">“Un poco de movimiento siempre es mejor que ninguno.”</p>
+    <div style="width:44px;height:3px;background:#7E8E6C;margin:20px auto 0;"></div>
+  </div>
+
+  <!-- MINI ÍNDICE A/B/C/D -->
+  <div style="margin-top:44px;background:#F7F0E1;border:1px solid #E2D9C6;border-radius:14px;padding:22px 24px;">
+    <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#5B6B4A;font-weight:700;margin-bottom:16px;">Cómo está organizada esta guía</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;">
+      <a href="#seccion-a" style="display:flex;align-items:center;gap:12px;color:inherit;">
+        <span style="width:34px;height:34px;border-radius:9px;background:#7E8E6C;color:#F2F4EC;font-family:'Source Serif 4',serif;font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">A</span>
+        <span style="font-size:14.5px;font-weight:600;color:#3A3226;line-height:1.25;">Dónde está hoy tu papá o mamá</span>
+      </a>
+      <a href="#seccion-b" style="display:flex;align-items:center;gap:12px;color:inherit;">
+        <span style="width:34px;height:34px;border-radius:9px;background:#7E8E6C;color:#F2F4EC;font-family:'Source Serif 4',serif;font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">B</span>
+        <span style="font-size:14.5px;font-weight:600;color:#3A3226;line-height:1.25;">Cómo empezar la conversación</span>
+      </a>
+      <a href="#seccion-c" style="display:flex;align-items:center;gap:12px;color:inherit;">
+        <span style="width:34px;height:34px;border-radius:9px;background:#7E8E6C;color:#F2F4EC;font-family:'Source Serif 4',serif;font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">C</span>
+        <span style="font-size:14.5px;font-weight:600;color:#3A3226;line-height:1.25;">Actividades y ejercicios</span>
+      </a>
+      <a href="#seccion-d" style="display:flex;align-items:center;gap:12px;color:inherit;">
+        <span style="width:34px;height:34px;border-radius:9px;background:#7E8E6C;color:#F2F4EC;font-family:'Source Serif 4',serif;font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">D</span>
+        <span style="font-size:14.5px;font-weight:600;color:#3A3226;line-height:1.25;">Cómo se vuelve estilo de vida</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ SECCIÓN A ============ -->
+  <div id="seccion-a" style="margin-top:56px;scroll-margin-top:80px;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+      <span style="width:48px;height:48px;border-radius:13px;background:#7E8E6C;color:#F2F4EC;font-family:'Source Serif 4',serif;font-size:25px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">A</span>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#5B6B4A;font-weight:600;">Punto de partida</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(23px,3.2vw,28px);line-height:1.15;color:#2B2216;margin:3px 0 0;">¿Dónde está hoy tu papá o mamá?</h2>
+      </div>
+    </div>
+    <p style="font-size:16px;line-height:1.75;margin:0 0 22px;color:#463c2d;">No todos los adultos mayores parten del mismo lugar. Identificar cuál de estas situaciones se parece más a la suya te ayuda a saber por dónde empezar — y también cómo conversarlo, que es el siguiente paso de esta guía.</p>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#F7F0E1;border:1px solid #E2D9C6;border-radius:12px;padding:20px 24px;">
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;margin:0 0 6px;">Ya se mueve, pero de forma esporádica</h3>
+        <p style="font-size:15.5px;line-height:1.7;margin:0;color:#463c2d;">Sale a caminar de vez en cuando, hace algo de actividad, pero sin frecuencia ni intención. Aquí el reto no es motivarlo desde cero — es ayudarlo a que lo esporádico se vuelva costumbre.</p>
+      </div>
+      <div style="background:#F7F0E1;border:1px solid #E2D9C6;border-radius:12px;padding:20px 24px;">
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;margin:0 0 6px;">Ya no quiere salir de casa, se siente inseguro</h3>
+        <p style="font-size:15.5px;line-height:1.7;margin:0;color:#463c2d;">El miedo a caerse, a sentirse cansado en la calle, o simplemente a “hacer el ridículo” moviéndose distinto a como se movía antes, puede hacer que prefiera quedarse en casa. Tiene potencial si se le guía con paciencia — no se trata de empujarlo a salir de inmediato.</p>
+      </div>
+      <div style="background:#F7F0E1;border:1px solid #E2D9C6;border-radius:12px;padding:20px 24px;">
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;margin:0 0 6px;">Tenía actividades favoritas que dejó de hacer</h3>
+        <p style="font-size:15.5px;line-height:1.7;margin:0;color:#463c2d;">Caminar, bailar, alguna disciplina que practicaba — muchos adultos mayores dejaron algo que disfrutaban por falta de tiempo, de compañía, o porque la vida cambió. Aquí la oportunidad es retomarlo. Y si nunca lo probó pero siempre le llamó la atención, ser adulto mayor no significa que ya no pueda intentar algo nuevo.</p>
+      </div>
+      <div style="background:#EAEEE0;border:1px solid #DCE4CE;border-left:3px solid #7E8E6C;border-radius:0 12px 12px 0;padding:20px 24px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5B6B4A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5B6B4A;font-weight:700;">Cuándo acudir a un especialista</span>
+        </div>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;margin:0 0 6px;">Ya tiene dificultades de movimiento</h3>
+        <p style="font-size:15.5px;line-height:1.7;margin:0;color:#463c2d;">Si notas que le cuesta trabajo caminar, mantener el equilibrio, o hay dolor asociado al movimiento, este no es momento de improvisar una rutina por tu cuenta. Aquí lo más responsable es acudir con un especialista — un fisioterapeuta puede evaluar exactamente qué tipo de movimiento es seguro. En la Red de Especialistas y Aliados de Contigo en el Camino iremos sumando profesionales de confianza en esta área.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECCIÓN B ============ -->
+  <div id="seccion-b" style="margin-top:56px;scroll-margin-top:80px;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+      <span style="width:48px;height:48px;border-radius:13px;background:#7E8E6C;color:#F2F4EC;font-family:'Source Serif 4',serif;font-size:25px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">B</span>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#5B6B4A;font-weight:600;">La conversación</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(23px,3.2vw,28px);line-height:1.15;color:#2B2216;margin:3px 0 0;">Cómo empezar la conversación</h2>
+      </div>
+    </div>
+    <p style="font-size:16px;line-height:1.75;margin:0 0 22px;color:#463c2d;">Antes de cualquier actividad, hay una conversación. Cómo la empieces importa tanto como lo que propongas después — y no hay una sola forma correcta de hacerlo. Estas son dos maneras que funcionan, dependiendo de la persona:</p>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#F7F0E1;border:1px solid #E2D9C6;border-left:3px solid #7E8E6C;border-radius:0 12px 12px 0;padding:20px 24px;">
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;margin:0 0 6px;">La invitación directa, entre los dos</h3>
+        <p style="font-size:15.5px;line-height:1.7;margin:0;color:#463c2d;">No es “deberías moverte más”, es “¿te gustaría que fuéramos a caminar el domingo?”. La diferencia es enorme: una suena a diagnóstico, la otra a plan compartido. Empezar por algo que ya disfruta —el jardín, caminar al mercado— hace la invitación todavía más fácil de aceptar.</p>
+      </div>
+      <div style="background:#F7F0E1;border:1px solid #E2D9C6;border-left:3px solid #7E8E6C;border-radius:0 12px 12px 0;padding:20px 24px;">
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;margin:0 0 6px;">Proponer ayuda profesional, sin rodeos</h3>
+        <p style="font-size:15.5px;line-height:1.7;margin:0;color:#463c2d;">A veces la vía más directa es también la más efectiva. Con mi mamá no le di vueltas: le pregunté si le gustaría que viniera un coach a darle una rutina de ejercicio enfocada en adultos mayores los sábados. Dijo que sí de inmediato. No todos necesitan que primero los convenzas de “hacer ejercicio” en abstracto — a veces basta con ofrecerles algo concreto, ya armado, y hecho pensando en ellos específicamente.</p>
+      </div>
+    </div>
+    <div style="margin-top:20px;background:#7E8E6C;color:#F2F4EC;border-radius:14px;padding:clamp(22px,3.5vw,28px) clamp(22px,4vw,32px);box-shadow:0 20px 44px -30px rgba(60,80,45,.7);">
+      <p style="font-family:'Source Serif 4',serif;font-size:clamp(16.5px,2.2vw,19px);line-height:1.55;margin:0;color:#FDFEFB;">En ambos casos, lo que ayuda es <strong style="font-weight:600;">proponer una primera vez, no una rutina de entrada</strong>. Es más fácil decir que sí a “vamos a caminar este sábado” o “que venga el coach este sábado” que a comprometerse con algo indefinido.</p>
+    </div>
+  </div>
+
+  <!-- ============ SECCIÓN C ============ -->
+  <div id="seccion-c" style="margin-top:56px;scroll-margin-top:80px;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+      <span style="width:48px;height:48px;border-radius:13px;background:#7E8E6C;color:#F2F4EC;font-family:'Source Serif 4',serif;font-size:25px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">C</span>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#5B6B4A;font-weight:600;">Actividades y ejercicios</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(23px,3.2vw,28px);line-height:1.15;color:#2B2216;margin:3px 0 0;">Actividades y ejercicios para adultos mayores, de menos a más</h2>
+      </div>
+    </div>
+    <p style="font-size:16px;line-height:1.75;margin:0 0 22px;color:#463c2d;">Aquí está el corazón de esta guía, organizada en las cuatro categorías que recomienda la Organización Mundial de la Salud para personas mayores. Algunas de estas actividades las pueden hacer ustedes dos en casa hoy mismo — para esas, te dejamos cómo. Otras funcionan mejor con una clase o un instructor — para esas, hay opciones para todos los presupuestos, desde clases gratuitas en centros comunitarios hasta estudios especializados.</p>
+
+    <!-- LEYENDA DE LOS DOS TRATAMIENTOS -->
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px;">
+      <div style="display:flex;align-items:center;gap:9px;background:#EAEEE0;border:1px solid #DCE4CE;border-radius:999px;padding:8px 16px 8px 10px;">
+        <span style="width:26px;height:26px;border-radius:7px;background:#7E8E6C;color:#EAEEE0;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.3V20h14V9.3"/><path d="M9.5 20v-5.5h5V20"/></svg></span>
+        <span style="font-size:12.5px;font-weight:700;color:#5B6B4A;">Para hacer en casa</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;background:#EFE6D3;border:1px solid #E4D8BF;border-radius:999px;padding:8px 16px 8px 10px;">
+        <span style="width:26px;height:26px;border-radius:7px;background:#B08968;color:#F3EBDA;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M18.5 20a6.5 6.5 0 0 0-3.2-5.6"/></svg></span>
+        <span style="font-size:12.5px;font-weight:700;color:#6F4A28;">Con clase o instructor</span>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA 1 · AERÓBICO -->
+    <div style="margin-bottom:22px;">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:12px;">
+        <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8A7C68;font-weight:700;">01</span>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:20px;color:#2B2216;margin:0;">Ejercicio aeróbico</h3>
+      </div>
+      <div class="cat-grid">
+        <div style="background:#EAEEE0;border:1px solid #DCE4CE;border-left:3px solid #7E8E6C;border-radius:0 11px 11px 0;padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="width:24px;height:24px;border-radius:6px;background:#7E8E6C;color:#EAEEE0;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.3V20h14V9.3"/></svg></span><span style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#5B6B4A;font-weight:700;">Para hacer en casa o en la cuadra</span></div>
+          <ul style="list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:9px;">
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Caminar</strong> — empiecen con una vuelta a la manzana; con el tiempo, alarguen la ruta o busquen un parque cerca.</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Subir y bajar escalones de forma controlada</strong> — un escalón a la vez, con pasamanos o apoyo cercano, 5 a 10 repeticiones.</li>
+          </ul>
+        </div>
+        <div style="background:#EFE6D3;border:1px solid #E4D8BF;border-left:3px solid #B08968;border-radius:0 11px 11px 0;padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="width:24px;height:24px;border-radius:6px;background:#B08968;color:#F3EBDA;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M18.5 20a6.5 6.5 0 0 0-3.2-5.6"/></svg></span><span style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6F4A28;font-weight:700;">Con clase o instructor</span></div>
+          <div style="font-size:12px;font-style:italic;color:#8A7358;margin-bottom:8px;">Hay opciones desde gratuitas hasta privadas.</div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;">
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Bailar</strong> — salsa, danzón, cumbia, bailes de salón, o zumba adaptada para adultos mayores</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Natación o aquagym</strong> — especialmente bueno si hay dolor articular, por el bajo impacto</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Bicicleta estacionaria</strong> — en casa si ya tienen una, o en un gimnasio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA 2 · FUERZA -->
+    <div style="margin-bottom:22px;">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:12px;">
+        <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8A7C68;font-weight:700;">02</span>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:20px;color:#2B2216;margin:0;">Ejercicios de fuerza</h3>
+      </div>
+      <div class="cat-grid">
+        <div style="background:#EAEEE0;border:1px solid #DCE4CE;border-left:3px solid #7E8E6C;border-radius:0 11px 11px 0;padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="width:24px;height:24px;border-radius:6px;background:#7E8E6C;color:#EAEEE0;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.3V20h14V9.3"/></svg></span><span style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#5B6B4A;font-weight:700;">Para hacer en casa</span></div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;">
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Levantarse y sentarse de una silla</strong> — sin usar las manos si es posible, 8 a 10 repeticiones.</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Lagartijas de pared</strong> — de pie, frente a una pared, manos apoyadas a la altura del pecho: doblar los codos acercando el cuerpo a la pared y volver a estirar, 10 repeticiones.</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Cargar objetos cotidianos</strong> — una bolsa del súper, una maceta chica: levantarla y sostenerla unos segundos, ida y vuelta.</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Bandas elásticas o botellas de agua como peso</strong> — sentado, estirar los brazos hacia adelante o a los lados sosteniendo la banda o la botella, 10 repeticiones.</li>
+          </ul>
+        </div>
+        <div style="background:#EFE6D3;border:1px solid #E4D8BF;border-left:3px solid #B08968;border-radius:0 11px 11px 0;padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="width:24px;height:24px;border-radius:6px;background:#B08968;color:#F3EBDA;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M18.5 20a6.5 6.5 0 0 0-3.2-5.6"/></svg></span><span style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6F4A28;font-weight:700;">Con clase o instructor</span></div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;">
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Pilates suave</strong> o pilates para adultos mayores</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA 3 · EQUILIBRIO -->
+    <div style="margin-bottom:22px;">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:12px;">
+        <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8A7C68;font-weight:700;">03</span>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:20px;color:#2B2216;margin:0;">Ejercicios de equilibrio</h3>
+      </div>
+      <div class="cat-grid">
+        <div style="background:#EAEEE0;border:1px solid #DCE4CE;border-left:3px solid #7E8E6C;border-radius:0 11px 11px 0;padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="width:24px;height:24px;border-radius:6px;background:#7E8E6C;color:#EAEEE0;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.3V20h14V9.3"/></svg></span><span style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#5B6B4A;font-weight:700;">Para hacer en casa</span></div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;">
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Pararse en un pie con apoyo cercano</strong> — sostenido de una silla o pared, 10 segundos por lado.</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Caminar talón-punta</strong> — en línea recta, colocando el talón justo frente a la punta del pie contrario, con apoyo cerca si hace falta.</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Ejercicios posturales</strong> — de pie, apoyado de una silla: llevar los hombros hacia atrás y sostener 5 segundos, repetir 10 veces.</li>
+          </ul>
+        </div>
+        <div style="background:#EFE6D3;border:1px solid #E4D8BF;border-left:3px solid #B08968;border-radius:0 11px 11px 0;padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="width:24px;height:24px;border-radius:6px;background:#B08968;color:#F3EBDA;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M18.5 20a6.5 6.5 0 0 0-3.2-5.6"/></svg></span><span style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6F4A28;font-weight:700;">Con clase o instructor</span></div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;">
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Tai chi</strong> — de las disciplinas más recomendadas para el equilibrio en esta etapa: movimientos lentos, de bajo impacto, con buena evidencia de reducir el riesgo de caídas</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Chi kung</strong> — sigue una lógica similar al tai chi, otra opción a explorar</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Bailes de salón</strong> — también trabajan equilibrio, no solo lo aeróbico</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA 4 · FLEXIBILIDAD -->
+    <div style="margin-bottom:26px;">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:12px;">
+        <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8A7C68;font-weight:700;">04</span>
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:20px;color:#2B2216;margin:0;">Ejercicios de flexibilidad</h3>
+      </div>
+      <div class="cat-grid">
+        <div style="background:#EAEEE0;border:1px solid #DCE4CE;border-left:3px solid #7E8E6C;border-radius:0 11px 11px 0;padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="width:24px;height:24px;border-radius:6px;background:#7E8E6C;color:#EAEEE0;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.3V20h14V9.3"/></svg></span><span style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#5B6B4A;font-weight:700;">Para hacer en casa</span></div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;">
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Estiramientos suaves de brazos y piernas</strong> — sentados, sostener cada estiramiento 15-20 segundos, sin rebotar.</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Movilidad articular</strong> — rotaciones lentas de cuello, hombros, muñecas y tobillos, unas 10 por articulación.</li>
+          </ul>
+        </div>
+        <div style="background:#EFE6D3;border:1px solid #E4D8BF;border-left:3px solid #B08968;border-radius:0 11px 11px 0;padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="width:24px;height:24px;border-radius:6px;background:#B08968;color:#F3EBDA;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M18.5 20a6.5 6.5 0 0 0-3.2-5.6"/></svg></span><span style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#6F4A28;font-weight:700;">Con clase o instructor</span></div>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;">
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Yoga suave</strong> o adaptado para adultos mayores</li>
+            <li style="position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#463c2d;"><span style="position:absolute;left:0;top:9px;width:6px;height:6px;background:#B08968;transform:rotate(45deg);"></span><strong style="font-weight:600;color:#2B2216;">Pilates</strong> — también trabaja flexibilidad, no solo fuerza</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:16px;line-height:1.75;margin:0;color:#463c2d;">No hay que dominar una categoría antes de probar otra, ni hacer las cuatro en la misma semana. Lo que importa es ir probando, con calma, hasta encontrar lo que realmente disfruta.</p>
+  </div>
+
+  <!-- ============ SECCIÓN D ============ -->
+  <div id="seccion-d" style="margin-top:56px;scroll-margin-top:80px;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+      <span style="width:48px;height:48px;border-radius:13px;background:#7E8E6C;color:#F2F4EC;font-family:'Source Serif 4',serif;font-size:25px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">D</span>
+      <div>
+        <div style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#5B6B4A;font-weight:600;">Que se vuelva hábito</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(23px,3.2vw,28px);line-height:1.15;color:#2B2216;margin:3px 0 0;">Cómo se vuelve estilo de vida</h2>
+      </div>
+    </div>
+    <p style="font-size:16px;line-height:1.75;margin:0 0 18px;color:#463c2d;">El objetivo no es que tú estés presente cada vez que tu papá o mamá se mueva. El objetivo es sembrar el hábito para que, poco a poco, ellos lo sostengan por su cuenta — con o sin ti ahí.</p>
+    <p style="font-size:16px;line-height:1.75;margin:0 0 20px;color:#463c2d;">Una vez que la actividad ya es parte de su semana, tu papel puede tomar cualquiera de estas formas, según lo que tu vida te permita:</p>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#F7F0E1;border:1px solid #E2D9C6;border-left:3px solid #7E8E6C;border-radius:0 12px 12px 0;padding:20px 24px;">
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;margin:0 0 5px;">Acompañamiento ocasional</h3>
+        <p style="font-size:15.5px;line-height:1.7;margin:0;color:#463c2d;">Sumarte cuando puedas, para que el hábito no se pierda y sepan que sigues presente, aunque no sea cada vez.</p>
+      </div>
+      <div style="background:#F7F0E1;border:1px solid #E2D9C6;border-left:3px solid #7E8E6C;border-radius:0 12px 12px 0;padding:20px 24px;">
+        <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:18px;color:#2B2216;margin:0 0 5px;">Acompañamiento constante</h3>
+        <p style="font-size:15.5px;line-height:1.7;margin:0;color:#463c2d;">Si tu agenda lo permite, seguir siendo parte de la actividad de forma regular.</p>
+      </div>
+    </div>
+    <p style="font-size:16px;line-height:1.75;margin:20px 0 0;color:#463c2d;">Ninguna de las dos es “la correcta”. Lo que de verdad importa es que el movimiento se quede en su rutina — contigo cerca o no.</p>
+
+    <div style="margin-top:28px;background:#EAEEE0;border:1px solid #DCE4CE;border-radius:14px;padding:clamp(24px,3.5vw,32px);">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="#7E8E6C" style="opacity:.5;"><path d="M9.5 5C6.5 5 4 7.5 4 10.5c0 2.6 1.9 4.7 4.4 5.1-.2 1.6-1.2 2.6-2.6 3.2-.3.1-.4.5-.2.8.1.2.3.3.5.3 3.6-.4 6.4-3.2 6.4-7.4V10.5C12.5 7.5 12.5 5 9.5 5Zm9 0C15.5 5 13 7.5 13 10.5c0 2.6 1.9 4.7 4.4 5.1-.2 1.6-1.2 2.6-2.6 3.2-.3.1-.4.5-.2.8.1.2.3.3.5.3 3.6-.4 6.4-3.2 6.4-7.4V10.5C21.5 7.5 21.5 5 18.5 5Z"/></svg>
+      <p style="font-family:'Source Serif 4',serif;font-size:clamp(17px,2.3vw,19.5px);line-height:1.55;color:#2B2216;margin:12px 0 0;text-wrap:pretty;">Con mi mamá, lo que empezó como una rutina de sábados con un coach, hoy también incluye caminatas en Viveros de Coyoacán — no como el inicio, sino como algo en lo que se convirtió con el tiempo: una oportunidad de estar en la naturaleza, pasar un rato juntos, y terminar con un café o un desayuno después. El movimiento fue la excusa; lo que se quedó fue la conexión.</p>
+    </div>
+  </div>
+
+  <!-- CIERRE -->
+  <div style="margin-top:52px;text-align:center;">
+    <div style="width:44px;height:3px;background:#7E8E6C;margin:0 auto 22px;"></div>
+    <p style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(20px,3vw,24px);line-height:1.5;color:#2B2216;margin:0 auto;max-width:600px;text-wrap:pretty;">Moverse juntos también es una forma de acompañar. No hace falta perfección, solo constancia — y una invitación, no una orden.</p>
+  </div>
+
+  <!-- CTA COMUNIDAD -->
+  <div style="margin-top:48px;background:#F1E2D6;border:1px solid #E4C9B8;border-radius:14px;padding:clamp(24px,3.5vw,32px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.2;color:#2B2216;margin:0;">Moverse es más fácil acompañado</h2>
+    <p style="font-size:15.5px;line-height:1.65;color:#5f5442;margin:10px auto 22px;max-width:480px;">Únete a la Comunidad Contigo en el Camino, donde otras familias comparten qué les ha funcionado para acompañar a su papá o mamá a estar más activo.</p>
+    <a href="https://wa.me/525520780577?text=Hola%2C%20vengo%20de%20la%20gu%C3%ADa%20%22Moverse%20juntos%22%20y%20me%20gustar%C3%ADa%20unirme%20a%20la%20Comunidad%20Contigo%20en%20el%20Camino." target="_blank" rel="noopener" data-wa="comunidad" style="display:inline-flex;align-items:center;gap:10px;background:#B5542C;color:#F7EFE1;font-weight:600;font-size:15.5px;padding:15px 30px;border-radius:10px;box-shadow:0 16px 30px -16px rgba(140,60,30,.7);">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.13.24-3.68-.77-3.1-1.22-5.08-4.38-5.24-4.58-.15-.2-1.25-1.66-1.25-3.17s.79-2.25 1.07-2.56c.28-.31.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.68.52.24.6.83 2.06.9 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.36 1.46.3.15.47.13.64-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.28.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.72-.17 1.4Z"/></svg>
+      Únete por WhatsApp
+    </a>
+  </div>
+
+  <!-- RED DE ESPECIALISTAS · sumando profesionales de movimiento -->
+  <div style="margin-top:20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:#EFEFF2;border:1px solid #D9DDE4;border-left:3px solid #4C5A6B;border-radius:0 12px 12px 0;padding:20px 24px;">
+    <span style="width:44px;height:44px;border-radius:11px;background:#4C5A6B;color:#EDF0F4;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></svg>
+    </span>
+    <div style="flex:1;min-width:220px;">
+      <div style="font-weight:600;font-size:15px;color:#2F3A47;">¿Hace falta un profesional de movimiento?</div>
+      <div style="font-size:13.5px;line-height:1.55;color:#6B7280;margin-top:2px;">La Red de Especialistas de Contigo en el Camino está sumando profesionales de movimiento y rehabilitación — fisioterapeutas, coaches y disciplinas guiadas para adultos mayores.</div>
+    </div>
+    <a href="/reddeespecialistas/" style="display:inline-flex;align-items:center;gap:8px;color:#2F3A47;font-weight:600;font-size:14px;padding:10px 18px;border-radius:8px;border:1.5px solid #4C5A6B;background:#F3F4F7;white-space:nowrap;">
+      Conocer la Red
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+
+  <!-- DESCARGA PDF ABAJO -->
+  <div style="margin-top:20px;background:#EAEEE0;border:1px solid #DCE4CE;border-radius:14px;padding:clamp(26px,4vw,36px);text-align:center;">
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.2;color:#2B2216;margin:0;">Llévate esta guía contigo</h2>
+    <p style="font-size:15.5px;line-height:1.6;color:#5f5442;margin:10px auto 22px;max-width:460px;">Descárgala en PDF para leerla con calma, imprimirla, o compartirla con quien acompaña contigo.</p>
+    <!-- AZURE-PDF-PLACEHOLDER · reemplazar href con la URL del PDF en Azure Blob Storage cuando esté lista -->
+    <a href="https://bibliotecacontigo.blob.core.windows.net/biblioteca/guia-contigo-en-el-camino-moverse-juntos.pdf" download target="_blank" rel="noopener noreferrer" data-pdf="moverse-juntos" style="display:inline-flex;align-items:center;gap:10px;background:#7E8E6C;color:#F7FAF1;font-weight:600;font-size:15.5px;padding:15px 30px;border-radius:10px;box-shadow:0 16px 30px -16px rgba(60,80,45,.7);">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 4 5-4M5 21h14"/></svg>
+      Descargar guía en PDF
+    </a>
+  </div>
+
+  <!-- FUENTES -->
+  <div style="margin-top:40px;border-top:1px solid #D8CBAE;padding-top:22px;">
+    <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#5B6B4A;font-weight:700;margin-bottom:12px;">Fuentes</div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);flex-shrink:0;margin-top:8px;"></span>
+        <p style="font-size:13.5px;line-height:1.6;color:#5f5442;margin:0;">Organización Mundial de la Salud — <em>Directrices sobre actividad física y hábitos sedentarios.</em></p>
+      </div>
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="width:6px;height:6px;background:#7E8E6C;transform:rotate(45deg);flex-shrink:0;margin-top:8px;"></span>
+        <p style="font-size:13.5px;line-height:1.6;color:#5f5442;margin:0;">Instituto Nacional de las Personas Adultas Mayores (INAPAM) — <em>Manual para la Activación Física en Personas Adultas Mayores.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTA -->
+  <div style="margin-top:26px;">
+    <p style="font-size:12.5px;line-height:1.6;color:#8A7C68;margin:0;"><strong style="color:#5f5442;">Nota:</strong> Esta guía es orientativa y no sustituye la valoración de un profesional de la salud. Antes de iniciar cualquier rutina de actividad física —sobre todo si hay dolor, problemas de equilibrio o condiciones médicas previas— conviene consultar a un médico o fisioterapeuta. Cada persona y cada situación son distintas.</p>
+  </div>
+
+</article>
+
+<!-- ============================ FOOTER ============================ -->
+<footer style="background:#2B2216;color:#C9BCA6;">
+  <div style="max-width:1120px;margin:0 auto;padding:clamp(44px,6vw,68px) 22px 34px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;align-items:start;">
+      <div style="max-width:360px;">
+        <a href="/" style="display:flex;align-items:center;gap:11px;color:inherit;">
+          <span style="width:34px;height:34px;border-radius:9px;background:#B5542C;display:flex;align-items:center;justify-content:center;color:#F1E2D6;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.47 5.49 A8.5 8.5 0 1 0 17.47 18.51" stroke-width="3" stroke-linecap="round"/><path d="M14.76 8.71 A4.3 4.3 0 1 0 14.76 15.29" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span style="font-family:'Source Serif 4',serif;font-weight:600;font-size:19px;color:#F3EBDA;">Contigo en el Camino</span>
+        </a>
+        <p style="font-size:14px;line-height:1.65;color:#A79A85;margin:16px 0 0;">Comunidad y orientación para familias que acompañan el envejecimiento de quienes aman.</p>
+        <div style="font-family:'Source Serif 4',serif;font-style:italic;font-size:12.5px;color:#A79A85;display:flex;align-items:center;gap:6px;margin-top:16px;">Inspirado por el amor a mi mamá <svg width="13" height="13" viewBox="0 0 24 24" fill="#B5542C" style="flex-shrink:0;"><path d="M12 20.5s-6.6-4.2-6.6-9.1A3.4 3.4 0 0 1 12 7.2a3.4 3.4 0 0 1 6.6 4.2c0 4.9-6.6 9.1-6.6 9.1Z"/></svg></div>
+      </div>
+
+      <div style="margin-left:clamp(0px,3vw,44px);">
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;">Explorar</div>
+        <div style="display:flex;flex-direction:column;gap:11px;">
+          <a href="/biblioteca/" style="color:#C9BCA6;font-size:14.5px;">Biblioteca Acompañar</a>
+          <a href="/reddeespecialistas/" style="color:#C9BCA6;font-size:14.5px;">Red de Especialistas</a>
+          <a href="/#comunidad" style="color:#C9BCA6;font-size:14.5px;">Únete a la comunidad</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMEsmxqLFkJIA10qj5JN0fry3QqcVoPK8LX2yT4V8ZnS8n0g/viewform" target="_blank" rel="noopener noreferrer" style="color:#C9BCA6;font-size:14.5px;">Responde la encuesta</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;">Contacto</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://wa.me/525520780577?text=Hola%2C%20vengo%20del%20sitio%20de%20Contigo%20en%20el%20Camino%20y%20quisiera%20saber%20m%C3%A1s%20sobre%20la%20comunidad." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;color:#C9BCA6;font-size:14.5px;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.13.24-3.68-.77-3.1-1.22-5.08-4.38-5.24-4.58-.15-.2-1.25-1.66-1.25-3.17s.79-2.25 1.07-2.56c.28-.31.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.68.52.24.6.83 2.06.9 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.36 1.46.3.15.47.13.64-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.28.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.72-.17 1.4Z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:hola@contigoenelcamino.com" style="display:inline-flex;align-items:center;gap:9px;color:#C9BCA6;font-size:14.5px;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></svg>
+            hola@contigoenelcamino.com
+          </a>
+        </div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;margin-top:28px;">Síguenos</div>
+        <div style="display:flex;gap:11px;">
+          <a href="https://www.facebook.com/contigoenelcaminomx/" target="_blank" rel="noopener" aria-label="Facebook" style="width:40px;height:40px;border-radius:10px;border:1px solid #4A4132;background:#3A3123;display:flex;align-items:center;justify-content:center;color:#C9BCA6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5h2.2V5.3h-2.6c-2 0-3.5 1.4-3.5 3.6v1.9H8v3.1h2.1V21h3.3v-7.1h2.3l.4-3.1h-2.7V9.1c0-.5.3-.6.6-.6Z"/></svg></a>
+          <a href="https://www.instagram.com/contigoenelcaminomx/" target="_blank" rel="noopener" aria-label="Instagram" style="width:40px;height:40px;border-radius:10px;border:1px solid #4A4132;background:#3A3123;display:flex;align-items:center;justify-content:center;color:#C9BCA6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+        <div style="font-size:12px;color:#7d715d;margin-top:12px;line-height:1.5;">Pronto en más redes.</div>
+      </div>
+
+      <div style="display:flex;align-items:flex-start;">
+        <a href="/carta-de-navegacion/" style="display:inline-flex;align-items:center;gap:9px;font-family:'Source Serif 4',serif;font-style:italic;font-size:13px;color:#A79A85;line-height:1.4;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B5542C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg>
+          Carta de Navegación
+        </a>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:40px;padding-top:22px;border-top:1px solid #43392A;">
+      <div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="/uploads/Del-Valle-grafito.png" width="26" height="26" style="display:block;flex-shrink:0;filter:brightness(0) invert(1);opacity:.55;" alt="Visiting Angels Del Valle">
+        <span style="font-size:11.5px;color:#8A7C68;">Aliado fundador · Visiting Angels Del Valle</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+<script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var t=document.getElementById('nav-toggle');document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){if(t)t.checked=false;});});document.addEventListener('click',function(e){if(t&&t.checked&&!n.contains(e.target))t.checked=false;});})();</script>
+
+</body>
+</html>

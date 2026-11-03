@@ -4,7 +4,8 @@
     ".webmanifest": "application/manifest+json",
     ".svg": "image/svg+xml",
     ".ico": "image/x-icon",
-    ".json": "application/json"
+    ".json": "application/json",
+    ".pdf": "application/pdf"
   },
   "routes": [
     {
@@ -27,7 +28,8 @@
       "/robots.txt",
       "/uploads/*",
       "/og/*",
-      "/*.{png,jpg,jpeg,gif,svg,ico,webp,css,js,json,txt,xml,webmanifest}"
+      "/documentos/*",
+      "/*.{png,jpg,jpeg,gif,svg,ico,webp,css,js,json,txt,xml,webmanifest,pdf}"
     ]
   }
 }

@@ -14,11 +14,7 @@
       if (!a) return;
       var href = a.getAttribute('href') || '';
       var ev = null;
-      var params = null;
-      if (href.indexOf('/documentos/carta-de-navegacion-v0.4.pdf') > -1) {
-        ev = 'click_descarga_carta_navegacion';
-        params = { documento: 'carta_de_navegacion', version_documento: 'v0.4', archivo: 'carta-de-navegacion-v0.4.pdf', pagina_origen: location.pathname };
-      } else if (a.hasAttribute('data-pdf')) {
+      if (a.hasAttribute('data-pdf')) {
         var p = location.pathname;
         ev = p.indexOf('5-dimensiones') > -1 ? 'click_descarga_guia_5dimensiones'
            : (p.indexOf('hermanos') > -1 || p.indexOf('no-depende') > -1) ? 'click_descarga_guia_decision_familiar'
@@ -32,7 +28,7 @@
       } else if (href.indexOf('wa.me/525520780577') > -1) {
         ev = (a.closest && a.closest('footer')) ? 'click_whatsapp_footer' : 'click_whatsapp_comunidad';
       }
-      if (ev && typeof gtag === 'function') { if (params) gtag('event', ev, params); else gtag('event', ev); }
+      if (ev && typeof gtag === 'function') gtag('event', ev);
     }, true);
   </script>
   <meta charset="utf-8">
@@ -166,10 +162,6 @@
     </div>
     <h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(31px,5vw,52px);line-height:1.08;letter-spacing:-.015em;color:#2B2216;margin:22px 0 0;max-width:760px;text-wrap:pretty;">Un ecosistema para vivir mejor el envejecimiento, con las personas mayores y con quienes las acompañan</h1>
     <div style="width:60px;height:3px;background:#B5542C;margin:26px 0 0;"></div>
-    <a href="/documentos/carta-de-navegacion-v0.4.pdf" download="carta-de-navegacion-v0.4.pdf" style="display:inline-flex;align-items:center;gap:7px;margin-top:22px;color:#8F3F1F;font-weight:600;font-size:14px;border-bottom:2px solid #E8B79E;padding-bottom:2px;">
-      <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
-      Descargar Carta en PDF <span style="font-weight:400;color:#8A7C68;">(3.2 MB)</span>
-    </a>
     <nav id="indice" aria-label="Índice de la Carta" class="toc" style="scroll-margin-top:82px;margin-top:clamp(34px,5vw,48px);">
       <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A7C68;font-weight:700;margin-bottom:6px;">Índice</div>
       <ol style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));column-gap:36px;">

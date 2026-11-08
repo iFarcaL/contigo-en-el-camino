@@ -33,10 +33,10 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Biblioteca Acompañar — Guías para comprender y decidir | Contigo en el Camino</title>
-  <meta name="description" content="Guías, herramientas de decisión y documentos que ayudan a las familias a entender su situación y acompañar el envejecimiento de sus padres con claridad.">
-  <meta property="og:title" content="Biblioteca Acompañar — Contigo en el Camino">
-  <meta property="og:description" content="Guías y herramientas de decisión para acompañar el envejecimiento con claridad.">
+  <title>Biblioteca — Ideas y herramientas para vivir y acompañar mejor | Contigo en el Camino</title>
+  <meta name="description" content="Guías y recursos para personas mayores, sus familias y quienes las acompañan. Ideas para vivir, aprender, cuidar y decidir con claridad.">
+  <meta property="og:title" content="Biblioteca — Contigo en el Camino">
+  <meta property="og:description" content="Guías y recursos para personas mayores, familias y quienes las acompañan.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Contigo en el Camino">
   <meta property="og:locale" content="es_MX">
@@ -46,12 +46,12 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Biblioteca Acompañar — guías para acompañar el envejecimiento con claridad">
+  <meta property="og:image:alt" content="Biblioteca Contigo en el Camino — guías y recursos para vivir y acompañar mejor">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Biblioteca Acompañar — Contigo en el Camino">
-  <meta name="twitter:description" content="Guías y herramientas de decisión para acompañar el envejecimiento con claridad.">
+  <meta name="twitter:title" content="Biblioteca — Contigo en el Camino">
+  <meta name="twitter:description" content="Guías y recursos para personas mayores, familias y quienes las acompañan.">
   <meta name="twitter:image" content="https://contigoenelcamino.com/og/og-biblioteca.png">
-  <meta name="twitter:image:alt" content="Biblioteca Acompañar — guías para acompañar el envejecimiento con claridad">
+  <meta name="twitter:image:alt" content="Biblioteca Contigo en el Camino — guías y recursos para vivir y acompañar mejor">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -66,6 +66,28 @@
   html{scroll-behavior:smooth;}
   html,body{margin:0;background:#F3EBDA;color:#463c2d;font-family:'Assistant',sans-serif;-webkit-font-smoothing:antialiased;}
   a{color:#5B6B4A;text-decoration:none;} a:hover{color:#41502f;}
+
+  .library-hero{background:#EAEEE0;border-bottom:1px solid #DCE4CE;}
+  .library-jumpnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:29px;}
+  .library-jumpnav a{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;min-height:48px;box-sizing:border-box;border:1px solid #B8C8A6;border-radius:10px;background:#F7F9F0;color:#425337;font-size:16px;font-weight:700;}
+  .library-jumpnav a:hover{background:#E0E9D6;color:#2E4025;}
+  .library-content{width:100%;max-width:1120px;margin:0 auto;padding:clamp(42px,6vw,62px) 22px clamp(60px,8vw,100px);box-sizing:border-box;flex:1;}
+  .library-section{scroll-margin-top:88px;}
+  .library-section+.library-section{padding-top:clamp(50px,7vw,80px);margin-top:clamp(50px,7vw,76px);border-top:1px solid #DCCFBA;}
+  .library-section-heading{max-width:830px;margin:0 0 26px;}
+  .library-section-heading h2{font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.3vw,32px);line-height:1.22;color:#2B2216;margin:12px 0 0;text-wrap:pretty;}
+  .library-section-heading p{font-size:clamp(17px,2vw,19px);line-height:1.7;color:#5f5442;margin:12px 0 0;max-width:750px;}
+  .library-eyebrow{font-size:11.5px;letter-spacing:.20em;text-transform:uppercase;color:#5B6B4A;font-weight:700;}
+  .library-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,295px),1fr));gap:22px;}
+  .library-card{min-width:0;transition:transform .2s,box-shadow .2s,border-color .2s;}
+  .library-card:hover{transform:translateY(-2px);box-shadow:0 18px 30px -22px rgba(65,52,31,.45);border-color:#B8C8A6;}
+  .library-card:focus-visible,.library-jumpnav a:focus-visible,.library-crosslink a:focus-visible{outline:3px solid #5B6B4A;outline-offset:3px;}
+  .library-card-elder{display:flex;flex-direction:column;max-width:530px;padding:30px;background:#FFFDF8;border:1px solid #E4D4A7;border-top:4px solid #C7982F;border-radius:14px;color:inherit;}
+  .library-crosslink{font-size:17px;line-height:1.7;color:#5f5442;margin:22px 0 0;}
+  .library-crosslink a{font-weight:700;color:#5B6B4A;display:inline-flex;align-items:center;gap:6px;}
+  @media(max-width:640px){.library-jumpnav{flex-direction:column;}.library-jumpnav a{width:100%;}.library-card-elder{max-width:none;}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.library-card{transition:none;}}
+
   .nav-bar{position:sticky;top:0;z-index:50;background:rgba(243,235,218,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #E2D9C6;transition:background .28s,box-shadow .28s,border-color .28s;}
   .nav-bar.scrolled{background:rgba(246,239,224,.98);box-shadow:0 6px 22px -12px rgba(60,45,25,.34);border-bottom-color:#D8CBAE;}
   .nav-inner{max-width:1120px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:padding .28s;}
@@ -152,34 +174,55 @@
 </header>
 
 
-<!-- ============================ ENCABEZADO DE SECCIÓN ============================ -->
-<section style="background:#EAEEE0;border-bottom:1px solid #DCE4CE;">
-  <div style="max-width:900px;margin:0 auto;padding:clamp(48px,7vw,84px) 22px;">
-    <div style="display:flex;align-items:center;gap:11px;">
-      <span style="width:38px;height:38px;border-radius:10px;background:#7E8E6C;display:flex;align-items:center;justify-content:center;color:#EAEEE0;flex-shrink:0;">
-        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 5.5A2 2 0 0 1 5 4h5v15H5a2 2 0 0 0-2 1.2Z"/><path d="M21 5.5A2 2 0 0 0 19 4h-5v15h5a2 2 0 0 1 2 1.2Z"/></svg>
-      </span>
-      <span style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#5B6B4A;font-weight:600;">Biblioteca Acompañar</span>
-    </div>
-    <h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4.6vw,46px);line-height:1.08;letter-spacing:-.015em;color:#2B2216;margin:20px 0 0;max-width:720px;text-wrap:pretty;">Guías para comprender y decidir con claridad</h1>
-    <div style="width:60px;height:3px;background:#7E8E6C;margin:24px 0 22px;"></div>
-    <p style="font-size:clamp(16px,2vw,18.5px);line-height:1.65;color:#5f5442;margin:0;max-width:600px;">Guías, herramientas de decisión y documentos que ayudan a las familias a entender su situación y dar el siguiente paso con calma, sin apresurar ni ignorar.</p>
+<!-- ============================ BIBLIOTECA INCLUSIVA v0.4 ============================ -->
+<section class="library-hero" aria-labelledby="library-title">
+ <div style="max-width:900px;margin:0 auto;padding:clamp(42px,6vw,72px) 22px clamp(40px,6vw,62px);">
+  <div style="display:flex;align-items:center;gap:11px;">
+   <span style="width:38px;height:38px;border-radius:10px;background:#7E8E6C;display:flex;align-items:center;justify-content:center;color:#EAEEE0;flex-shrink:0;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 5.5A2 2 0 0 1 5 4h5v15H5a2 2 0 0 0-2 1.2Z"/><path d="M21 5.5A2 2 0 0 0 19 4h-5v15h5a2 2 0 0 1 2 1.2Z"/></svg></span>
+   <span style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#5B6B4A;font-weight:700;">Biblioteca · Contigo en el Camino</span>
   </div>
+  <h1 id="library-title" style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(31px,4.5vw,46px);line-height:1.12;letter-spacing:-.015em;color:#2B2216;margin:20px 0 0;max-width:760px;text-wrap:pretty;">Ideas y herramientas para vivir y acompañar mejor</h1>
+  <div style="width:60px;height:3px;background:#7E8E6C;margin:24px 0 22px;"></div>
+  <p style="font-size:clamp(18px,2.25vw,21px);line-height:1.7;color:#5f5442;margin:0;max-width:720px;">Guías y recursos para las personas mayores, sus familias y quienes las acompañan. Un espacio para descubrir posibilidades, comprender situaciones y encontrar ideas útiles para la vida cotidiana.</p>
+  <nav class="library-jumpnav" aria-label="Explorar contenidos por tema">
+   <a href="#para-personas-mayores">Vivir en grande <span aria-hidden="true">↓</span></a>
+   <a href="#para-acompanar">Acompañar a alguien <span aria-hidden="true">↓</span></a>
+   <a href="#para-cuidarnos">Cuidarnos al cuidar <span aria-hidden="true">↓</span></a>
+  </nav>
+ </div>
+</section>
+<main class="library-content" id="contenido-biblioteca">
+<section id="para-personas-mayores" class="library-section" aria-labelledby="para-personas-mayores-title">
+  <div class="library-section-heading">
+    <div class="library-eyebrow">Para personas mayores</div>
+    <h2 id="para-personas-mayores-title">Vivir en grande</h2>
+    <p>Ideas para mantener la curiosidad, disfrutar de lo que te gusta y seguir descubriendo posibilidades.</p>
+  </div>
+  <div class="library-grid">
+  <a class="library-card library-card-elder" href="/vivir-en-grande/hoy-puedes-mas-de-lo-que-crees/">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;"><span aria-hidden="true" style="width:42px;height:42px;border-radius:11px;background:#F6EDD5;border:1px solid #E4C878;display:flex;align-items:center;justify-content:center;color:#98701C;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1"/></svg></span><span style="font-size:11px;color:#725211;background:#F6EDD5;padding:7px 11px;border-radius:6px;font-weight:700;">Para personas mayores</span></div>
+  <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(22px,2.5vw,26px);line-height:1.2;color:#2B2216;margin:20px 0 0;">Hoy puedes más de lo que crees</h3>
+  <p style="font-size:17px;line-height:1.7;color:#6f6350;margin:12px 0 0;flex:1;">Retomar algo que dejaste de hacer, ir a tu propio ritmo y atreverte a probar algo nuevo.</p><span style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;color:#725211;font-weight:700;font-size:16px;">Leer la guía <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+</a>
+  </div>
+  <p class="library-crosslink">¿Quieres compartir actividades y conocer gente? <a href="/vivir-en-grande/">Conoce el Club Vivir en Grande <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
 </section>
 
-<!-- ============================ GRID DE GUÍAS ============================ -->
-<section style="max-width:1120px;margin:0 auto;padding:clamp(40px,6vw,64px) 22px clamp(56px,8vw,96px);width:100%;box-sizing:border-box;flex:1;">
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;">
-
-    <!-- Guía 1 -->
-    <a href="/biblioteca/5-dimensiones-del-bienestar/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
+<section id="para-acompanar" class="library-section" aria-labelledby="para-acompanar-title">
+  <div class="library-section-heading">
+    <div class="library-eyebrow">Para familiares y personas cercanas</div>
+    <h2 id="para-acompanar-title">Acompañar a alguien</h2>
+    <p>Guías para entender situaciones, conversar y tomar decisiones junto a las personas que quieres.</p>
+  </div>
+  <div class="library-grid">
+      <a class="library-card" href="/biblioteca/5-dimensiones-del-bienestar/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
         <span style="width:42px;height:42px;border-radius:11px;background:#EAEEE0;border:1.5px solid #CDD8BC;display:flex;align-items:center;justify-content:center;color:#5B6B4A;flex-shrink:0;">
           <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.3L18 9l-4.1 1.7L12 15l-1.9-4.3L6 9l4.1-1.7z"/><path d="M18 15l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg>
         </span>
         <span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;background:#7E8E6C;color:#EAEEE0;padding:5px 11px;border-radius:5px;font-weight:600;">Guía introductoria</span>
       </div>
-      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">Las 5 dimensiones que sostienen el bienestar de tu papá o mamá</h2>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">Las 5 dimensiones que sostienen el bienestar de tu papá o mamá</h3>
       <p style="font-size:14.5px;line-height:1.62;color:#6f6350;margin:12px 0 0;flex:1;">Cuerpo, mente, emociones, relaciones y propósito: en qué fijarte, más allá de lo médico, con señales e ideas concretas para cultivar cada una desde hoy.</p>
       <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:11px;letter-spacing:.03em;color:#7E8E6C;font-weight:600;"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>Relacionada: Moverse juntos</span>
       <span style="display:inline-flex;align-items:center;gap:7px;color:#5B6B4A;font-weight:600;font-size:14px;margin-top:20px;">
@@ -187,48 +230,42 @@
         <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </span>
     </a>
-
-    <!-- Guía 2 -->
-    <a href="/biblioteca/es-momento-de-buscar-acompanamiento/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
+    <a class="library-card" href="/biblioteca/es-momento-de-buscar-acompanamiento/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
         <span style="width:42px;height:42px;border-radius:11px;background:#EAEEE0;border:1.5px solid #CDD8BC;display:flex;align-items:center;justify-content:center;color:#5B6B4A;flex-shrink:0;">
           <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 11l3 3 6-6"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>
         </span>
         <span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;background:#7E8E6C;color:#EAEEE0;padding:5px 11px;border-radius:5px;font-weight:600;">Guía rápida</span>
       </div>
-      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">¿Es momento de buscar acompañamiento para mi mamá o papá?</h2>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">¿Es momento de buscar acompañamiento para mi mamá o papá?</h3>
       <p style="font-size:14.5px;line-height:1.62;color:#6f6350;margin:12px 0 0;flex:1;">Una herramienta para reconocer señales, observar el conjunto y decidir con calma cuándo la persona mayor —o quien la cuida— necesita más respaldo.</p>
       <span style="display:inline-flex;align-items:center;gap:7px;color:#5B6B4A;font-weight:600;font-size:14px;margin-top:20px;">
         Leer la guía
         <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </span>
     </a>
-
-    <!-- Guía 3 -->
-    <a href="/biblioteca/el-acompanamiento-no-depende-de-todos-tus-hermanos/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
+    <a class="library-card" href="/biblioteca/el-acompanamiento-no-depende-de-todos-tus-hermanos/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
         <span style="width:42px;height:42px;border-radius:11px;background:#EAEEE0;border:1.5px solid #CDD8BC;display:flex;align-items:center;justify-content:center;color:#5B6B4A;flex-shrink:0;">
           <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M18.5 20a6.5 6.5 0 0 0-3.2-5.6"/></svg>
         </span>
         <span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;background:#7E8E6C;color:#EAEEE0;padding:5px 11px;border-radius:5px;font-weight:600;">Guía para la familia</span>
       </div>
-      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">El acompañamiento no depende de que todos tus hermanos participen</h2>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">El acompañamiento no depende de que todos tus hermanos participen</h3>
       <p style="font-size:14.5px;line-height:1.62;color:#6f6350;margin:12px 0 0;flex:1;">Cuando uno asume más que los demás: cómo abrir la conversación con tus hermanos y sostener la decisión con calma, aunque el involucramiento de la familia sea desigual.</p>
       <span style="display:inline-flex;align-items:center;gap:7px;color:#5B6B4A;font-weight:600;font-size:14px;margin-top:20px;">
         Leer la guía
         <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </span>
     </a>
-
-    <!-- Guía 4 -->
-    <a href="/biblioteca/moverse-juntos/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
+    <a class="library-card" href="/biblioteca/moverse-juntos/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
         <span style="width:42px;height:42px;border-radius:11px;background:#EAEEE0;border:1.5px solid #CDD8BC;display:flex;align-items:center;justify-content:center;color:#5B6B4A;flex-shrink:0;">
           <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 8-4-16-3 8H2"/></svg>
         </span>
         <span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;background:#7E8E6C;color:#EAEEE0;padding:5px 11px;border-radius:5px;font-weight:600;">Guía de actividades</span>
       </div>
-      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">Moverse juntos: cómo acompañar a tu papá o mamá a estar más activo</h2>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">Moverse juntos: cómo acompañar a tu papá o mamá a estar más activo</h3>
       <p style="font-size:14.5px;line-height:1.62;color:#6f6350;margin:12px 0 0;flex:1;">Dónde empezar según cómo esté hoy, cómo proponer el movimiento sin que suene a obligación, y ejercicios para adultos mayores —en casa o con instructor— hasta que se vuelva hábito.</p>
       <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:11px;letter-spacing:.03em;color:#7E8E6C;font-weight:600;"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>Relacionada: Las 5 dimensiones del bienestar</span>
       <span style="display:inline-flex;align-items:center;gap:7px;color:#5B6B4A;font-weight:600;font-size:14px;margin-top:20px;">
@@ -236,16 +273,25 @@
         <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </span>
     </a>
+  </div>
+  
+</section>
 
-    <!-- Guía 5 -->
-    <a href="/biblioteca/sindrome-del-cuidador/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
+<section id="para-cuidarnos" class="library-section" aria-labelledby="para-cuidarnos-title">
+  <div class="library-section-heading">
+    <div class="library-eyebrow">Para quienes cuidan y acompañan</div>
+    <h2 id="para-cuidarnos-title">Cuidarnos al cuidar</h2>
+    <p>Recursos para reconocer el cansancio, pedir apoyo y cuidar también de nuestro propio bienestar.</p>
+  </div>
+  <div class="library-grid">
+      <a class="library-card" href="/biblioteca/sindrome-del-cuidador/" style="display:flex;flex-direction:column;background:#F7F0E1;border:1px solid #E2D9C6;border-top:4px solid #7E8E6C;border-radius:14px;padding:26px 26px 24px;color:inherit;transition:transform .18s ease, box-shadow .18s ease;">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
         <span style="width:42px;height:42px;border-radius:11px;background:#EAEEE0;border:1.5px solid #CDD8BC;display:flex;align-items:center;justify-content:center;color:#5B6B4A;flex-shrink:0;">
           <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 15a4.5 4.5 0 0 0 7 0"/><path d="M9 9.5h.01M15 9.5h.01"/></svg>
         </span>
         <span style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;background:#7E8E6C;color:#EAEEE0;padding:5px 11px;border-radius:5px;font-weight:600;">Guía</span>
       </div>
-      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">Síndrome del cuidador: lo que sientes tiene nombre</h2>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;line-height:1.22;color:#2B2216;margin:20px 0 0;text-wrap:pretty;">Síndrome del cuidador: lo que sientes tiene nombre</h3>
       <p style="font-size:14.5px;line-height:1.62;color:#6f6350;margin:12px 0 0;flex:1;">El agotamiento de quien acompaña tiene nombre: señales que reconocer en el cuerpo, las emociones y el comportamiento, y qué ayuda de verdad cuando ya pesa.</p>
       <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:11px;letter-spacing:.03em;color:#7E8E6C;font-weight:600;"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>Relacionada: El acompañamiento no depende de que todos tus hermanos participen</span>
       <span style="display:inline-flex;align-items:center;gap:7px;color:#5B6B4A;font-weight:600;font-size:14px;margin-top:20px;">
@@ -253,11 +299,11 @@
         <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </span>
     </a>
-
   </div>
-
-  <p style="font-size:13.5px;line-height:1.6;color:#8A7C68;margin:34px 0 0;text-align:center;">Más guías y herramientas se irán sumando a esta biblioteca.</p>
+  
 </section>
+<p style="font-size:15px;line-height:1.7;color:#8A7C68;margin:52px 0 0;text-align:center;">Esta biblioteca seguirá creciendo con nuevas lecturas y herramientas para cada etapa del camino.</p>
+</main>
 
 <!-- ============================ FOOTER ============================ -->
 <footer style="background:#2B2216;color:#C9BCA6;">
@@ -275,7 +321,7 @@
       <div style="margin-left:clamp(0px,3vw,44px);">
         <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;">Explorar</div>
         <div style="display:flex;flex-direction:column;gap:11px;">
-          <a href="/biblioteca/" style="color:#C9BCA6;font-size:14.5px;">Biblioteca Acompañar</a>
+          <a href="/biblioteca/" style="color:#C9BCA6;font-size:14.5px;">Biblioteca</a>
           <a href="/reddeespecialistas/" style="color:#C9BCA6;font-size:14.5px;">Red de Especialistas</a>
           <a href="/#comunidad" style="color:#C9BCA6;font-size:14.5px;">Únete a la comunidad</a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMEsmxqLFkJIA10qj5JN0fry3QqcVoPK8LX2yT4V8ZnS8n0g/viewform" target="_blank" rel="noopener noreferrer" style="color:#C9BCA6;font-size:14.5px;">Responde la encuesta</a>

@@ -34,9 +34,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Club Vivir en Grande — Movimiento, música y convivencia | Contigo en el Camino</title>
-  <meta name="description" content="Un club de actividad física, música, cultura y vida social para adultos mayores independientes. La conexión humana es clave para vivir con salud y plenitud.">
+  <meta name="description" content="Personas mayores protagonistas, familiares bienvenidos. Actividades, caminatas, música, tejido, convivencia y guías para disfrutar y aprender juntos.">
   <meta property="og:title" content="Club Vivir en Grande — Contigo en el Camino">
-  <meta property="og:description" content="Movimiento, música y convivencia con propósito para adultos mayores independientes.">
+  <meta property="og:description" content="Personas mayores protagonistas, familias bienvenidas: actividades, encuentros y guías para disfrutar y aprender juntos.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Contigo en el Camino">
   <meta property="og:locale" content="es_MX">
@@ -49,7 +49,7 @@
   <meta property="og:image:alt" content="Club Vivir en Grande — movimiento, música y convivencia con propósito">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Club Vivir en Grande — Contigo en el Camino">
-  <meta name="twitter:description" content="Movimiento, música y convivencia con propósito para adultos mayores independientes.">
+  <meta name="twitter:description" content="Personas mayores protagonistas, familias bienvenidas: actividades, encuentros y guías para disfrutar y aprender juntos.">
   <meta name="twitter:image" content="https://contigoenelcamino.com/og/og-vivir-en-grande.png">
   <meta name="twitter:image:alt" content="Club Vivir en Grande — movimiento, música y convivencia con propósito">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -67,6 +67,20 @@
   html,body{margin:0;background:#F3EBDA;color:#463c2d;font-family:'Assistant',sans-serif;-webkit-font-smoothing:antialiased;}
   a{color:#5B6B4A;text-decoration:none;} a:hover{color:#41502f;}
   .club-guide-card{transition:transform .18s,box-shadow .18s,border-color .18s;}
+  .club-hero-actions{display:flex;gap:13px;flex-wrap:wrap;align-items:stretch;margin-top:28px;}
+  .club-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;box-sizing:border-box;padding:15px 23px;border-radius:12px;font-family:'Assistant',sans-serif;font-size:17px;font-weight:700;line-height:1.3;text-align:center;transition:transform .18s,box-shadow .18s,background .18s;}
+  .club-action-primary{background:#98701C;color:#FFFDF8;box-shadow:0 12px 24px -16px rgba(100,73,20,.85);}
+  .club-action-primary:hover{background:#765611;color:#FFFDF8;transform:translateY(-1px);}
+  .club-action-secondary{background:#FFFDF8;border:1.5px solid #D6B965;color:#725211;}
+  .club-action-secondary:hover{background:#F9EFDA;color:#5F4410;}
+  .club-action:focus-visible,.club-guide-card:focus-visible,.club-expand-guides:focus-visible{outline:3px solid #8F3F1F;outline-offset:3px;}
+  .club-guides-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:18px;margin-top:28px;}
+  .club-guide-card[hidden]{display:none !important;}
+  .club-expand-guides{font:700 16px 'Assistant',sans-serif;background:#FFFDF8;color:#725211;border:1.5px solid #D6B965;border-radius:11px;padding:13px 22px;min-height:50px;cursor:pointer;margin-top:24px;}
+  .club-expand-guides:hover{background:#F9EFDA;}
+  @media(max-width:640px){.club-hero-actions{flex-direction:column;align-items:stretch;}.club-hero-actions .club-action{width:100%;}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.club-guide-card,.club-action{transition:none;}}
+
   .club-guide-card:hover{transform:translateY(-3px);box-shadow:0 16px 30px -20px rgba(152,112,28,.55);border-color:#D9BD6A;}
   .nav-bar{position:sticky;top:0;z-index:50;background:rgba(243,235,218,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #E2D9C6;transition:background .28s,box-shadow .28s,border-color .28s;}
   .nav-bar.scrolled{background:rgba(246,239,224,.98);box-shadow:0 6px 22px -12px rgba(60,45,25,.34);border-bottom-color:#D8CBAE;}
@@ -161,111 +175,125 @@
       </span>
       <span style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#98701C;font-weight:600;">Club Vivir en Grande</span>
     </div>
-    <h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4.6vw,46px);line-height:1.08;letter-spacing:-.015em;color:#2B2216;margin:20px 0 0;max-width:720px;text-wrap:pretty;">Movimiento, música y convivencia con propósito</h1>
+    <h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4.6vw,46px);line-height:1.08;letter-spacing:-.015em;color:#2B2216;margin:20px 0 0;max-width:720px;text-wrap:pretty;">Un espacio para disfrutar, aprender y compartir</h1>
     <div style="width:60px;height:3px;background:#C7982F;margin:24px 0 22px;"></div>
-    <p style="font-size:clamp(19px,2.4vw,22px);line-height:1.75;color:#5f5442;margin:0;max-width:620px;">Actividad física, música, cultura y vida social para adultos mayores independientes —un espacio para mantenerse activo, disfrutar y seguir compartiendo con otros.</p>
+    <p style="font-size:clamp(19px,2.4vw,22px);line-height:1.75;color:#5f5442;margin:0;max-width:620px;">En Club Vivir en Grande, las personas mayores son las protagonistas. Nos reunimos para movernos, aprender, descubrir intereses, hacer amistades y disfrutar de nuevas experiencias.</p>
+    <p style="font-size:clamp(17px,2.1vw,19px);line-height:1.7;color:#5f5442;margin:16px 0 0;max-width:700px;">Hijos, nietos y otras personas cercanas también son bienvenidos. Podemos compartir actividades, aprender unos de otros y convivir de nuevas maneras.</p>
+    <div class="club-hero-actions">
+      <a class="club-action club-action-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf16fqZ1xJpdAkKTPU1GEXxORxNwYnOoLzXnIkGgSkBcwMXxA/viewform" target="_blank" rel="noopener noreferrer">Quiero participar <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="club-action club-action-secondary" href="#guias-del-club">Explorar guías <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1"><path d="m6 9 6 6 6-6"/></svg></a>
+    </div>
   </div>
 </section>
 
-<!-- ============================ 2 · POR QUÉ IMPORTA ============================ -->
-<section style="max-width:820px;margin:0 auto;padding:clamp(52px,7vw,84px) 22px 0;">
-  <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:600;">Por qué esto importa</div>
-  <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,33px);line-height:1.2;color:#2B2216;margin:14px 0 0;text-wrap:pretty;">Vivir acompañado también es cuidar la salud</h2>
-  <div style="width:52px;height:3px;background:#C7982F;margin:22px 0;"></div>
-  <div style="background:#F6EDD5;border-left:4px solid #C7982F;border-radius:0 10px 10px 0;padding:30px 34px;">
-    <p style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(22px,2.9vw,27px);line-height:1.5;color:#2B2216;margin:0;">La conexión humana y el vínculo social son de los factores más determinantes para la salud y la longevidad —tan importantes como la actividad física misma.</p>
-  </div>
-  <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.85;color:#5f5442;margin:28px 0 0;">Mantener relaciones cercanas y una vida social activa se asocia con mejor salud cardiovascular, memoria más preservada y un estado de ánimo más estable. Cuando el movimiento, la música y la convivencia ocurren juntos, el beneficio es doble: el cuerpo se mantiene fuerte y el ánimo, acompañado.</p>
-</section>
-
-<!-- ============================ 3 · EL ORIGEN ============================ -->
-<section style="max-width:820px;margin:0 auto;padding:clamp(48px,7vw,80px) 22px 0;">
-  <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:600;">El origen</div>
-  <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,33px);line-height:1.2;color:#2B2216;margin:14px 0 0;text-wrap:pretty;">Empezó con un grupo pequeño de mamás</h2>
-  <div style="width:52px;height:3px;background:#C7982F;margin:22px 0;"></div>
-  <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.85;color:#5f5442;margin:0 0 22px;">Todo comenzó de la forma más sencilla: unas sesiones de acondicionamiento físico para un pequeño grupo de mamás que querían mantenerse activas y en movimiento.</p>
-  <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.85;color:#5f5442;margin:0;">Con el tiempo, esas mañanas se volvieron algo más. Llegó la música y nació un coro; llegaron las conversaciones, los cafés y las risas. Lo que empezó como ejercicio creció, de manera natural, hasta convertirse en un espacio de encuentro donde el cuerpo se mueve y la vida se comparte.</p>
-</section>
-
-<!-- ============================ 4 · QUÉ INCLUYE ============================ -->
-<section style="max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,80px) 22px 0;width:100%;box-sizing:border-box;">
-  <div style="max-width:820px;margin:0 auto;">
-    <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:600;">Qué incluye</div>
-    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,33px);line-height:1.2;color:#2B2216;margin:14px 0 24px;text-wrap:pretty;">Cuatro maneras de vivir en grande</h2>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;">
-    <div style="background:#F6EDD5;border:1px solid #EAD9AE;border-top:4px solid #C7982F;border-radius:14px;padding:30px 28px;">
-      <span style="width:44px;height:44px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 12h2l2-5 4 10 2-5h2"/></svg></span>
-      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.25;color:#2B2216;margin:18px 0 0;">Actividad física</h3>
-      <p style="font-size:18px;line-height:1.7;color:#6f6350;margin:12px 0 0;">Ejercicio suave y seguro para mantener fuerza, equilibrio y movilidad.</p>
-    </div>
-    <div style="background:#F6EDD5;border:1px solid #EAD9AE;border-top:4px solid #C7982F;border-radius:14px;padding:30px 28px;">
-      <span style="width:44px;height:44px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></span>
-      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.25;color:#2B2216;margin:18px 0 0;">Música y cultura</h3>
-      <p style="font-size:18px;line-height:1.7;color:#6f6350;margin:12px 0 0;">Coro, canto y actividades culturales que alegran y estimulan la mente.</p>
-    </div>
-    <div style="background:#F6EDD5;border:1px solid #EAD9AE;border-top:4px solid #C7982F;border-radius:14px;padding:30px 28px;">
-      <span style="width:44px;height:44px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M18.5 20a6.5 6.5 0 0 0-3.2-5.6"/></svg></span>
-      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.25;color:#2B2216;margin:18px 0 0;">Convivencia</h3>
-      <p style="font-size:18px;line-height:1.7;color:#6f6350;margin:12px 0 0;">Encuentros, conversación y compañía para no pasar los días en soledad.</p>
-    </div>
-    <div style="background:#F6EDD5;border:1px solid #EAD9AE;border-top:4px solid #C7982F;border-radius:14px;padding:30px 28px;">
-      <span style="width:44px;height:44px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.4 5.5 6 .5-4.5 4 1.4 5.9L12 20l-5.3 2.9 1.4-5.9-4.5-4 6-.5z"/></svg></span>
-      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.25;color:#2B2216;margin:18px 0 0;">Proyectos con propósito</h3>
-      <p style="font-size:18px;line-height:1.7;color:#6f6350;margin:12px 0 0;">Iniciativas que dan sentido y hacen sentir útil y parte de algo.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ============================ 5 · ESTADO ACTUAL ============================ -->
 <section style="max-width:820px;margin:0 auto;padding:clamp(48px,7vw,80px) 22px clamp(20px,3vw,32px);">
   <div style="background:#EFE6D3;border:1px solid #E2D9C6;border-radius:16px;padding:clamp(28px,4vw,40px);">
     <div style="display:inline-flex;align-items:center;gap:8px;background:#F6EDD5;border:1px solid #E4C878;border-radius:20px;padding:6px 14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#98701C;font-weight:700;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#C7982F;"></span>En pausa · retomando
+      <span style="width:8px;height:8px;border-radius:50%;background:#C7982F;"></span>Ya estamos en marcha
     </div>
-    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(23px,3.4vw,30px);line-height:1.2;color:#2B2216;margin:18px 0 0;text-wrap:pretty;">Estamos reuniendo al grupo de nuevo</h2>
-    <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.85;color:#5f5442;margin:18px 0 0;">El Club está en una pausa y hoy lo estamos retomando. Queremos volver a reunir al grupo original —esas mamás con las que todo empezó— y también abrir espacio a nuevas personas que quieran sumarse a vivir en grande.</p>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(23px,3.4vw,30px);line-height:1.2;color:#2B2216;margin:18px 0 0;text-wrap:pretty;">Los primeros encuentros nos han dejado con ganas de continuar</h2>
+    <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.85;color:#5f5442;margin:18px 0 0;">Ya hemos celebrado encuentros para conocernos, conversar sobre nuestros intereses y comenzar a organizar actividades. También disfrutamos nuestras primeras experiencias de <strong>samba y tejido</strong>. En samba probamos movimientos diferentes y compartimos un nuevo reto; en tejido fuimos aprendiendo con paciencia y ayuda mutua. Queremos seguir escuchando propuestas e invitando a más personas a participar, con o sin experiencia previa.</p>
   </div>
 </section>
 
-<!-- ============================ GUÍAS DEL CLUB ============================ -->
+
+<!-- ============================ 4 · QUÉ INCLUYE ============================ -->
 <section style="max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,80px) 22px 0;width:100%;box-sizing:border-box;">
   <div style="max-width:820px;margin:0 auto;">
-    <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:600;">Guías del Club</div>
-    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,33px);line-height:1.2;color:#2B2216;margin:14px 0 0;text-wrap:pretty;">Lecturas para vivir en grande</h2>
-    <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.75;color:#5f5442;margin:14px 0 0;max-width:640px;">Textos breves, en letra grande, para leer con calma o compartir.</p>
+    <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:600;">Qué incluye</div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,33px);line-height:1.2;color:#2B2216;margin:14px 0 24px;text-wrap:pretty;">Qué podemos hacer juntos</h2>
   </div>
-  <!-- GUIAS-DEL-CLUB · una tarjeta <a class="club-guide-card"> por guía publicada; duplica el bloque completo para sumar una nueva guía -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:28px;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px;">
+    <div style="background:#F6EDD5;border:1px solid #EAD9AE;border-top:4px solid #C7982F;border-radius:14px;padding:30px 28px;">
+      <span style="width:44px;height:44px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 12h2l2-5 4 10 2-5h2"/></svg></span>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.25;color:#2B2216;margin:18px 0 0;">Movimiento y bienestar</h3>
+      <p style="font-size:18px;line-height:1.7;color:#6f6350;margin:12px 0 0;">Caminatas, baile, ejercicios adaptados a las posibilidades de cada participante y actividades para disfrutar el movimiento.</p>
+    </div>
+    <div style="background:#F6EDD5;border:1px solid #EAD9AE;border-top:4px solid #C7982F;border-radius:14px;padding:30px 28px;">
+      <span style="width:44px;height:44px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></span>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.25;color:#2B2216;margin:18px 0 0;">Música y cultura</h3>
+      <p style="font-size:18px;line-height:1.7;color:#6f6350;margin:12px 0 0;">Canto, música, lectura, fotografía, visitas culturales y otras experiencias para descubrir y compartir.</p>
+    </div>
+    <div style="background:#F6EDD5;border:1px solid #EAD9AE;border-top:4px solid #C7982F;border-radius:14px;padding:30px 28px;">
+      <span style="width:44px;height:44px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M18.5 20a6.5 6.5 0 0 0-3.2-5.6"/></svg></span>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.25;color:#2B2216;margin:18px 0 0;">Aprender y compartir</h3>
+      <p style="font-size:18px;line-height:1.7;color:#6f6350;margin:12px 0 0;">Tejido, pintura, talleres y actividades en las que podemos aprender algo nuevo o enseñar lo que sabemos.</p>
+    </div>
+    <div style="background:#F6EDD5;border:1px solid #EAD9AE;border-top:4px solid #C7982F;border-radius:14px;padding:30px 28px;">
+      <span style="width:44px;height:44px;border-radius:11px;background:#C7982F;display:flex;align-items:center;justify-content:center;color:#F6EDD5;"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.4 5.5 6 .5-4.5 4 1.4 5.9L12 20l-5.3 2.9 1.4-5.9-4.5-4 6-.5z"/></svg></span>
+      <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:22px;line-height:1.25;color:#2B2216;margin:18px 0 0;">Encuentros y convivencia</h3>
+      <p style="font-size:18px;line-height:1.7;color:#6f6350;margin:12px 0 0;">Conversaciones, reuniones y propuestas de los participantes, también con hijos, nietos y otros familiares.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================ GUÍAS DEL CLUB ============================ -->
+<section id="guias-del-club" style="scroll-margin-top:82px;max-width:1120px;margin:0 auto;padding:clamp(48px,7vw,80px) 22px 0;width:100%;box-sizing:border-box;">
+  <div style="max-width:820px;margin:0 auto;">
+    <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:600;">Lecturas del Club</div>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,33px);line-height:1.2;color:#2B2216;margin:14px 0 0;text-wrap:pretty;">Guías para seguir descubriendo</h2>
+    <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.75;color:#5f5442;margin:14px 0 0;max-width:640px;">Compartimos lecturas para explorar nuevos intereses, aprender a tu propio ritmo y encontrar ideas que puedas compartir. Seguiremos incorporando más guías.</p>
+  </div>
+  <!-- CATÁLOGO: Agregar tarjetas .club-guide-card por cada guía publicada, más recientes primero. El botón Ver más se activa con siete o más. -->
+  <div class="club-guides-grid" data-club-guides>
     <a class="club-guide-card" href="/vivir-en-grande/hoy-puedes-mas-de-lo-que-crees/" style="display:flex;flex-direction:column;background:#FFFDF8;border:1px solid #EAD9AE;border-radius:14px;padding:28px 26px;color:inherit;">
       <div style="display:flex;align-items:center;gap:10px;">
         <span style="width:40px;height:40px;border-radius:10px;background:#F6EDD5;border:1px solid #E4C878;display:flex;align-items:center;justify-content:center;color:#98701C;flex-shrink:0;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>
         <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#98701C;font-weight:700;">Guía</span>
       </div>
       <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(22px,2.6vw,25px);line-height:1.18;color:#2B2216;margin:18px 0 0;text-wrap:pretty;">Hoy puedes más de lo que crees</h3>
-      <p style="font-size:17px;line-height:1.6;color:#6f6350;margin:12px 0 0;">Retomar lo que dejaste de hacer, ir despacio, y atreverte a algo nuevo — sin demostrarle nada a nadie.</p>
+      <p style="font-size:17px;line-height:1.6;color:#6f6350;margin:12px 0 0;">Retomar algo que dejaste de hacer, ir a tu propio ritmo y atreverte a probar algo nuevo.</p>
       <span style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;color:#98701C;font-weight:700;font-size:16px;">Leer la guía <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
   </div>
+  <div style="text-align:center;">
+    <button type="button" class="club-expand-guides" data-expand-guides aria-expanded="false" aria-controls="guias-del-club" hidden>Ver más guías</button>
+  </div>
 </section>
 
-<!-- ============================ 6 · FORMULARIO (audiencia: adulto mayor) ============================ -->
+
+<!-- ============================ 2 · POR QUÉ IMPORTA ============================ -->
+<section style="max-width:820px;margin:0 auto;padding:clamp(52px,7vw,84px) 22px 0;">
+  <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:600;">Por qué esto importa</div>
+  <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,33px);line-height:1.2;color:#2B2216;margin:14px 0 0;text-wrap:pretty;">Una actividad puede ser el comienzo de algo más</h2>
+  <div style="width:52px;height:3px;background:#C7982F;margin:22px 0;"></div>
+  <div style="background:#F6EDD5;border-left:4px solid #C7982F;border-radius:0 10px 10px 0;padding:30px 34px;">
+    <p style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(22px,2.9vw,27px);line-height:1.5;color:#2B2216;margin:0;">Moverse, aprender algo nuevo y compartir tiempo con otras personas son formas de cuidar nuestro bienestar.</p>
+  </div>
+  <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.85;color:#5f5442;margin:28px 0 0;">Una caminata puede convertirse en una conversación; una clase de baile, en un nuevo reto; una sesión de tejido, en una oportunidad para aprender de alguien más. Queremos crear espacios donde las personas mayores puedan disfrutar de lo que les gusta, descubrir nuevas posibilidades y encontrar compañía con quienes comparten sus intereses.</p>
+</section>
+
+
+<!-- ============================ 3 · EL ORIGEN ============================ -->
+<section style="max-width:820px;margin:0 auto;padding:clamp(48px,7vw,80px) 22px 0;">
+  <div style="font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#98701C;font-weight:600;">El origen</div>
+  <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,33px);line-height:1.2;color:#2B2216;margin:14px 0 0;text-wrap:pretty;">De Happy Abus a Vivir en Grande</h2>
+  <div style="width:52px;height:3px;background:#C7982F;margin:22px 0;"></div>
+  <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.85;color:#5f5442;margin:0 0 22px;">Hace unos años organicé unas sesiones de acondicionamiento físico para ayudar a mi mamá a cuidar su salud. Poco a poco se sumaron familiares y amigas, y aquel pequeño grupo terminó encontrando mucho más que ejercicio.</p>
+  <p style="font-size:clamp(19px,2.3vw,21px);line-height:1.85;color:#5f5442;margin:0;">También hubo música, canto y nuevas amistades. Esa experiencia, a la que llamamos <strong>Happy Abus</strong>, fue uno de los antecedentes que me inspiraron a crear Contigo en el Camino. Hoy queremos recuperar ese espíritu y abrirlo a nuevas personas, actividades e ideas.</p>  <p style="font-size:17px;line-height:1.7;color:#5f5442;margin:22px 0 0;"><a href="/conoce-cc/" style="color:#725211;font-weight:700;border-bottom:2px solid #C7982F;padding-bottom:3px;">Conoce la historia de Contigo en el Camino <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+</section>
+
+
+<!-- ============================ 7 · INVITACIÓN A PARTICIPAR ============================ -->
 <section style="background:#F6EDD5;border-top:1px solid #EAD9AE;margin-top:clamp(40px,6vw,72px);">
   <div style="max-width:760px;margin:0 auto;padding:clamp(44px,7vw,80px) 22px;">
     <div style="text-align:center;">
       <div style="font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#98701C;font-weight:700;">Únete al Club</div>
-      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4.6vw,42px);line-height:1.12;color:#2B2216;margin:16px 0 0;text-wrap:pretty;">¿Te gustaría unirte?</h2>
-      <p style="font-size:clamp(20px,2.7vw,23px);line-height:1.65;color:#5f5442;margin:20px auto 0;max-width:540px;">Déjanos tus datos y te contamos cuándo empezamos. Es fácil y no toma más de un minuto.</p>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4.6vw,42px);line-height:1.12;color:#2B2216;margin:16px 0 0;text-wrap:pretty;">¿Te gustaría participar?</h2>
+      <p style="font-size:clamp(20px,2.7vw,23px);line-height:1.65;color:#5f5442;margin:20px auto 0;max-width:540px;">Puedes venir por tu cuenta o acompañado de tus hijos, nietos u otras personas cercanas. Queremos conocer tus intereses, compartirte las próximas actividades e invitarte a proponer nuevas experiencias.</p>
     </div>
 
     <div style="margin-top:clamp(32px,5vw,44px);text-align:center;">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSf16fqZ1xJpdAkKTPU1GEXxORxNwYnOoLzXnIkGgSkBcwMXxA/viewform" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:13px;font-family:'Assistant',sans-serif;font-weight:700;font-size:clamp(20px,2.6vw,23px);color:#FFFBF0;background:#C7982F;border-radius:14px;padding:22px 40px;box-shadow:0 16px 30px -14px rgba(152,112,28,.7);">
-        Quiero unirme al Club
+        Quiero participar en el Club
         <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
 
-    <p style="font-size:16px;line-height:1.6;color:#8a7a52;margin:22px auto 0;text-align:center;max-width:520px;">Se abre en una pestaña nueva. Tus datos solo se usan para invitarte a las actividades del Club.</p>
+    <p style="font-size:16px;line-height:1.6;color:#8a7a52;margin:22px auto 0;text-align:center;max-width:520px;">El formulario se abre en otra pestaña. Utilizaremos tus datos para comunicarnos contigo sobre las actividades del Club.</p>
   </div>
 </section>
 
@@ -334,5 +362,24 @@
 
 </div>
 <script>(function(){var n=document.getElementById('site-nav');if(!n)return;function u(){n.classList.toggle('scrolled',window.scrollY>6);}window.addEventListener('scroll',u,{passive:true});u();var b=document.getElementById('nav-burger'),m=document.getElementById('nav-mobile');if(!b||!m)return;function o(){return b.getAttribute('aria-expanded')==='true';}function s(v,f){n.classList.toggle('is-open',v);b.setAttribute('aria-expanded',v?'true':'false');if(!v&&f)b.focus();}b.addEventListener('click',function(){s(!o());});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){s(false);});});document.addEventListener('click',function(e){if(o()&&!n.contains(e.target))s(false);});document.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&o()){s(false,n.contains(document.activeElement));}});var q=window.matchMedia('(min-width:1040px)');function c(){if(q.matches&&o())s(false);}if(q.addEventListener)q.addEventListener('change',c);else if(q.addListener)q.addListener(c);})();</script>
+
+<script>
+/* Mejora progresiva para crecer el catálogo sin mostrar una lista interminable. */
+(function(){
+  var grid=document.querySelector('[data-club-guides]'),toggle=document.querySelector('[data-expand-guides]');
+  if(!grid||!toggle)return;
+  var cards=Array.prototype.slice.call(grid.querySelectorAll('.club-guide-card')),limit=6;
+  if(cards.length<=limit)return;
+  var expanded=false;
+  function render(){
+    cards.forEach(function(card,i){card.hidden=!expanded&&i>=limit;});
+    toggle.hidden=false;
+    toggle.setAttribute('aria-expanded',expanded?'true':'false');
+    toggle.textContent=expanded?'Mostrar menos guías':'Ver las '+(cards.length-limit)+' guías restantes';
+  }
+  toggle.addEventListener('click',function(){expanded=!expanded;render();});
+  render();
+})();
+</script>
 </body>
 </html>

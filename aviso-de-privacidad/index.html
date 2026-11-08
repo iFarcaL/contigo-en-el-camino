@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6H9QE31MJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X6H9QE31MJ');
+    // Seguimiento de eventos de conversion (delegado, sin tocar cada boton)
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var ev = null;
+      if (a.hasAttribute('data-pdf')) {
+        var p = location.pathname;
+        ev = p.indexOf('5-dimensiones') > -1 ? 'click_descarga_guia_5dimensiones'
+           : (p.indexOf('hermanos') > -1 || p.indexOf('no-depende') > -1) ? 'click_descarga_guia_decision_familiar'
+           : 'click_descarga_guia_acompanamiento';
+      } else if (href.indexOf('1FAIpQLSdMEsmxq') > -1) {
+        ev = 'click_encuesta';
+      } else if (href.indexOf('1FAIpQLSf16fq') > -1) {
+        ev = 'click_unirme_club';
+      } else if (href.indexOf('wa.me/525579405463') > -1) {
+        ev = 'click_whatsapp_vadv';
+      } else if (href.indexOf('wa.me/525520780577') > -1) {
+        ev = (a.closest && a.closest('footer')) ? 'click_whatsapp_footer' : 'click_whatsapp_comunidad';
+      }
+      if (ev && typeof gtag === 'function') gtag('event', ev);
+    }, true);
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aviso de privacidad | Contigo en el Camino</title>
@@ -32,7 +62,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://contigoenelcamino.com/aviso-de-privacidad/">
-  <meta name="robots" content="noindex, nofollow">
   <style>
   html{scroll-behavior:smooth;}
   html,body{margin:0;background:#F3EBDA;color:#463c2d;font-family:'Assistant',sans-serif;-webkit-font-smoothing:antialiased;}
@@ -73,10 +102,8 @@
   </style>
   
 <style>
-.legal{flex:1;background:#F3EBDA}.legal-wrap{max-width:780px;margin:0 auto;padding:clamp(34px,6vw,70px) 22px 80px}.legal-preview{padding:18px 20px;margin-bottom:30px;border-left:4px solid #9C5725;background:#F9E5CF;color:#442b16;font-size:16px;line-height:1.55}.legal-eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#79532e}.legal h1{font-family:'Source Serif 4',serif;font-size:clamp(36px,6vw,58px);line-height:1.1;color:#2B2216;margin:15px 0 20px}.legal-intro{font-size:clamp(19px,2.5vw,23px);line-height:1.55;color:#5b503f;max-width:650px}.legal section{padding-top:30px;margin-top:30px;border-top:1px solid #d6c8b1;scroll-margin-top:100px}.legal h2{font-family:'Source Serif 4',serif;color:#2B2216;font-size:clamp(25px,3vw,31px);line-height:1.2;margin:0 0 16px}.legal h3{color:#463c2d;font-size:20px;margin:26px 0 10px}.legal p,.legal li{font-size:18px;line-height:1.7}.legal a{color:#435b35;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.legal a:focus-visible{outline:3px solid #B5542C;outline-offset:4px}.legal-toc{background:#eae0cd;border-radius:12px;margin:32px 0;padding:20px 24px}.legal-toc ul{margin:8px 0 0;padding-left:22px}.legal-toc li{margin:4px 0}
+.legal{flex:1;background:#F3EBDA}.legal-wrap{max-width:780px;margin:0 auto;padding:clamp(34px,6vw,70px) 22px 80px}.legal-eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#79532e}.legal h1{font-family:'Source Serif 4',serif;font-size:clamp(36px,6vw,58px);line-height:1.1;color:#2B2216;margin:15px 0 20px}.legal-intro{font-size:clamp(19px,2.5vw,23px);line-height:1.55;color:#5b503f;max-width:650px}.legal section{padding-top:30px;margin-top:30px;border-top:1px solid #d6c8b1;scroll-margin-top:100px}.legal h2{font-family:'Source Serif 4',serif;color:#2B2216;font-size:clamp(25px,3vw,31px);line-height:1.2;margin:0 0 16px}.legal h3{color:#463c2d;font-size:20px;margin:26px 0 10px}.legal p,.legal li{font-size:18px;line-height:1.7}.legal a{color:#435b35;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.legal a:focus-visible{outline:3px solid #B5542C;outline-offset:4px}.legal-toc{background:#eae0cd;border-radius:12px;margin:32px 0;padding:20px 24px}.legal-toc ul{margin:8px 0 0;padding-left:22px}.legal-toc li{margin:4px 0}
 </style>
-  <link rel="stylesheet" href="/assets/medicion.css">
-  <script defer src="/assets/medicion.js"></script>
 </head>
 <body>
 <div id="top" style="background:#F3EBDA;overflow-x:clip;min-height:100vh;display:flex;flex-direction:column;">
@@ -108,7 +135,6 @@
 </header>
 <main class="legal" id="contenido">
   <div class="legal-wrap">
-    <div class="legal-preview" role="note"><strong>Borrador para revisión.</strong> Este texto y su implementación están en preparación; faltan decisiones operativas y revisión jurídica antes de publicarlos.</div>
     <p class="legal-eyebrow">Contigo en el Camino · Información institucional</p>
     <h1>Aviso de privacidad</h1>
     <p class="legal-intro">Queremos que sepas qué información recibimos, para qué la usamos y cómo puedes ejercer tus derechos.</p>
@@ -134,7 +160,7 @@
       <h3>Grupos de WhatsApp</h3>
       <p>Participar en un grupo es voluntario. En un grupo de WhatsApp, las demás personas integrantes pueden ver tu número telefónico y los mensajes que compartas. La visibilidad de tu nombre de perfil, fotografía y otros datos depende de la configuración y características del servicio. Otras personas pueden conservar o compartir información fuera del grupo.</p>
       <h3>Acceso y proveedores</h3>
-      <p>Los servicios tecnológicos intervienen en el alojamiento, la medición del sitio y la gestión de registros y comunicaciones. El responsable no autoriza que los registros del Club se compartan con Visiting Angels Del Valle para las finalidades propias de esa empresa. Antes de publicar este aviso se completará la revisión de proveedores y eventuales transferencias.</p>
+      <p>Utilizamos servicios tecnológicos para alojar el sitio, medir su uso y gestionar registros y comunicaciones, incluidos Microsoft Azure y los servicios de Google indicados en este aviso. El responsable no autoriza que los registros del Club se compartan con Visiting Angels Del Valle para las finalidades propias de esa empresa.</p>
     </section>
     <section id="derechos"><h2>Tus derechos y opciones</h2>
       <p>Puedes solicitar acceso, rectificación, cancelación u oposición al tratamiento de tus datos personales, así como pedir que dejemos de enviarte comunicaciones opcionales.</p>
@@ -143,21 +169,20 @@
       <p>Comunicaremos la determinación dentro de un máximo de 20 días hábiles desde la recepción de la solicitud y, si procede, la haremos efectiva dentro de los 15 días hábiles siguientes a la comunicación. Los plazos pueden ampliarse una vez por un periodo igual cuando las circunstancias lo justifiquen, conforme a la ley. Existen excepciones legales para algunas solicitudes.</p>
     </section>
     <section id="conservacion"><h2>Conservación y seguridad</h2>
-      <p>La política aprobada para los registros de participación prevé conservarlos durante 12 meses desde la última interacción significativa, salvo que una obligación legal aplicable exija otra cosa. Se realizará una revisión trimestral para identificar los registros que correspondan a ese plazo y atender su supresión o bloqueo cuando proceda. Esta política no retrasa las solicitudes de baja, revocación o derechos ARCO. Su puesta en operación y el tratamiento de copias están pendientes de verificación.</p>
-      <p>El acceso a los registros debe limitarse a quienes necesiten utilizarlos para las actividades del proyecto. En la revisión realizada, el formulario y la hoja mostraron como propietaria a la cuenta institucional y no mostraron otras personas con acceso de edición. La revisión de accesos externos y copias adicionales aún no está completa.</p>
+      <p>La política para los registros de participación prevé conservarlos durante 12 meses desde la última interacción significativa, salvo que una obligación legal aplicable exija otra cosa, y revisarlos trimestralmente para identificar los registros que correspondan a ese plazo. Las solicitudes de baja, revocación o derechos ARCO se atienden sin esperar a esa revisión.</p>
+      <p>La edición del formulario y el acceso a la hoja de respuestas están restringidos. Se procura limitar el acceso a los registros a quienes necesitan utilizarlos para las actividades del proyecto.</p>
     </section>
     <section id="fotografias"><h2>Fotografías y testimonios</h2>
       <p>Asistir a una actividad no implica autorizar el uso público de fotografías, videos o testimonios que permitan identificarte. Cuando corresponda, se solicitará una autorización independiente antes de ese uso.</p>
     </section>
-    <section id="cookies"><h2>Medición, almacenamiento y cookies</h2>
-      <p>Guardamos tu elección sobre la medición en el almacenamiento local de tu navegador para recordarla entre páginas y visitas. Este almacenamiento cumple una función necesaria para aplicar tu preferencia y no es una cookie. Puedes borrar esta información desde la configuración de tu navegador; en ese caso volveremos a preguntarte. En las páginas revisadas no identificamos cookies propias estrictamente necesarias.</p>
-      <p>Solo si eliges «Aceptar medición», cargamos Google Analytics para conocer y mejorar el uso del sitio. Puede utilizar cookies como <code>_ga</code> y <code>_ga_X6H9QE31MJ</code> e identificadores y datos técnicos de la visita. La medición puede incluir páginas vistas, desplazamientos, clics salientes y descargas. La personalización publicitaria está desactivada en la propiedad de Analytics.</p>
-      <p>Si rechazas la medición o no eliges, puedes usar el sitio y no cargamos la etiqueta de Analytics. Puedes cambiar de opinión mediante «Preferencias de medición» en el pie de página. Al rechazar después de haber aceptado, dejamos de medir y tratamos de eliminar las cookies de Analytics accesibles desde este sitio; también puedes administrarlas en tu navegador. Esto no elimina automáticamente los datos ya recibidos por Google.</p>
-      <p>El sitio también utiliza Google Fonts para mostrar tipografías, lo que implica conexiones con Google independientes de Analytics. Otros servicios externos a los que accedas, como formularios o WhatsApp, tienen sus propias políticas y tecnologías.</p>
+    <section id="cookies"><h2>Medición y cookies</h2>
+      <p>Usamos Google Analytics para consultar información agregada sobre visitas, temas de interés y desempeño de contenidos, con el fin de conocer y mejorar el sitio. Google Analytics utiliza cookies e identificadores y puede tratar información técnica y de navegación, como el dispositivo, la ubicación aproximada y las interacciones con las páginas. Los informes agregados no significan que Google reciba únicamente datos agregados.</p>
+      <p>La medición puede incluir páginas vistas, desplazamientos, clics salientes y descargas, así como clics en enlaces de la comunidad. La personalización publicitaria y Google Signals están desactivados en la propiedad de Analytics.</p>
+      <p>Puedes administrar o bloquear cookies desde la configuración de tu navegador. Además, Google ofrece un <a href="https://support.google.com/analytics/answer/181881?hl=es-419" target="_blank" rel="noopener noreferrer">complemento para inhabilitar Google Analytics</a> en navegadores compatibles; consulta su disponibilidad e instrucciones en esa página. Estas opciones dependen del navegador y dispositivo que utilices. También puedes solicitar información o ejercer tus derechos escribiendo a <a href="mailto:hola@contigoenelcamino.com">hola@contigoenelcamino.com</a>.</p>
+      <p>El sitio utiliza Google Fonts para mostrar tipografías, lo que implica conexiones con Google independientes de Analytics. Los servicios externos a los que accedas, como formularios o WhatsApp, cuentan con sus propias políticas.</p>
     </section>
     <section id="cambios"><h2>Cambios a este aviso</h2>
-      <p>La versión actualizada del aviso se publicará en esta página. El procedimiento para comunicar cambios relevantes se definirá antes de la publicación.</p>
-      <p>Fecha de aprobación y publicación: pendiente.</p>
+      <p>La versión actualizada de este aviso se dará a conocer mediante su publicación en esta página.</p>
     </section>
   </div>
 </main>
@@ -213,7 +238,7 @@
     </div>
 
     <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:40px;padding-top:22px;border-top:1px solid #43392A;">
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;"><div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div><a href="/aviso-de-privacidad/" style="font-size:14px;color:#E0D3BF;text-decoration:underline;text-underline-offset:3px;">Aviso de privacidad</a><button type="button" class="cc-preferencias" data-cc-preferencias>Preferencias de medición</button></div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;"><div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div><a href="/aviso-de-privacidad/" style="font-size:14px;color:#E0D3BF;text-decoration:underline;text-underline-offset:3px;">Aviso de privacidad</a></div>
       <div style="display:flex;align-items:center;gap:10px;">
         <img src="/uploads/Del-Valle-grafito.png" width="26" height="26" style="display:block;flex-shrink:0;filter:brightness(0) invert(1);opacity:.55;" alt="Visiting Angels Del Valle">
         <span style="font-size:11.5px;color:#8A7C68;">Aliado fundador · Visiting Angels Del Valle</span>

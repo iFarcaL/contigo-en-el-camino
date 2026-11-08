@@ -1,36 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6H9QE31MJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X6H9QE31MJ');
-    // Seguimiento de eventos de conversion (delegado, sin tocar cada boton)
-    document.addEventListener('click', function(e){
-      var a = e.target && e.target.closest ? e.target.closest('a') : null;
-      if (!a) return;
-      var href = a.getAttribute('href') || '';
-      var ev = null;
-      if (a.hasAttribute('data-pdf')) {
-        var p = location.pathname;
-        ev = p.indexOf('5-dimensiones') > -1 ? 'click_descarga_guia_5dimensiones'
-           : (p.indexOf('hermanos') > -1 || p.indexOf('no-depende') > -1) ? 'click_descarga_guia_decision_familiar'
-           : 'click_descarga_guia_acompanamiento';
-      } else if (href.indexOf('1FAIpQLSdMEsmxq') > -1) {
-        ev = 'click_encuesta';
-      } else if (href.indexOf('1FAIpQLSf16fq') > -1) {
-        ev = 'click_unirme_club';
-      } else if (href.indexOf('wa.me/525579405463') > -1) {
-        ev = 'click_whatsapp_vadv';
-      } else if (href.indexOf('wa.me/525520780577') > -1) {
-        ev = (a.closest && a.closest('footer')) ? 'click_whatsapp_footer' : 'click_whatsapp_comunidad';
-      }
-      if (ev && typeof gtag === 'function') gtag('event', ev);
-    }, true);
-  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aviso de privacidad | Contigo en el Camino</title>
@@ -105,6 +75,8 @@
 <style>
 .legal{flex:1;background:#F3EBDA}.legal-wrap{max-width:780px;margin:0 auto;padding:clamp(34px,6vw,70px) 22px 80px}.legal-preview{padding:18px 20px;margin-bottom:30px;border-left:4px solid #9C5725;background:#F9E5CF;color:#442b16;font-size:16px;line-height:1.55}.legal-eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#79532e}.legal h1{font-family:'Source Serif 4',serif;font-size:clamp(36px,6vw,58px);line-height:1.1;color:#2B2216;margin:15px 0 20px}.legal-intro{font-size:clamp(19px,2.5vw,23px);line-height:1.55;color:#5b503f;max-width:650px}.legal section{padding-top:30px;margin-top:30px;border-top:1px solid #d6c8b1;scroll-margin-top:100px}.legal h2{font-family:'Source Serif 4',serif;color:#2B2216;font-size:clamp(25px,3vw,31px);line-height:1.2;margin:0 0 16px}.legal h3{color:#463c2d;font-size:20px;margin:26px 0 10px}.legal p,.legal li{font-size:18px;line-height:1.7}.legal a{color:#435b35;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.legal a:focus-visible{outline:3px solid #B5542C;outline-offset:4px}.legal-toc{background:#eae0cd;border-radius:12px;margin:32px 0;padding:20px 24px}.legal-toc ul{margin:8px 0 0;padding-left:22px}.legal-toc li{margin:4px 0}
 </style>
+  <link rel="stylesheet" href="/assets/medicion.css">
+  <script defer src="/assets/medicion.js"></script>
 </head>
 <body>
 <div id="top" style="background:#F3EBDA;overflow-x:clip;min-height:100vh;display:flex;flex-direction:column;">
@@ -177,9 +149,11 @@
     <section id="fotografias"><h2>Fotografías y testimonios</h2>
       <p>Asistir a una actividad no implica autorizar el uso público de fotografías, videos o testimonios que permitan identificarte. Cuando corresponda, se solicitará una autorización independiente antes de ese uso.</p>
     </section>
-    <section id="cookies"><h2>Medición y cookies</h2>
-      <p>El sitio utiliza Google Analytics para medir visitas e interacciones. La herramienta puede usar cookies e identificadores, además de información técnica sobre el dispositivo y la visita. La medición está configurada para registrar, entre otras interacciones, páginas vistas, desplazamientos, clics salientes y descargas. El responsable utiliza la medición para conocer y mejorar el sitio. La personalización publicitaria está desactivada en todas las regiones de la propiedad de Analytics; el mecanismo para elegir sobre la medición sigue en revisión.</p>
-      <p>Puedes administrar o eliminar cookies en la configuración de tu navegador. La lista completa de tecnologías, sus periodos, las opciones específicas disponibles y el tratamiento por proveedores siguen en revisión.</p>
+    <section id="cookies"><h2>Medición, almacenamiento y cookies</h2>
+      <p>Guardamos tu elección sobre la medición en el almacenamiento local de tu navegador para recordarla entre páginas y visitas. Este almacenamiento cumple una función necesaria para aplicar tu preferencia y no es una cookie. Puedes borrar esta información desde la configuración de tu navegador; en ese caso volveremos a preguntarte. En las páginas revisadas no identificamos cookies propias estrictamente necesarias.</p>
+      <p>Solo si eliges «Aceptar medición», cargamos Google Analytics para conocer y mejorar el uso del sitio. Puede utilizar cookies como <code>_ga</code> y <code>_ga_X6H9QE31MJ</code> e identificadores y datos técnicos de la visita. La medición puede incluir páginas vistas, desplazamientos, clics salientes y descargas. La personalización publicitaria está desactivada en la propiedad de Analytics.</p>
+      <p>Si rechazas la medición o no eliges, puedes usar el sitio y no cargamos la etiqueta de Analytics. Puedes cambiar de opinión mediante «Preferencias de medición» en el pie de página. Al rechazar después de haber aceptado, dejamos de medir y tratamos de eliminar las cookies de Analytics accesibles desde este sitio; también puedes administrarlas en tu navegador. Esto no elimina automáticamente los datos ya recibidos por Google.</p>
+      <p>El sitio también utiliza Google Fonts para mostrar tipografías, lo que implica conexiones con Google independientes de Analytics. Otros servicios externos a los que accedas, como formularios o WhatsApp, tienen sus propias políticas y tecnologías.</p>
     </section>
     <section id="cambios"><h2>Cambios a este aviso</h2>
       <p>La versión actualizada del aviso se publicará en esta página. El procedimiento para comunicar cambios relevantes se definirá antes de la publicación.</p>
@@ -239,7 +213,7 @@
     </div>
 
     <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:40px;padding-top:22px;border-top:1px solid #43392A;">
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;"><div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div><a href="/aviso-de-privacidad/" style="font-size:14px;color:#E0D3BF;text-decoration:underline;text-underline-offset:3px;">Aviso de privacidad</a></div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;"><div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div><a href="/aviso-de-privacidad/" style="font-size:14px;color:#E0D3BF;text-decoration:underline;text-underline-offset:3px;">Aviso de privacidad</a><button type="button" class="cc-preferencias" data-cc-preferencias>Preferencias de medición</button></div>
       <div style="display:flex;align-items:center;gap:10px;">
         <img src="/uploads/Del-Valle-grafito.png" width="26" height="26" style="display:block;flex-shrink:0;filter:brightness(0) invert(1);opacity:.55;" alt="Visiting Angels Del Valle">
         <span style="font-size:11.5px;color:#8A7C68;">Aliado fundador · Visiting Angels Del Valle</span>

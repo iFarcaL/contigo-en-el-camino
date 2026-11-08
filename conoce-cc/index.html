@@ -1,36 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6H9QE31MJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X6H9QE31MJ');
-    // Seguimiento de eventos de conversion (delegado, sin tocar cada boton)
-    document.addEventListener('click', function(e){
-      var a = e.target && e.target.closest ? e.target.closest('a') : null;
-      if (!a) return;
-      var href = a.getAttribute('href') || '';
-      var ev = null;
-      if (a.hasAttribute('data-pdf')) {
-        var p = location.pathname;
-        ev = p.indexOf('5-dimensiones') > -1 ? 'click_descarga_guia_5dimensiones'
-           : (p.indexOf('hermanos') > -1 || p.indexOf('no-depende') > -1) ? 'click_descarga_guia_decision_familiar'
-           : 'click_descarga_guia_acompanamiento';
-      } else if (href.indexOf('1FAIpQLSdMEsmxq') > -1) {
-        ev = 'click_encuesta';
-      } else if (href.indexOf('1FAIpQLSf16fq') > -1) {
-        ev = 'click_unirme_club';
-      } else if (href.indexOf('wa.me/525579405463') > -1) {
-        ev = 'click_whatsapp_vadv';
-      } else if (href.indexOf('wa.me/525520780577') > -1) {
-        ev = (a.closest && a.closest('footer')) ? 'click_whatsapp_footer' : 'click_whatsapp_comunidad';
-      }
-      if (ev && typeof gtag === 'function') gtag('event', ev);
-    }, true);
-  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Conoce Contigo en el Camino — Un ecosistema para vivir mejor el envejecimiento</title>
@@ -124,6 +94,8 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="/assets/medicion.css">
+  <script defer src="/assets/medicion.js"></script>
 </head>
 <body>
 <div id="top" style="background:#F3EBDA;overflow-x:clip;min-height:100vh;display:flex;flex-direction:column;">
@@ -316,7 +288,7 @@
     </div>
 
     <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:40px;padding-top:22px;border-top:1px solid #43392A;">
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;"><div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div><a href="/aviso-de-privacidad/" style="font-size:14px;color:#E0D3BF;text-decoration:underline;text-underline-offset:3px;">Aviso de privacidad</a></div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;"><div style="font-size:12.5px;color:#8A7C68;">© 2026 Contigo en el Camino. Todos los derechos reservados.</div><a href="/aviso-de-privacidad/" style="font-size:14px;color:#E0D3BF;text-decoration:underline;text-underline-offset:3px;">Aviso de privacidad</a><button type="button" class="cc-preferencias" data-cc-preferencias>Preferencias de medición</button></div>
       <div style="display:flex;align-items:center;gap:10px;">
         <img src="/uploads/Del-Valle-grafito.png" width="26" height="26" style="display:block;flex-shrink:0;filter:brightness(0) invert(1);opacity:.55;" alt="Visiting Angels Del Valle">
         <span style="font-size:11.5px;color:#8A7C68;">Aliado fundador · Visiting Angels Del Valle</span>

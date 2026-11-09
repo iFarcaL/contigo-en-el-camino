@@ -33,10 +33,10 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Red de Especialistas y Aliados — Cuidado profesional de confianza | Contigo en el Camino</title>
-  <meta name="description" content="Profesionales de confianza y recursos públicos para acompañar a un ser querido mayor: atención médica, cuidado y estancias, legal y financiero. Construimos esta red aliado por aliado.">
+  <title>Red de Especialistas y Aliados | Contigo en el Camino</title>
+  <meta name="description" content="Conoce la Red de Especialistas y Aliados de Contigo en el Camino: servicios profesionales, orientación y oportunidades de colaboración para personas mayores y sus familias.">
   <meta property="og:title" content="Red de Especialistas y Aliados — Contigo en el Camino">
-  <meta property="og:description" content="Profesionales de confianza y recursos públicos disponibles, para que no tengas que buscar a ciegas.">
+  <meta property="og:description" content="Profesionales y organizaciones que pueden ofrecer servicios y participar en actividades y contenidos para personas mayores y sus familias.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Contigo en el Camino">
   <meta property="og:locale" content="es_MX">
@@ -49,7 +49,7 @@
   <meta property="og:image:alt" content="Red de Especialistas y Aliados — Contigo en el Camino">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Red de Especialistas y Aliados — Contigo en el Camino">
-  <meta name="twitter:description" content="Profesionales de confianza y recursos públicos disponibles, para que no tengas que buscar a ciegas.">
+  <meta name="twitter:description" content="Profesionales y organizaciones que pueden ofrecer servicios y participar en actividades y contenidos para personas mayores y sus familias.">
   <meta name="twitter:image" content="https://contigoenelcamino.com/og/og-especialistas.png">
   <meta name="twitter:image:alt" content="Red de Especialistas y Aliados — Contigo en el Camino">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -152,228 +152,127 @@
 </header>
 
 
-<!-- ============================ 1 · ENCABEZADO ============================ -->
-<section style="background:#DEE3E8;border-bottom:1px solid #C6D0DA;">
-  <div style="max-width:900px;margin:0 auto;padding:clamp(48px,7vw,84px) 22px;">
-    <div style="display:flex;align-items:center;gap:11px;">
-      <span style="width:38px;height:38px;border-radius:10px;background:#4C5A6B;display:flex;align-items:center;justify-content:center;color:#DEE3E8;flex-shrink:0;">
-        <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="5.5" cy="6.5" r="2.3"/><circle cx="18.5" cy="6.5" r="2.3"/><circle cx="12" cy="18" r="2.3"/><path d="M7.4 7.7 10.8 15.9M16.6 7.7 13.2 15.9M8 6.5h8"/></svg>
-      </span>
-      <span style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#2F3A47;font-weight:600;">Red de Especialistas y Aliados</span>
+<!-- RED v0.2 · Red de especialistas y aliados; propuesta editorial para revisión -->
+<style>
+  .red-page{color:#263440;}
+  .red-page *{box-sizing:border-box;}
+  .red-page a:focus-visible{outline:3px solid #B5542C;outline-offset:4px;}
+  .red-page .red-wrap{width:100%;max-width:1000px;margin-inline:auto;padding-inline:22px;}
+  .red-page .red-eyebrow{font:700 12px/1.4 'Assistant',sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#4C5A6B;margin:0 0 17px;}
+  .red-page h1,.red-page h2,.red-page h3{font-family:'Source Serif 4',serif;letter-spacing:-.015em;color:#22303C;}
+  .red-page h1{font-size:clamp(32px,4.6vw,48px);line-height:1.12;margin:0 0 24px;font-weight:600;}
+  .red-page h2{font-size:clamp(26px,3.5vw,34px);line-height:1.19;margin:0 0 18px;font-weight:600;}
+  .red-page h3{font-size:21px;line-height:1.25;margin:0 0 12px;font-weight:600;}
+  .red-page p{font-size:17px;line-height:1.72;margin:0 0 16px;color:#3F4B56;}
+  .red-page .red-lead{font-size:clamp(17px,2.1vw,20px);max-width:760px;}
+  .red-page .red-hero{background:#DEE3E8;border-bottom:1px solid #C6D0DA;padding-block:clamp(52px,7vw,86px);}
+  .red-page .red-section{padding-block:clamp(48px,6vw,76px);}
+  .red-page .red-section+.red-section{border-top:1px solid #E1D8C7;}
+  .red-page .red-heading{max-width:760px;margin-bottom:28px;}
+  .red-page .red-ally{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,310px);gap:30px;padding:clamp(25px,4vw,38px);background:#FFFDF9;border:1px solid #D6D8D4;border-top:4px solid #4C5A6B;border-radius:14px;align-items:start;}
+  .red-page .red-ally-label{display:inline-block;font:700 12px/1.4 'Assistant',sans-serif;color:#4C5A6B;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;}
+  .red-page .red-ally-aside{border-left:1px solid #D6D8D4;padding-left:25px;}
+  .red-page .red-ally-aside p{font-size:15px;}
+  .red-page .red-btn{display:inline-flex;align-items:center;justify-content:center;max-width:100%;min-height:46px;border-radius:9px;padding:11px 19px;background:#3D5365;color:#fff;text-align:center;font-weight:700;font-size:15px;line-height:1.4;transition:background .16s;}
+  .red-page .red-btn:hover{background:#263845;color:#fff;}
+  .red-page .red-btn-secondary{background:#fff;color:#2F4352;border:1.5px solid #4C5A6B;}
+  .red-page .red-btn-secondary:hover{background:#E8EDF0;color:#263845;}
+  .red-page .red-areas{background:#ECE7DC;}
+  .red-page .red-area-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px;}
+  .red-page .red-area{padding:23px 24px;background:#FFFDF9;border:1px solid #DED5C6;border-radius:12px;}
+  .red-page .red-area p{font-size:15.5px;margin:0;}
+  .red-page .red-helper{font-size:14.5px;color:#5A655F;}
+  .red-page .red-join{background:#DEE3E8;}
+  .red-page .red-join .red-wrap{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(250px,1fr);gap:clamp(28px,5vw,70px);}
+  .red-page .red-contact{background:#FFFDF9;padding:25px;border-radius:12px;border:1px solid #CBD3D9;align-self:start;}
+  .red-page .red-contact h3{font-size:21px;}
+  .red-page .red-contact p{font-size:15px;}
+  .red-page .red-contact .red-btn{width:100%;}
+  @media(max-width:760px){
+    .red-page .red-ally,.red-page .red-join .red-wrap{grid-template-columns:minmax(0,1fr);}
+    .red-page .red-ally-aside{border-left:0;border-top:1px solid #D6D8D4;padding:20px 0 0;}
+    .red-page .red-area-grid{grid-template-columns:minmax(0,1fr);}
+    .red-page .red-ally{gap:20px;}
+    .red-page .red-section{padding-block:42px;}
+  }
+</style>
+<main class="red-page" id="contenido">
+  <section class="red-hero" aria-labelledby="red-titulo">
+    <div class="red-wrap">
+      <p class="red-eyebrow">Contigo en el Camino</p>
+      <h1 id="red-titulo">Red de Especialistas y Aliados</h1>
+      <p class="red-lead">Queremos que las personas mayores y sus familias puedan encontrar orientación profesional cuando la necesiten. Estamos reuniendo especialistas y organizaciones que puedan ofrecer sus servicios y participar en conversaciones, actividades y contenidos de la comunidad.</p>
+      <p class="red-lead">La Red está comenzando. Por ahora contamos con un aliado fundador y buscamos incorporar profesionales de distintas especialidades.</p>
     </div>
-    <h1 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(30px,4.6vw,46px);line-height:1.08;letter-spacing:-.015em;color:#22303C;margin:20px 0 0;max-width:720px;text-wrap:pretty;">Red de Especialistas y Aliados</h1>
-    <div style="width:60px;height:3px;background:#4C5A6B;margin:24px 0 22px;"></div>
-    <p style="font-size:clamp(16px,2vw,18.5px);line-height:1.65;color:#41505E;margin:0;max-width:640px;">Acompañar a un papá o mamá mayor casi nunca se resuelve solo —en algún momento necesitas a alguien más: un médico, un abogado, un asesor, un lugar de confianza. Aquí reunimos, poco a poco, profesionales que conocemos y recursos públicos disponibles, para que no tengas que buscar a ciegas.</p>
-  </div>
-</section>
+  </section>
 
-<!-- ============================ 2 · ESTADO ACTUAL + LEYENDA ============================ -->
-<section style="max-width:820px;margin:0 auto;padding:clamp(44px,6vw,68px) 22px 0;">
-  <div style="background:#EAEFF3;border:1px solid #CDD6DE;border-left:4px solid #4C5A6B;border-radius:0 14px 14px 0;padding:clamp(26px,4vw,36px);">
-    <div style="display:inline-flex;align-items:center;gap:8px;background:#DEE3E8;border:1px solid #B9C4CE;border-radius:20px;padding:6px 14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#2F3A47;font-weight:700;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#4C5A6B;"></span>Construyendo la red
-    </div>
-    <p style="font-size:clamp(16px,2vw,18px);line-height:1.7;color:#3c4b58;margin:18px 0 0;">Estamos construyendo esta red aliado por aliado. Hoy Visiting Angels Del Valle es nuestro aliado fundador en cuidado profesional —y ya puedes ver aquí también los recursos públicos disponibles mientras seguimos sumando especialistas de confianza.</p>
-  </div>
-
-  <!-- Leyenda: qué significa cada bloque -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:20px;">
-    <div style="display:flex;align-items:flex-start;gap:11px;background:#fff;border:1px solid #E2D9C6;border-radius:12px;padding:16px 18px;">
-      <span style="width:11px;height:11px;border-radius:50%;background:#4C5A6B;flex-shrink:0;margin-top:4px;box-shadow:0 0 0 4px #DEE3E8;"></span>
-      <div><div style="font-weight:700;font-size:14.5px;color:#2F3A47;">Aliados de la Red</div><div style="font-size:14px;line-height:1.55;color:#6f6350;margin-top:2px;">Profesionales y lugares que conocemos y en los que confiamos.</div></div>
-    </div>
-    <div style="display:flex;align-items:flex-start;gap:11px;background:#fff;border:1px solid #E2D9C6;border-radius:12px;padding:16px 18px;">
-      <span style="color:#8A7C68;flex-shrink:0;margin-top:2px;"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6h.01" stroke-linecap="round"/></svg></span>
-      <div><div style="font-weight:700;font-size:14.5px;color:#6b5f4b;">Recursos públicos</div><div style="font-size:14px;line-height:1.55;color:#6f6350;margin-top:2px;">Información y programas públicos disponibles para todos, aunque aún no haya un aliado en esa categoría.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ 3 · CATEGORÍAS ============================ -->
-
-<!-- ===== a) ATENCIÓN MÉDICA ===== -->
-<section style="max-width:1120px;margin:0 auto;padding:clamp(46px,6vw,76px) 22px 0;width:100%;box-sizing:border-box;">
-  <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;gap:15px;">
-    <span style="width:48px;height:48px;border-radius:12px;background:#4C5A6B;display:flex;align-items:center;justify-content:center;color:#DEE3E8;flex-shrink:0;"><svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h3l2-6 4 12 2-6h5"/></svg></span>
-    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;color:#22303C;margin:0;">Atención médica</h2>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:24px;">
-
-    <!-- Aliados de la Red (vacío · invitación) -->
-    <div style="background:#fff;border:1px solid #E2D9C6;border-top:3px solid #4C5A6B;border-radius:14px;padding:26px 24px;">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#4C5A6B;flex-shrink:0;box-shadow:0 0 0 4px #DEE3E8;"></span>
-        <span style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#2F3A47;font-weight:700;">Aliados de la Red</span>
+  <section class="red-section" id="aliados" aria-labelledby="red-aliados-titulo">
+    <div class="red-wrap">
+      <div class="red-heading">
+        <p class="red-eyebrow">Quiénes participan hoy</p>
+        <h2 id="red-aliados-titulo">Nuestro aliado fundador</h2>
       </div>
-      <div style="border:1.5px dashed #B3BFCB;border-radius:12px;padding:26px 22px;background:#F5F7F9;text-align:center;">
-        <span style="display:inline-flex;width:40px;height:40px;border-radius:50%;background:#DEE3E8;color:#4C5A6B;align-items:center;justify-content:center;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg></span>
-        <p style="font-size:14.5px;line-height:1.6;color:#4c5a68;margin:14px 0 0;">Aún no sumamos un aliado de confianza en atención médica. Estamos buscando a los profesionales adecuados para incluirlos aquí.</p>
-        <a href="#unete" style="display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:#2F3A47;">¿Eres especialista? →</a>
-      </div>
-    </div>
-
-    <!-- Recursos públicos -->
-    <div style="background:#EFE6D3;border:1px solid #E2D9C6;border-radius:14px;padding:26px 24px;">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px;">
-        <span style="color:#8A7C68;flex-shrink:0;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6h.01" stroke-linecap="round"/></svg></span>
-        <span style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#8A7C68;font-weight:700;">Recursos públicos</span>
-      </div>
-      <div style="padding:18px 0 4px;border-top:1px solid #E0D5C0;margin-top:12px;">
-        <div style="font-weight:700;font-size:16px;color:#2B2216;">INAPAM · Programas de salud</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#6f6350;margin:5px 0 0;">Programas de salud, orientación y descuentos para personas adultas mayores.</div>
-        <div style="font-size:13.5px;color:#2F3A47;font-weight:600;margin-top:7px;">gob.mx/inapam</div>
-      </div>
-      <div style="padding:18px 0 4px;border-top:1px solid #E0D5C0;">
-        <div style="font-weight:700;font-size:16px;color:#2B2216;">Casas de Día · INAPAM / ISSSTE</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#6f6350;margin:5px 0 0;">Espacios de día con actividades y atención básica para el adulto mayor.</div>
-        <div style="font-size:13.5px;color:#2F3A47;font-weight:600;margin-top:7px;">gob.mx/inapam · issste.gob.mx</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== b) CUIDADO Y ESTANCIAS ===== -->
-<section id="vadv" style="max-width:1120px;margin:0 auto;padding:clamp(46px,6vw,76px) 22px 0;width:100%;box-sizing:border-box;">
-  <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;gap:15px;">
-    <span style="width:48px;height:48px;border-radius:12px;background:#4C5A6B;display:flex;align-items:center;justify-content:center;color:#DEE3E8;flex-shrink:0;"><svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10.5V20h14v-9.5"/><path d="M10 20v-5h4v5"/></svg></span>
-    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;color:#22303C;margin:0;">Cuidado y estancias</h2>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:24px;">
-
-    <!-- Aliados de la Red · VADV (badge aliado fundador, tono tierra) -->
-    <div style="background:#fff;border:1px solid #E2D9C6;border-top:3px solid #4C5A6B;border-radius:14px;padding:26px 24px;">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#4C5A6B;flex-shrink:0;box-shadow:0 0 0 4px #DEE3E8;"></span>
-        <span style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#2F3A47;font-weight:700;">Aliados de la Red</span>
-      </div>
-
-      <div style="border:1.5px dotted #B08968;border-radius:12px;padding:22px 22px;background:#FBF6EC;">
-        <div style="display:flex;align-items:center;gap:14px;">
-          <img src="/uploads/Del-Valle-tierra.png" width="46" height="46" style="display:block;flex-shrink:0;border-radius:9px;" alt="Visiting Angels Del Valle">
-          <div style="min-width:0;">
-            <span style="display:inline-flex;align-items:center;gap:6px;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#9C6B3F;font-weight:700;background:#EFE6D3;border:1px dotted #B08968;border-radius:999px;padding:3px 10px;">Aliado fundador</span>
-            <div style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;color:#2B2216;margin-top:7px;line-height:1.15;">Visiting Angels Del Valle</div>
-          </div>
+      <article class="red-ally">
+        <div>
+          <span class="red-ally-label">Aliado fundador · Cuidado en casa</span>
+          <h3>Visiting Angels Del Valle</h3>
+          <p>Ofrece acompañamiento y cuidado no médico a domicilio para personas mayores. Su equipo puede apoyar en actividades cotidianas, compañía y organización del cuidado en casa, de acuerdo con las necesidades de cada familia.</p>
+          <p>Es nuestro primer aliado. Su participación no significa que sea la única opción disponible para quienes buscan apoyo.</p>
         </div>
-
-        <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;gap:11px;align-items:flex-start;">
-            <span style="color:#9C6B3F;flex-shrink:0;margin-top:1px;"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-6-4.4-6-9a3.4 3.4 0 0 1 6-2.3 3.4 3.4 0 0 1 6 2.3c0 4.6-6 9-6 9Z"/></svg></span>
-            <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9C6B3F;font-weight:700;">Servicio</div><div style="font-size:15.5px;line-height:1.55;color:#463C2D;margin-top:2px;">Cuidado en casa y acompañamiento profesional para adultos mayores.</div></div>
-          </div>
+        <div class="red-ally-aside">
+          <p>Si quieres conocer sus servicios, puedes comunicarte directamente con Visiting Angels Del Valle.</p>
+          <a class="red-btn" href="https://wa.me/525579405463?text=Hola%2C%20vengo%20de%20la%20Red%20de%20Especialistas%20y%20Aliados%20de%20Contigo%20en%20el%20Camino%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20cuidado%20en%20casa." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
         </div>
+      </article>
+    </div>
+  </section>
 
-        <div style="margin-top:18px;background:#F3EBDA;border-left:3px solid #B08968;border-radius:0 10px 10px 0;padding:15px 18px;">
-          <p style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;font-size:16px;line-height:1.55;color:#5c4a37;margin:0;">Los conocemos de cerca y confiamos en cómo cuidan: con calidez, respeto y profesionalismo. Son nuestro aliado fundador en este camino.</p>
-        </div>
+  <section class="red-section red-areas" id="especialidades" aria-labelledby="red-especialidades-titulo">
+    <div class="red-wrap">
+      <div class="red-heading">
+        <p class="red-eyebrow">En desarrollo</p>
+        <h2 id="red-especialidades-titulo">Especialidades que queremos incorporar</h2>
+        <p>Nos interesa conocer profesionales que trabajen en estas áreas. Las mencionamos como campos de búsqueda, no como servicios que ya ofrecemos.</p>
+      </div>
+      <div class="red-area-grid">
+        <article class="red-area">
+          <h3>Salud y movilidad</h3>
+          <p>Geriatría, fisioterapia, nutrición y otras especialidades relacionadas con la salud de las personas mayores.</p>
+        </article>
+        <article class="red-area">
+          <h3>Bienestar emocional</h3>
+          <p>Psicología, apoyo a familias cuidadoras, acompañamiento en pérdidas y duelo.</p>
+        </article>
+        <article class="red-area">
+          <h3>Hogar y vida cotidiana</h3>
+          <p>Adaptación de vivienda, accesibilidad y servicios que ayuden a vivir de forma segura y cómoda.</p>
+        </article>
+        <article class="red-area">
+          <h3>Asuntos legales y patrimoniales</h3>
+          <p>Orientación notarial, decisiones patrimoniales, pensiones y organización financiera.</p>
+        </article>
+      </div>
+      <p class="red-helper" style="margin-top:23px;">Si buscas información para tomar decisiones, también puedes consultar nuestra <a href="/biblioteca/" style="text-decoration:underline;text-underline-offset:3px;">Biblioteca</a>.</p>
+    </div>
+  </section>
 
-        <a href="https://wa.me/525579405463?text=Hola%2C%20vengo%20de%20la%20Red%20de%20Especialistas%20y%20Aliados%20de%20Contigo%20en%20el%20Camino%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20cuidado%20en%20casa%20para%20mi%20mam%C3%A1%20o%20pap%C3%A1." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:9px;margin-top:18px;font-weight:700;font-size:15px;color:#fff;background:#9C6B3F;border-radius:11px;padding:12px 20px;">
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7s-3.8-3.2-3.9-3.4c-.1-.2-1-1.3-1-2.4s.6-1.7.8-2c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2 .9.6 1.3.8 1.5.9.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.3Z"/></svg>
-          Contactar por WhatsApp
-        </a>
+  <section class="red-section red-join" id="unete" aria-labelledby="red-unete-titulo">
+    <div class="red-wrap">
+      <div>
+        <p class="red-eyebrow">Para profesionales y organizaciones</p>
+        <h2 id="red-unete-titulo">¿Te gustaría colaborar con Contigo en el Camino?</h2>
+        <p>Estamos buscando especialistas que quieran presentar sus servicios a nuestra comunidad. También nos interesa colaborar en guías, conversaciones y actividades del Club Vivir en Grande, según la experiencia y disponibilidad de cada persona.</p>
+        <p>Antes de incorporar a un profesional revisaremos su trayectoria, las credenciales que correspondan a su actividad y la zona donde trabaja. Conversaremos sobre cómo participar y presentar sus servicios.</p>
+        <p class="red-helper">Por ahora, Contigo en el Camino no cobra comisiones por recomendaciones. Cada especialista acuerda directamente los servicios y sus honorarios con las personas interesadas. La participación en contenidos o actividades se acuerda por separado; no es un requisito para formar parte de la Red.</p>
+      </div>
+      <div class="red-contact">
+        <h3>Cuéntanos a qué te dedicas</h3>
+        <p>Escríbenos tu especialidad, dónde trabajas y cómo te gustaría participar. Podemos conversar antes de solicitar información adicional.</p>
+        <a class="red-btn red-btn-secondary" href="https://wa.me/525520780577?text=Hola%2C%20soy%20especialista%20y%20me%20gustar%C3%ADa%20conocer%20la%20Red%20de%20Especialistas%20y%20Aliados%20de%20Contigo%20en%20el%20Camino." target="_blank" rel="noopener noreferrer">Escribir a Contigo en el Camino</a>
       </div>
     </div>
-
-    <!-- Recursos públicos -->
-    <div style="background:#EFE6D3;border:1px solid #E2D9C6;border-radius:14px;padding:26px 24px;">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px;">
-        <span style="color:#8A7C68;flex-shrink:0;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6h.01" stroke-linecap="round"/></svg></span>
-        <span style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#8A7C68;font-weight:700;">Recursos públicos</span>
-      </div>
-      <div style="padding:18px 0 4px;border-top:1px solid #E0D5C0;margin-top:12px;">
-        <div style="font-weight:700;font-size:16px;color:#2B2216;">Casas de Día y Residencias de Día · INAPAM e ISSSTE</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#6f6350;margin:5px 0 0;">Estancias de día y residencias con cuidado y actividades para adultos mayores.</div>
-        <div style="font-size:13.5px;color:#2F3A47;font-weight:600;margin-top:7px;">gob.mx/inapam · issste.gob.mx</div>
-      </div>
-      <div style="padding:18px 0 4px;border-top:1px solid #E0D5C0;">
-        <div style="font-weight:700;font-size:16px;color:#2B2216;">DIF · Albergues y apoyo</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#6f6350;margin:5px 0 0;">Albergues y programas de asistencia para personas adultas mayores.</div>
-        <div style="font-size:13.5px;color:#2F3A47;font-weight:600;margin-top:7px;">gob.mx · DIF de tu estado o alcaldía</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== c) LEGAL ===== -->
-<section style="max-width:1120px;margin:0 auto;padding:clamp(46px,6vw,76px) 22px 0;width:100%;box-sizing:border-box;">
-  <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;gap:15px;">
-    <span style="width:48px;height:48px;border-radius:12px;background:#4C5A6B;display:flex;align-items:center;justify-content:center;color:#DEE3E8;flex-shrink:0;"><svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 7h12M6 21h12"/><path d="M7 7 4 13a3 3 0 0 0 6 0Z"/><path d="M17 7l-3 6a3 3 0 0 0 6 0Z"/></svg></span>
-    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;color:#22303C;margin:0;">Legal</h2>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:24px;">
-
-    <div style="background:#fff;border:1px solid #E2D9C6;border-top:3px solid #4C5A6B;border-radius:14px;padding:26px 24px;">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#4C5A6B;flex-shrink:0;box-shadow:0 0 0 4px #DEE3E8;"></span>
-        <span style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#2F3A47;font-weight:700;">Aliados de la Red</span>
-      </div>
-      <div style="border:1.5px dashed #B3BFCB;border-radius:12px;padding:26px 22px;background:#F5F7F9;text-align:center;">
-        <span style="display:inline-flex;width:40px;height:40px;border-radius:50%;background:#DEE3E8;color:#4C5A6B;align-items:center;justify-content:center;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg></span>
-        <p style="font-size:14.5px;line-height:1.6;color:#4c5a68;margin:14px 0 0;">Aún no sumamos un aliado de confianza en el área legal. Estamos buscando a los profesionales adecuados para incluirlos aquí.</p>
-        <a href="#unete" style="display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:#2F3A47;">¿Eres especialista? →</a>
-      </div>
-    </div>
-
-    <div style="background:#EFE6D3;border:1px solid #E2D9C6;border-radius:14px;padding:26px 24px;">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px;">
-        <span style="color:#8A7C68;flex-shrink:0;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6h.01" stroke-linecap="round"/></svg></span>
-        <span style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#8A7C68;font-weight:700;">Recursos públicos</span>
-      </div>
-      <div style="padding:18px 0 4px;border-top:1px solid #E0D5C0;margin-top:12px;">
-        <div style="font-weight:700;font-size:16px;color:#2B2216;">Poder notarial y trámites</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#6f6350;margin:5px 0 0;">Información general sobre el poder notarial —el documento que permite tomar decisiones o realizar trámites en representación de un ser querido— y otros trámites relacionados. Se otorga ante una notaría pública autorizada; conviene informarse con tiempo.</div>
-        <div style="font-size:13.5px;color:#2F3A47;font-weight:600;margin-top:7px;">Notaría pública autorizada · Colegio de Notarios de tu estado</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== d) FINANCIERO ===== -->
-<section style="max-width:1120px;margin:0 auto;padding:clamp(46px,6vw,76px) 22px 0;width:100%;box-sizing:border-box;">
-  <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;gap:15px;">
-    <span style="width:48px;height:48px;border-radius:12px;background:#4C5A6B;display:flex;align-items:center;justify-content:center;color:#DEE3E8;flex-shrink:0;"><svg aria-hidden="true" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="2.6"/><path d="M5 6v12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6"/><path d="M5 12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6"/></svg></span>
-    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.4vw,31px);line-height:1.15;color:#22303C;margin:0;">Financiero</h2>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:24px;">
-
-    <div style="background:#fff;border:1px solid #E2D9C6;border-top:3px solid #4C5A6B;border-radius:14px;padding:26px 24px;">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:18px;">
-        <span style="width:10px;height:10px;border-radius:50%;background:#4C5A6B;flex-shrink:0;box-shadow:0 0 0 4px #DEE3E8;"></span>
-        <span style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#2F3A47;font-weight:700;">Aliados de la Red</span>
-      </div>
-      <div style="border:1.5px dashed #B3BFCB;border-radius:12px;padding:26px 22px;background:#F5F7F9;text-align:center;">
-        <span style="display:inline-flex;width:40px;height:40px;border-radius:50%;background:#DEE3E8;color:#4C5A6B;align-items:center;justify-content:center;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg></span>
-        <p style="font-size:14.5px;line-height:1.6;color:#4c5a68;margin:14px 0 0;">Aún no sumamos un aliado de confianza en el área financiera. Estamos buscando a los profesionales adecuados para incluirlos aquí.</p>
-        <a href="#unete" style="display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:#2F3A47;">¿Eres especialista? →</a>
-      </div>
-    </div>
-
-    <div style="background:#EFE6D3;border:1px solid #E2D9C6;border-radius:14px;padding:26px 24px;">
-      <div style="display:flex;align-items:center;gap:9px;margin-bottom:6px;">
-        <span style="color:#8A7C68;flex-shrink:0;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6h.01" stroke-linecap="round"/></svg></span>
-        <span style="font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#8A7C68;font-weight:700;">Recursos públicos</span>
-      </div>
-      <div style="padding:18px 0 4px;border-top:1px solid #E0D5C0;margin-top:12px;">
-        <div style="font-weight:700;font-size:16px;color:#2B2216;">AFORE y pensión</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#6f6350;margin:5px 0 0;">Información general sobre AFORE, pensiones y trámites de retiro. Según el régimen del trabajador, corresponde al IMSS o al ISSSTE; conviene revisar el estado de cuenta y los requisitos con tiempo.</div>
-        <div style="font-size:13.5px;color:#2F3A47;font-weight:600;margin-top:7px;">imss.gob.mx · issste.gob.mx · gob.mx/consar</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ 4 · ÚNETE (especialistas) ============================ -->
-<section id="unete" style="background:#22303C;margin-top:clamp(52px,7vw,84px);">
-  <div style="max-width:760px;margin:0 auto;padding:clamp(48px,7vw,80px) 22px;text-align:center;">
-    <div style="font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8794A3;font-weight:600;">Para especialistas</div>
-    <h2 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:clamp(24px,3.6vw,34px);line-height:1.18;color:#F1F4F7;margin:16px 0 0;text-wrap:pretty;">¿Eres especialista y te gustaría ser parte de esta red?</h2>
-    <p style="font-size:clamp(16px,2vw,18px);line-height:1.65;color:#B9C4CE;margin:18px auto 0;max-width:520px;">Escríbenos por WhatsApp y con gusto te contamos cómo trabajamos y cómo podrías sumarte.</p>
-    <a href="https://wa.me/525520780577?text=Hola%2C%20soy%20especialista%20en%20%5B%C3%A1rea%5D%20y%20me%20interesa%20unirme%20a%20la%20Red%20de%20Especialistas%20y%20Aliados%20de%20Contigo%20en%20el%20Camino." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:11px;margin-top:clamp(28px,4vw,36px);font-family:'Assistant',sans-serif;font-weight:700;font-size:16.5px;color:#22303C;background:#DEE3E8;border-radius:14px;padding:17px 30px;box-shadow:0 18px 34px -16px rgba(0,0,0,.6);">
-      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7s-3.8-3.2-3.9-3.4c-.1-.2-1-1.3-1-2.4s.6-1.7.8-2c.2-.2.4-.3.6-.3h.4c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2 .9.6 1.3.8 1.5.9.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.3.1.6-.1 1.3Z"/></svg>
-      Escríbenos por WhatsApp
-    </a>
-  </div>
-</section>
+  </section>
+</main>
 
 <!-- ============================ FOOTER ============================ -->
 <footer style="background:#2B2216;color:#C9BCA6;">
@@ -391,7 +290,7 @@
       <div style="margin-left:clamp(0px,3vw,44px);">
         <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A7C68;font-weight:600;margin-bottom:14px;">Explorar</div>
         <div style="display:flex;flex-direction:column;gap:11px;">
-          <a href="/biblioteca/" style="color:#C9BCA6;font-size:14.5px;">Biblioteca Acompañar</a>
+          <a href="/biblioteca/" style="color:#C9BCA6;font-size:14.5px;">Biblioteca</a>
           <a href="/reddeespecialistas/" style="color:#C9BCA6;font-size:14.5px;">Red de Especialistas</a>
           <a href="/vivir-en-grande/" style="color:#C9BCA6;font-size:14.5px;">Club Vivir en Grande</a>
           <a href="/#comunidad" style="color:#C9BCA6;font-size:14.5px;">Únete a la comunidad</a>
